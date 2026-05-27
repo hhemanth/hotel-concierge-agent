@@ -53,6 +53,8 @@ Use this as the source of truth for what's done vs what needs work. When you fin
 - `backend/app/data/scrape_tfe.py` — DONE (async best-effort scraper: robots.txt-aware, httpx + BeautifulSoup, writes properties_scraped.json; graceful failure always produces output file)
 - `backend/app/data/inventory.json` — DONE (mock availability)
 - `backend/app/data/faqs.md` — DONE (synthetic FAQs)
+- `backend/app/mcp/__init__.py` — DONE (empty package marker)
+- `backend/app/mcp/booking_server.py` — DONE (FastMCP server; 6 tools: search_hotels, check_hotel_availability, get_hotel_offers, create_hotel_booking, cancel_hotel_booking, get_hotel_booking; OFFERS module-level constant; no print statements; run: python -m app.mcp.booking_server)
 - `backend/evals/test_conversations.json` — DONE (10 test cases)
 - `backend/evals/run_evals.py` — **STUB** — TODO: run cases, score with LLM-as-a-Judge, output JSON report
 
