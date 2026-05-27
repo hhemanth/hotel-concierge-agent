@@ -9,9 +9,19 @@ export async function POST(req: NextRequest) {
     headers: { "content-type": "application/json" },
     body,
   });
-  const data = await res.text();
-  return new NextResponse(data, {
-    status: res.status,
-    headers: { "content-type": res.headers.get("content-type") || "application/json" },
+
+  if (!res.ok) {
+    const text = await res.text();
+    return new NextResponse(text, { status: res.status });
+  }
+
+  // Pipe the SSE stream straight through to the browser
+  return new NextResponse(res.body, {
+    status: 200,
+    headers: {
+      "Content-Type": "text/event-stream",
+      "Cache-Control": "no-cache",
+      "X-Accel-Buffering": "no",
+    },
   });
 }
