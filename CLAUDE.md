@@ -37,11 +37,11 @@ Use this as the source of truth for what's done vs what needs work. When you fin
 - `backend/.env.example` — DONE (VOYAGE_API_KEY, SUPABASE_URL, EMBEDDING_MODEL)
 - `backend/app/main.py` — DONE (FastAPI app, /chat, /healthz, CORS, request logging)
 - `backend/app/observability.py` — DONE (structured logging + token/cost tracker)
-- `backend/app/agent/state.py` — DONE (AgentState TypedDict)
-- `backend/app/agent/graph.py` — DONE (graph wired, nodes registered, edges defined)
+- `backend/app/agent/state.py` — **DONE** (AgentState + BookingState TypedDicts; new fields: search_criteria, available_options, selected_option, booking_result, mentioned_properties, response_metadata)
+- `backend/app/agent/graph.py` — **DONE** (graph wired; _route_after_extract handles search + direct modes)
 - `backend/app/agent/nodes/router.py` — **WORKING** (LLM-based intent classifier, simple prompt; refine prompts as needed)
 - `backend/app/agent/nodes/retrieve.py` — **DONE** (wired to rag/retriever.py search(); graceful fallback on error)
-- `backend/app/agent/nodes/extract_params.py` — **STUB** — TODO: use structured output (JSON mode) to extract booking params
+- `backend/app/agent/nodes/extract_params.py` — **DONE** (search/direct mode extraction; selected_option detection; search_criteria + booking_in_progress dual output)
 - `backend/app/agent/nodes/booking.py` — **STUB** — TODO: implement check_availability call, option presentation, confirmation
 - `backend/app/agent/nodes/respond.py` — **WORKING** (final response synthesis from state)
 - `backend/app/tools/booking_api.py` — **WORKING** (in-memory mock with check_availability, create_booking, cancel_booking)

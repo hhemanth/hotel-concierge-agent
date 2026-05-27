@@ -26,14 +26,24 @@ def _route_after_router(state: AgentState) -> Literal["retrieve", "extract_param
 
 
 def _route_after_extract(state: AgentState) -> Literal["booking_step", "respond"]:
-    """If booking params are incomplete, jump straight to respond (ask the user).
-    Otherwise proceed to the booking step (availability / present / confirm).
+    """Route after parameter extraction.
+
+    - search mode: always route to booking_step (it will handle the vague query).
+    - direct mode: route to booking_step only when all four required params are present;
+                   otherwise route to respond so the agent can ask for missing info.
     """
     booking_state = state.get("booking_in_progress") or {}
+    mode = (state.get("search_criteria") or {}).get("mode", "direct")
+
+    if mode == "search":
+        return "booking_step"
+
+    # Direct mode: all four fields required
     required = ("city", "check_in", "check_out", "guests")
     if all(booking_state.get(k) for k in required):
         return "booking_step"
-    return "respond"
+
+    return "respond"  # missing info — ask the user
 
 
 def build_graph():
