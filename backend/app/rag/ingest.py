@@ -104,6 +104,28 @@ async def _embed_docs(client: voyageai.AsyncClient, docs: list[Doc]) -> list[lis
     return all_embeddings
 
 
+async def _ensure_schema(conn: psycopg.AsyncConnection) -> None:
+    """Create docs table + index if they don't exist (idempotent)."""
+    async with conn.cursor() as cur:
+        await cur.execute("CREATE EXTENSION IF NOT EXISTS vector")
+        await cur.execute("""
+            CREATE TABLE IF NOT EXISTS docs (
+              id          TEXT PRIMARY KEY,
+              content     TEXT NOT NULL,
+              embedding   vector(1024) NOT NULL,
+              source_type TEXT,
+              metadata    JSONB
+            )
+        """)
+        await cur.execute("""
+            CREATE INDEX IF NOT EXISTS docs_embedding_idx
+              ON docs USING ivfflat (embedding vector_cosine_ops)
+              WITH (lists = 100)
+        """)
+    await conn.commit()
+    logger.info("schema_ready")
+
+
 async def _upsert_docs(
     conn: psycopg.AsyncConnection,
     docs: list[Doc],
@@ -153,11 +175,12 @@ async def main() -> int:
     voyage_client = voyageai.AsyncClient(api_key=voyage_api_key)
     embeddings = await _embed_docs(voyage_client, all_docs)
 
-    # Upsert
+    # Connect, ensure schema exists, upsert
     conn = await psycopg.AsyncConnection.connect(database_url)
     try:
         from pgvector.psycopg import register_vector_async
         await register_vector_async(conn)
+        await _ensure_schema(conn)
         await _upsert_docs(conn, all_docs, embeddings)
     finally:
         await conn.close()
