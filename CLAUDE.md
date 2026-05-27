@@ -40,13 +40,13 @@ Use this as the source of truth for what's done vs what needs work. When you fin
 - `backend/app/agent/state.py` — DONE (AgentState TypedDict)
 - `backend/app/agent/graph.py` — DONE (graph wired, nodes registered, edges defined)
 - `backend/app/agent/nodes/router.py` — **WORKING** (LLM-based intent classifier, simple prompt; refine prompts as needed)
-- `backend/app/agent/nodes/retrieve.py` — **STUB** — TODO: wire to `rag/retriever.py` once ingest is done
+- `backend/app/agent/nodes/retrieve.py` — **DONE** (wired to rag/retriever.py search(); graceful fallback on error)
 - `backend/app/agent/nodes/extract_params.py` — **STUB** — TODO: use structured output (JSON mode) to extract booking params
 - `backend/app/agent/nodes/booking.py` — **STUB** — TODO: implement check_availability call, option presentation, confirmation
 - `backend/app/agent/nodes/respond.py` — **WORKING** (final response synthesis from state)
 - `backend/app/tools/booking_api.py` — **WORKING** (in-memory mock with check_availability, create_booking, cancel_booking)
-- `backend/app/rag/ingest.py` — **STUB** — TODO: read `data/*.json` + `data/faqs.md`, chunk, embed, upsert to pgvector
-- `backend/app/rag/retriever.py` — **STUB** — TODO: cosine similarity search via pgvector
+- `backend/app/rag/ingest.py` — **DONE** (loads properties + FAQs, embeds with Voyage AI voyage-large-2-instruct, upserts to pgvector; run: python -m app.rag.ingest)
+- `backend/app/rag/retriever.py` — **DONE** (Voyage AI embed + pgvector cosine similarity; graceful fallback if env vars missing)
 - `backend/app/data/__init__.py` — DONE (empty package marker)
 - `backend/app/data/properties.json` — DONE (5 synthetic properties, fallback)
 - `backend/app/data/properties.py` — DONE (thin loader: prefers properties_scraped.json, falls back to properties.json)
