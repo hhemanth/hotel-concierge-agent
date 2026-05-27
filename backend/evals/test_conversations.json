@@ -1,0 +1,114 @@
+[
+  {
+    "id": "info-checkin-time",
+    "category": "info",
+    "messages": [
+      {"role": "user", "content": "What time is check-in at Vibe Sydney?"}
+    ],
+    "expected": {
+      "must_mention": ["14:00", "2pm"],
+      "must_not_mention": ["confirmed", "booked"]
+    }
+  },
+  {
+    "id": "info-parking",
+    "category": "info",
+    "messages": [
+      {"role": "user", "content": "Is there parking at Adina Bondi?"}
+    ],
+    "expected": {
+      "must_mention": ["parking", "AUD 40", "limited"],
+      "must_not_mention": ["sold out"]
+    }
+  },
+  {
+    "id": "info-gym-24h",
+    "category": "info",
+    "messages": [
+      {"role": "user", "content": "Does the Vibe Sydney gym open overnight?"}
+    ],
+    "expected": {
+      "must_mention": ["24", "gym"],
+      "must_not_mention": []
+    }
+  },
+  {
+    "id": "info-pets",
+    "category": "info",
+    "messages": [
+      {"role": "user", "content": "Can I bring my dog?"}
+    ],
+    "expected": {
+      "must_mention": ["service", "pets"],
+      "must_not_mention": []
+    }
+  },
+  {
+    "id": "info-cancellation",
+    "category": "info",
+    "messages": [
+      {"role": "user", "content": "What's the cancellation window for a flexible rate?"}
+    ],
+    "expected": {
+      "must_mention": ["24 hour"],
+      "must_not_mention": []
+    }
+  },
+  {
+    "id": "booking-happy-path",
+    "category": "booking",
+    "messages": [
+      {"role": "user", "content": "Book me 2 nights in Sydney from 2026-07-10 for 2 people under $400 a night, with a gym."}
+    ],
+    "expected": {
+      "must_mention": ["vibe", "adina"],
+      "must_not_mention": ["confirmed"]
+    }
+  },
+  {
+    "id": "booking-missing-info",
+    "category": "booking",
+    "messages": [
+      {"role": "user", "content": "I want to book a room in Melbourne."}
+    ],
+    "expected": {
+      "must_mention": ["when", "dates"],
+      "must_not_mention": ["confirmed", "booked"]
+    }
+  },
+  {
+    "id": "booking-multiturn",
+    "category": "booking",
+    "messages": [
+      {"role": "user", "content": "Looking for a hotel in Sydney near the beach for a family of 4."},
+      {"role": "assistant", "content": "Happy to help! What dates are you thinking?"},
+      {"role": "user", "content": "2026-08-14 to 2026-08-17."}
+    ],
+    "expected": {
+      "must_mention": ["adina bondi", "Hall Street"],
+      "must_not_mention": []
+    }
+  },
+  {
+    "id": "booking-no-match",
+    "category": "booking",
+    "messages": [
+      {"role": "user", "content": "Book me a 5-star villa in Hobart for tonight."}
+    ],
+    "expected": {
+      "must_mention": ["Hobart", "couldn"],
+      "must_not_mention": ["confirmed"]
+    }
+  },
+  {
+    "id": "smalltalk",
+    "category": "smalltalk",
+    "messages": [
+      {"role": "user", "content": "Thanks!"}
+    ],
+    "expected": {
+      "must_mention": [],
+      "must_not_mention": ["confirmed", "AUD"]
+    }
+  }
+]
