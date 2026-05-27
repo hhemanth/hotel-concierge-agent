@@ -35,7 +35,7 @@ Use this as the source of truth for what's done vs what needs work. When you fin
 - `backend/Dockerfile` — DONE (Railway-ready, Python 3.11 slim)
 - `backend/requirements.txt` — DONE (Voyage AI + fastmcp + langchain-mcp-adapters + beautifulsoup4)
 - `backend/.env.example` — DONE (VOYAGE_API_KEY, SUPABASE_URL, EMBEDDING_MODEL)
-- `backend/app/main.py` — DONE (FastAPI app, /chat, /healthz, CORS, request logging)
+- `backend/app/main.py` — **DONE** (FastAPI app; /chat returns StreamingResponse SSE; /healthz JSON; CORS; per-request cost tracking via request_context)
 - `backend/app/observability.py` — DONE (structured logging + token/cost tracker)
 - `backend/app/agent/state.py` — **DONE** (AgentState + BookingState TypedDicts; new fields: search_criteria, available_options, selected_option, booking_result, mentioned_properties, response_metadata)
 - `backend/app/agent/graph.py` — **DONE** (graph wired; _route_after_extract handles search + direct modes)
@@ -68,10 +68,15 @@ Use this as the source of truth for what's done vs what needs work. When you fin
 - `frontend/tailwind.config.ts` — DONE
 - `frontend/postcss.config.js` — DONE
 - `frontend/.env.example` — DONE
-- `frontend/app/layout.tsx` — DONE
-- `frontend/app/page.tsx` — **WORKING** (chat UI, calls /api/chat, displays history)
-- `frontend/app/globals.css` — DONE
-- `frontend/app/api/chat/route.ts` — DONE (proxies to backend)
+- `frontend/app/layout.tsx` — **DONE** (Inter + Playfair Display via next/font/google)
+- `frontend/app/page.tsx` — **DONE** (SSE streaming consumer; PropertyCard + OptionsGrid + BookingConfirmation components; typing indicator; navy/gold TFE design; option-selection flow sends "Option N" message)
+- `frontend/app/globals.css` — **DONE** (dot-bounce animation; navy background)
+- `frontend/app/api/chat/route.ts` — **DONE** (pipes SSE stream from backend)
+- `frontend/tailwind.config.ts` — **DONE** (navy #1B2A4A + gold #C9A84C custom colors; Inter/Playfair font vars)
+
+### CI/CD
+- `.github/workflows/ci.yml` — **DONE** (on PR: ruff + pyright + pytest backend; npm ci + next build frontend)
+- `.github/workflows/deploy.yml` — **DONE** (on merge to main: Railway backend deploy ∥ Vercel frontend deploy)
 
 ## Order of work (suggested)
 
