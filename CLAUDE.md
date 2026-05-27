@@ -14,7 +14,7 @@ Build a working demo of a single LangGraph agent that handles both **guest infor
 | ------------ | ---------------------------------------------------------------- |
 | LLM          | Anthropic Claude (Sonnet for agent reasoning, Haiku for router + judge) |
 | Agent framework | LangGraph                                                     |
-| Embeddings   | OpenAI `text-embedding-3-small`                                  |
+| Embeddings   | Voyage AI `voyage-large-2-instruct`                              |
 | Vector store | pgvector (Supabase in prod, local Postgres in dev)               |
 | Backend      | FastAPI (Python 3.11)                                            |
 | Frontend     | Next.js 14 app router (TypeScript, Tailwind)                     |
@@ -33,8 +33,8 @@ Use this as the source of truth for what's done vs what needs work. When you fin
 
 ### Backend
 - `backend/Dockerfile` — DONE (Railway-ready, Python 3.11 slim)
-- `backend/requirements.txt` — DONE (pinned)
-- `backend/.env.example` — DONE
+- `backend/requirements.txt` — DONE (Voyage AI + fastmcp + langchain-mcp-adapters + beautifulsoup4)
+- `backend/.env.example` — DONE (VOYAGE_API_KEY, SUPABASE_URL, EMBEDDING_MODEL)
 - `backend/app/main.py` — DONE (FastAPI app, /chat, /healthz, CORS, request logging)
 - `backend/app/observability.py` — DONE (structured logging + token/cost tracker)
 - `backend/app/agent/state.py` — DONE (AgentState TypedDict)
@@ -52,6 +52,9 @@ Use this as the source of truth for what's done vs what needs work. When you fin
 - `backend/app/data/faqs.md` — DONE (synthetic FAQs)
 - `backend/evals/test_conversations.json` — DONE (10 test cases)
 - `backend/evals/run_evals.py` — **STUB** — TODO: run cases, score with LLM-as-a-Judge, output JSON report
+
+### Supabase
+- `supabase/migrations/001_docs_table.sql` — DONE (pgvector schema: docs table + ivfflat index, 1024-dim for Voyage AI)
 
 ### Frontend
 - `frontend/package.json` — DONE
