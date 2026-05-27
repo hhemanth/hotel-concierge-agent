@@ -86,10 +86,11 @@ async def run(state: AgentState) -> dict:  # noqa: C901
         vibe_hints: list[str] = search_criteria.get("vibe_hints") or []
         min_nights: int | None = search_criteria.get("min_nights")
 
+        vibe = vibe_hints[0] if vibe_hints else None
         options = search_hotels(
             location=location,
             amenities=booking_in_progress.get("preferences") or None,
-            vibe=vibe_hints or None,
+            vibe=vibe,
             max_price_aud=booking_in_progress.get("max_price_per_night"),
             min_nights=min_nights,
         )
