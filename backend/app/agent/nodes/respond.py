@@ -2,10 +2,15 @@
 
 This is the only node that talks to the user. It branches on intent + booking
 state and assembles an LLM prompt with the relevant context.
+
+After generating the reply it also populates response_metadata so the SSE
+transport (and frontend) can render property cards and surface booking results
+without parsing the free-text reply.
 """
 
 from __future__ import annotations
 
+import json
 import os
 
 from anthropic import Anthropic
@@ -34,21 +39,51 @@ def _format_docs(docs: list[dict]) -> str:
 
 
 def _format_options(options: list[dict]) -> str:
+    """Format available hotel options as a numbered list for the LLM prompt."""
     lines = []
     for i, o in enumerate(options, 1):
-        lines.append(
-            f"{i}. {o['name']} ({o['property_id']}) — {o['neighbourhood']}, "
-            f"AUD {o['price_per_night']:.0f}/night, "
-            f"amenities: {', '.join(o.get('amenities', []))}."
-        )
+        name = o.get("name", o.get("property_id", f"Option {i}"))
+        pid = o.get("property_id", "")
+        neighbourhood = o.get("neighbourhood", "")
+        price = o.get("price_per_night")
+        amenities = o.get("amenities", [])
+        offers = o.get("offers", [])
+
+        line = f"{i}. {name}"
+        if pid:
+            line += f" ({pid})"
+        if neighbourhood:
+            line += f" — {neighbourhood}"
+        if price is not None:
+            line += f", AUD {price:.0f}/night"
+        if amenities:
+            line += f", amenities: {', '.join(amenities)}"
+        if offers:
+            offer_strs = [f"{of['name']} ({of['discount_pct']}% off)" for of in offers if "name" in of]
+            if offer_strs:
+                line += f", offers: {'; '.join(offer_strs)}"
+        lines.append(line)
     return "\n".join(lines)
 
 
-def _build_user_block(state: AgentState) -> str:
+def _format_booking_result(result: dict) -> str:
+    """Format a confirmed booking result for the LLM prompt."""
+    return json.dumps(result, indent=2)
+
+
+def _build_user_block(state: AgentState) -> str:  # noqa: C901
     intent = state.get("intent")
     messages = state.get("messages", [])
     latest = messages[-1]["content"] if messages else ""
 
+    # Enhanced booking fields (Steps 7–10)
+    available_options: list[dict] = state.get("available_options") or []
+    booking_result: dict | None = state.get("booking_result")
+    search_criteria: dict = state.get("search_criteria") or {}
+
+    # ------------------------------------------------------------------
+    # Info intent: RAG-backed Q&A
+    # ------------------------------------------------------------------
     if intent == "info":
         docs = state.get("retrieved_docs") or []
         return (
@@ -58,40 +93,78 @@ def _build_user_block(state: AgentState) -> str:
             "If the context doesn't cover it, say so honestly."
         )
 
+    # ------------------------------------------------------------------
+    # Booking intent: multi-turn booking flow
+    # ------------------------------------------------------------------
     if intent == "booking":
-        booking = state.get("booking_in_progress") or {}
+        booking: dict = state.get("booking_in_progress") or {}
+
+        # 1. Confirmed booking result (from enhanced booking node)
+        if booking_result and booking_result.get("booking_id"):
+            return (
+                f"Booking confirmed:\n{_format_booking_result(booking_result)}\n\n"
+                "Confirm the booking warmly to the user. Include the booking id, "
+                "property name, dates, and a one-line next-step (e.g. confirmation email)."
+            )
+
+        # 2. Legacy confirmed booking (from old booking flow)
+        if booking.get("confirmed_booking_id"):
+            return (
+                f"Booking confirmed:\n{json.dumps(booking, indent=2)}\n\n"
+                "Confirm the booking warmly to the user. Include the booking id, "
+                "property name, dates, and a one-line next-step (e.g. confirmation email)."
+            )
+
+        # 3. Available options to present (from enhanced booking node)
+        if available_options:
+            mode = search_criteria.get("mode", "direct")
+            if mode == "search":
+                preamble = "Search results:"
+            else:
+                preamble = "Availability result:"
+            return (
+                f"User said: {latest}\n\n"
+                f"Booking criteria: {json.dumps(booking, indent=2)}\n\n"
+                f"{preamble}\n{_format_options(available_options)}\n\n"
+                "Present these options to the user conversationally. "
+                "Include price, location, amenities, and any applicable offers. "
+                "Ask which they'd like to book or if they want to refine their criteria. "
+                "Reference options by number (e.g. 'Option 1')."
+            )
+
+        # 4. Legacy candidate_options (from old booking flow)
+        legacy_options: list[dict] = booking.get("candidate_options") or []
+        if legacy_options:
+            return (
+                f"User said: {latest}\n\n"
+                f"Booking criteria: {json.dumps(booking, indent=2)}\n\n"
+                f"Available options:\n{_format_options(legacy_options)}\n\n"
+                "Present these options to the user, conversationally. "
+                "Ask which they'd like to book or if they want to refine."
+            )
+
+        # 5. Missing parameters: ask a single follow-up question
         required = ("city", "check_in", "check_out", "guests")
         missing = [k for k in required if not booking.get(k)]
         if missing:
             return (
                 f"User said: {latest}\n\n"
-                f"Booking so far: {booking}\n\n"
+                f"Booking so far: {json.dumps(booking, indent=2)}\n\n"
                 f"You're missing: {', '.join(missing)}. "
                 "Ask the user a single friendly follow-up question that gathers "
                 "what's missing. Don't dump every field at once — pick the most natural."
             )
-        if booking.get("confirmed_booking_id"):
-            return (
-                f"Booking confirmed:\n{booking}\n\n"
-                "Confirm the booking warmly to the user. Include the booking id, "
-                "property name, dates, and a one-line next-step (e.g. confirmation email)."
-            )
-        options = booking.get("candidate_options") or []
-        if options:
-            return (
-                f"User said: {latest}\n\n"
-                f"Booking criteria: {booking}\n\n"
-                f"Available options:\n{_format_options(options)}\n\n"
-                "Present these options to the user, conversationally. "
-                "Ask which they'd like to book or if they want to refine."
-            )
+
+        # 6. No availability matched
         return (
-            f"User said: {latest}\n\nBooking state: {booking}\n\n"
+            f"User said: {latest}\n\nBooking state: {json.dumps(booking, indent=2)}\n\n"
             "No availability matched. Apologise, suggest the closest near-misses, "
             "and offer to adjust dates or budget."
         )
 
-    # smalltalk / unknown
+    # ------------------------------------------------------------------
+    # Smalltalk / unknown
+    # ------------------------------------------------------------------
     return f"User said: {latest}\n\nReply warmly and briefly."
 
 
@@ -111,4 +184,12 @@ async def run(state: AgentState) -> dict:
 
     reply = resp.content[0].text.strip() if resp.content else ""
     logger.info("respond", chars=len(reply))
-    return {"response": reply}
+
+    # Populate response_metadata for SSE transport and frontend card rendering
+    response_metadata: dict = {
+        "mentioned_properties": state.get("mentioned_properties") or [],
+        "available_options": state.get("available_options") or [],
+        "booking_result": state.get("booking_result"),
+    }
+
+    return {"response": reply, "response_metadata": response_metadata}
