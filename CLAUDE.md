@@ -47,7 +47,10 @@ Use this as the source of truth for what's done vs what needs work. When you fin
 - `backend/app/tools/booking_api.py` — **WORKING** (in-memory mock with check_availability, create_booking, cancel_booking)
 - `backend/app/rag/ingest.py` — **STUB** — TODO: read `data/*.json` + `data/faqs.md`, chunk, embed, upsert to pgvector
 - `backend/app/rag/retriever.py` — **STUB** — TODO: cosine similarity search via pgvector
-- `backend/app/data/properties.json` — DONE (4 synthetic properties)
+- `backend/app/data/__init__.py` — DONE (empty package marker)
+- `backend/app/data/properties.json` — DONE (5 synthetic properties, fallback)
+- `backend/app/data/properties.py` — DONE (thin loader: prefers properties_scraped.json, falls back to properties.json)
+- `backend/app/data/scrape_tfe.py` — DONE (async best-effort scraper: robots.txt-aware, httpx + BeautifulSoup, writes properties_scraped.json; graceful failure always produces output file)
 - `backend/app/data/inventory.json` — DONE (mock availability)
 - `backend/app/data/faqs.md` — DONE (synthetic FAQs)
 - `backend/evals/test_conversations.json` — DONE (10 test cases)
