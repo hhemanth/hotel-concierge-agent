@@ -28,6 +28,7 @@ type HotelOption = {
   check_out?: string;
   guests?: number;
   offers?: Offer[];
+  image_url?: string;
 };
 
 type BookingResult = {
@@ -174,17 +175,26 @@ function PropertyCard({
   return (
     <div className="w-72 flex-shrink-0 rounded-2xl overflow-hidden border border-stone-200 bg-white shadow-md hover:shadow-lg transition-shadow">
       {/* Image / header */}
-      <div className={`relative h-36 bg-gradient-to-br ${gradientClass}`}>
-        <div className="absolute inset-0 flex items-center justify-center opacity-10">
-          <svg viewBox="0 0 64 64" fill="white" className="w-24 h-24">
-            <rect x="8" y="20" width="48" height="36" rx="2" />
-            <rect x="16" y="4" width="32" height="16" rx="2" />
-            <rect x="24" y="36" width="16" height="20" rx="1" />
-            {[16, 28, 40].map((x) => (
-              <rect key={x} x={x} y="26" width="8" height="8" rx="1" />
-            ))}
-          </svg>
-        </div>
+      <div className={`relative h-40 bg-gradient-to-br ${gradientClass}`}>
+        {option.image_url ? (
+          // eslint-disable-next-line @next/next/no-img-element
+          <img
+            src={option.image_url}
+            alt={option.name}
+            className="absolute inset-0 h-full w-full object-cover"
+          />
+        ) : (
+          <div className="absolute inset-0 flex items-center justify-center opacity-10">
+            <svg viewBox="0 0 64 64" fill="white" className="w-24 h-24">
+              <rect x="8" y="20" width="48" height="36" rx="2" />
+              <rect x="16" y="4" width="32" height="16" rx="2" />
+              <rect x="24" y="36" width="16" height="20" rx="1" />
+              {[16, 28, 40].map((x) => (
+                <rect key={x} x={x} y="26" width="8" height="8" rx="1" />
+              ))}
+            </svg>
+          </div>
+        )}
         {bestOffer && (
           <div className="absolute top-3 left-3">
             <span className="rounded-full bg-gold px-2.5 py-1 text-xs font-semibold text-navy shadow">

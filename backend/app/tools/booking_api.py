@@ -13,7 +13,7 @@ import json
 import uuid
 from datetime import date
 from pathlib import Path
-from typing import TypedDict
+from typing import NotRequired, TypedDict
 
 _DATA_DIR = Path(__file__).resolve().parents[1] / "data"
 
@@ -26,6 +26,7 @@ class PropertyOption(TypedDict):
     price_per_night: float
     amenities: list[str]
     rating: float
+    image_url: NotRequired[str]
 
 
 class BookingConfirmation(TypedDict):
@@ -109,7 +110,7 @@ def check_availability(
             if not all(any(w in a for a in amen) for w in wanted):
                 continue
 
-        options.append({
+        entry: PropertyOption = {
             "property_id": prop["property_id"],
             "name": prop["name"],
             "city": prop["city"],
@@ -117,7 +118,10 @@ def check_availability(
             "price_per_night": round(avg_price, 2),
             "amenities": prop.get("amenities", []),
             "rating": prop.get("rating", 0.0),
-        })
+        }
+        if prop.get("image_url"):
+            entry["image_url"] = prop["image_url"]
+        options.append(entry)
 
     # Cheapest first
     options.sort(key=lambda o: o["price_per_night"])
