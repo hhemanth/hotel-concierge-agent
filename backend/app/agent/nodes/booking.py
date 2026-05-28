@@ -87,13 +87,25 @@ async def run(state: AgentState) -> dict:  # noqa: C901
         min_nights: int | None = search_criteria.get("min_nights")
 
         vibe = vibe_hints[0] if vibe_hints else None
+        amenities_param = booking_in_progress.get("preferences") or None
+        max_price = booking_in_progress.get("max_price_per_night")
         options = search_hotels(
             location=location,
-            amenities=booking_in_progress.get("preferences") or None,
+            amenities=amenities_param,
             vibe=vibe,
-            max_price_aud=booking_in_progress.get("max_price_per_night"),
+            max_price_aud=max_price,
             min_nights=min_nights,
         )
+        # If the price cap produced no results, relax it and show closest options.
+        if not options and max_price is not None:
+            logger.info("search_mode_price_fallback", max_price=max_price)
+            options = search_hotels(
+                location=location,
+                amenities=amenities_param,
+                vibe=vibe,
+                max_price_aud=None,
+                min_nights=min_nights,
+            )
 
         enriched: list[dict] = []
         for prop in options[:3]:

@@ -152,17 +152,20 @@ def _build_user_block(state: AgentState) -> str:  # noqa: C901
                 "Ask which they'd like to book or if they want to refine."
             )
 
-        # 5. Missing parameters: ask a single follow-up question
-        required = ("city", "check_in", "check_out", "guests")
-        missing = [k for k in required if not booking.get(k)]
-        if missing:
-            return (
-                f"User said: {latest}\n\n"
-                f"Booking so far: {json.dumps(booking, indent=2)}\n\n"
-                f"You're missing: {', '.join(missing)}. "
-                "Ask the user a single friendly follow-up question to gather what's missing. "
-                "Do NOT say you will search or check availability — just ask for the missing detail."
-            )
+        # 5. Missing parameters: only applies to direct mode.
+        # In search/browse mode the user doesn't need to specify every field up front.
+        mode = search_criteria.get("mode", "direct")
+        if mode == "direct":
+            required = ("city", "check_in", "check_out", "guests")
+            missing = [k for k in required if not booking.get(k)]
+            if missing:
+                return (
+                    f"User said: {latest}\n\n"
+                    f"Booking so far: {json.dumps(booking, indent=2)}\n\n"
+                    f"You're missing: {', '.join(missing)}. "
+                    "Ask the user a single friendly follow-up question to gather what's missing. "
+                    "Do NOT say you will search or check availability — just ask for the missing detail."
+                )
 
         # 6. No availability matched
         return (
