@@ -131,9 +131,12 @@ def search_hotels(
                 if not all(v.lower() in combined_text for v in vibe):
                     continue
 
-            # Price filter: use average inventory price for this property
+            # Price filter: prefer inventory average, fall back to the property's
+            # own indicative rate (scraped hotels have no inventory entries).
             if max_price_aud is not None:
                 avg_price = _avg_price_for_property(prop["property_id"])
+                if avg_price is None:
+                    avg_price = prop.get("price_per_night")
                 if avg_price is not None and avg_price > max_price_aud:
                     continue
 

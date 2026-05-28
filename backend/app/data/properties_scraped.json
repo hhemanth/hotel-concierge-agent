@@ -1,0 +1,2838 @@
+[
+  {
+    "property_id": "a-by-adina-canberra",
+    "name": "A by Adina Canberra",
+    "city": "canberra",
+    "neighbourhood": "",
+    "max_guests": 4,
+    "rating": 4.5,
+    "price_per_night": 220.0,
+    "amenities": [
+      "24-hr Reception",
+      "Luggage Storage",
+      "Fast WiFi",
+      "Easy Access",
+      "Lobby Bar",
+      "Non-Smoking",
+      "Full Kitchen Apartment",
+      "Laundry in Apartment",
+      "Parking On-site: $20/Night"
+    ],
+    "description": "",
+    "check_in_time": "14:00",
+    "check_out_time": "11:00",
+    "pet_policy": "Contact the hotel for its pet policy",
+    "parking": "Parking On-site: $20/Night",
+    "address": "1 Constitution Avenue, Canberra, 2601",
+    "image_url": "https://media.tfehotels.com/media/filer_public/4b/fd/4bfdfbf0-e22a-4eeb-9a74-3e9adb25977b/a-by-adina-canberra-one-bedroom-apartment-01-2021-450x300.jpg",
+    "latitude": -35.28275,
+    "longitude": 149.13101,
+    "phone": "+61 2 5134 6444",
+    "faqs": [
+      {
+        "question": "Does the hotel have an airport transfer or shuttle service?",
+        "answer": "<p>The hotel does not offer airport pick up service, however guest can find numerous transport alternatives including taxi and Uber. Alternatively, guest can book airport and ground transfer service via our partner's website. For more information, go to <a target=\"_blank\" href=\"https://www.tfehotels.com/en/shuttle/\">tfehotels.com/shuttle</a></p>"
+      },
+      {
+        "question": "Is parking available at the hotel?",
+        "answer": "<p>Parking is available for guests of A by Adina Canberra through the Constitution Place carpark. The cost of parking is $20.00 per 24 hour period, with multi use entry and exit access via license plate recognition or validated ticket.</p>\n\n<p>For detailed information about parking, <u><a href=\"https://stay.abyadina.com/canberra/parking\" rel=\"noreferrer\" target=\"_blank\">click here</a></u></p>"
+      },
+      {
+        "question": "What are the children policies and age restrictions at A by Adina Canberra?",
+        "answer": "<p>Persons under the age of 18 must be accompanied by a parent or legal guardian. Children under the age of 12 years using existing bedding can stay at no additional charge in the room with guardians / parents.</p>"
+      }
+    ],
+    "source": "scraped:tfehotels.com"
+  },
+  {
+    "property_id": "a-by-adina-sydney",
+    "name": "A by Adina Sydney",
+    "city": "sydney",
+    "neighbourhood": "",
+    "max_guests": 4,
+    "rating": 4.3,
+    "price_per_night": 320.0,
+    "amenities": [
+      "24-hr Reception",
+      "Luggage Storage",
+      "Fast WiFi",
+      "Easy Access",
+      "Lobby Bar",
+      "Non-Smoking",
+      "Laundry in Apartment",
+      "Indoor Pool",
+      "Restaurant",
+      "Full Kitchen Apartment",
+      "Off-site Parking from $60/night"
+    ],
+    "description": "",
+    "check_in_time": "14:00",
+    "check_out_time": "11:00",
+    "pet_policy": "Contact the hotel for its pet policy",
+    "parking": "Off-site Parking from $60/night",
+    "address": "2 Hunter Street, Sydney, 2000",
+    "image_url": "https://media.tfehotels.com/media/filer_public/0b/ce/0bcecc6e-7f6b-483c-bb1c-68570bb4a2c7/a-by-adina-sydney-one-bedroom-lounge-room-01-2022-450x300.jpg",
+    "latitude": -33.86513,
+    "longitude": 151.20757,
+    "phone": "+61 2 9182 9500",
+    "faqs": [
+      {
+        "question": "Does the hotel have an airport transfer or shuttle service?",
+        "answer": "<p>The hotel does not offer an airport pick up service, however there are alternative transport options available including taxi’s, hire cards, Uber, light rail, bus and a short walk to the Circular Quay train station. Alternatively, guests can book airport and ground transfer services via our partner's website. For more information, go to <a href=\"https://www.tfehotels.com/en/shuttle/\" target=\"_blank\">tfehotels.com/shuttle</a></p>"
+      },
+      {
+        "question": "Is parking available at the hotel?",
+        "answer": "<p>Car parking is located at Angel Place Car Park, 123 Pitt Street, Sydney and is charged at an additional cost of $60 per vehicle/per 24-hour period (starting from the entry time recorded on your parking ticket). Please bring your ticket at reception for validation before driving out. Entry is available from 6am - midnight, 7 days a week. Should you require access outside of these hours, contact Wilson Parking directly.</p>\n\n<p>For detailed information about parking and direction, <u><a href=\"https://stay.abyadina.com/wp-content/uploads/2022/08/A-by-Adina_Sydney_Map-for-Parking_Aug22_2.pdf\" rel=\"noreferrer\" target=\"_blank\">click here</a></u></p>"
+      },
+      {
+        "question": "What are the children policies and age restrictions at A by Adina Sydney?",
+        "answer": "<p>Persons under the age of 18 must be accompanied by a parent or legal guardian. Children under the age of 12 years using existing bedding can stay at no additional charge in the room with guardians / parents.</p>"
+      },
+      {
+        "question": "Is breakfast available at the hotel?",
+        "answer": "<p>Breakfast is served at hotel's restaurant Dean &amp; Nancy on 22 and available from 6.30am - 10.30am weekdays, 7am - 11am on weekends. In-room dining option is also available.</p>"
+      }
+    ],
+    "source": "scraped:tfehotels.com"
+  },
+  {
+    "property_id": "adina-apartment-hotel-adelaide-treasury",
+    "name": "Adina Apartment Hotel Adelaide Treasury",
+    "city": "adelaide",
+    "neighbourhood": "",
+    "max_guests": 4,
+    "rating": 4.6,
+    "price_per_night": 220.0,
+    "amenities": [
+      "24 Hour Reception",
+      "Luggage Storage",
+      "Free WiFi",
+      "Indoor Pool",
+      "Sauna",
+      "Gym",
+      "Spa / Jacuzzi",
+      "Non-smoking",
+      "Easy Access",
+      "Conference Facilities",
+      "Restaurant Chargeback",
+      "Laundry in Apartments",
+      "Full Kitchen Apartments",
+      "Kitchenette in All Studios",
+      "Parking Off-site: $25/Day"
+    ],
+    "description": "Official site of Adina Apartment Hotel Adelaide Treasury, full serviced apartments accommodation centrally located in Adelaide CBD. Book direct today.",
+    "check_in_time": "15:00",
+    "check_out_time": "11:00",
+    "pet_policy": "Contact the hotel for its pet policy",
+    "parking": "Parking Off-site: $25/Day",
+    "address": "2 Flinders Street, Adelaide, 5000",
+    "image_url": "https://media.tfehotels.com/media/filer_public/b8/b6/b8b661db-a3b6-4532-9f8c-4aaf870e8535/adina-apartment-hotel-adelaide-courtyard-01-2018-450x300.jpg",
+    "latitude": -34.92695,
+    "longitude": 138.60034,
+    "phone": "+61 8 8112 0000",
+    "faqs": [
+      {
+        "question": "Does the hotel have an airport transfer or shuttle service?",
+        "answer": "<p>The hotel does not have its own pick up service, however guest can find numerous transport alternatives including taxi and Uber. Alternatively, guest can book airport and ground transfer service via our partner's website. For more information, go to <a target=\"_blank\" href=\"https://www.tfehotels.com/en/shuttle/\">tfehotels.com/shuttle</a></p>"
+      },
+      {
+        "question": "Is parking available at the hotel?",
+        "answer": "<p>Parking is available at Adina Adelaide guests for $25 per car per night located 3 minutes away at Gawler Place. Guest can park temporarily at hotel's loading dock located on 2 Flinders Street to collect parking pass from hotel reception. Maximum car height is 2.03m.</p>"
+      },
+      {
+        "question": "What are the children policies and age restrictions at Adina Adelaide Treasury?",
+        "answer": "<p>Persons under the age of 18 must be accompanied by a parent or legal guardian. Children under the age of 12 years using existing bedding can stay at no additional charge in the room with guardians / parents.</p>"
+      },
+      {
+        "question": "Is breakfast available at the hotel?",
+        "answer": "<p>Room service option is now availlable from 7 days a week from Treasury 1860. For further information regarding dining options, please contact hotel on 08 8112 0000</p>"
+      },
+      {
+        "question": "Is the swimming pool and wellness facilities open at this time?",
+        "answer": "<p>Adina Adelaide Treasury is equipped with on-site gym, a heated indoor swimming pool, spa/jacuzzi, sauna, and courtyard area.</p>"
+      }
+    ],
+    "source": "scraped:tfehotels.com"
+  },
+  {
+    "property_id": "adina-apartment-hotel-auckland-britomart",
+    "name": "Adina Apartment Hotel Auckland Britomart",
+    "city": "auckland",
+    "neighbourhood": "",
+    "max_guests": 4,
+    "rating": 4.3,
+    "price_per_night": 150.0,
+    "amenities": [
+      "24-hr Reception",
+      "Luggage Storage",
+      "Free WiFi",
+      "Gym",
+      "Restaurant",
+      "Bar",
+      "Room Service",
+      "Non-smoking",
+      "Easy Access",
+      "Conference Facilities",
+      "Laundry in Apartments",
+      "Kitchenette in All Studio",
+      "Full Kitchen Apartments",
+      "Parking on-site: from NZD 50/Night"
+    ],
+    "description": "None",
+    "check_in_time": "15:00",
+    "check_out_time": "11:00",
+    "pet_policy": "Contact the hotel for its pet policy",
+    "parking": "Parking on-site: from NZD 50/Night",
+    "address": "2 Tapora Street, Auckland, 1010",
+    "image_url": "https://media.tfehotels.com/media/filer_public/e0/bd/e0bd498e-571b-420e-82f0-ec43efe67e38/adina-apartment-hotel-auckland-britomart-three-bedroom-premier-apartment-lounge-room-01-2017-450x300.jpg",
+    "latitude": -36.84647,
+    "longitude": 174.77438,
+    "phone": "+64 9393 8200",
+    "faqs": [
+      {
+        "question": "Does the hotel have an airport transfer or shuttle service?",
+        "answer": "<p>The hotel does not have its own pick-up service; however, guests can find numerous transport alternatives including taxis and Ubers. Alternatively, guests can book airport and ground transfer services via our partner’s website. For more information, go to <a href=\"https://www.tfehotels.com/en/shuttle/\" target=\"_blank\">tfehotels.com/shuttle</a></p>"
+      },
+      {
+        "question": "Is parking available at the hotel?",
+        "answer": "<p>Parking is available for NZ$50 per night, per vehicle, with a maximum height clearance of 2.1m. Guests must check in first, after which reception will allocate an available parking space and provide access via the room key. Parking can be added when booking online via our website. Parking spaces are subject to availability upon arrival. </p>"
+      },
+      {
+        "question": "What are the children policies and age restrictions at Adina Auckland Britomat?",
+        "answer": "<p>Guests under 18 must be accompanied by a parent or legal guardian. Children under 12 can stay free of charge when sharing existing bedding with their parents or guardians. </p>"
+      },
+      {
+        "question": "Is breakfast available at the hotel?",
+        "answer": "<p>Breakfast is available daily at Yard Bar &amp; Eatery from 7am - 10am.</p>"
+      }
+    ],
+    "source": "scraped:tfehotels.com"
+  },
+  {
+    "property_id": "adina-apartment-hotel-bondi-beach-sydney",
+    "name": "Adina Apartment Hotel Bondi Beach Sydney",
+    "city": "sydney",
+    "neighbourhood": "Bondi Beach",
+    "max_guests": 4,
+    "rating": 4.5,
+    "price_per_night": 320.0,
+    "amenities": [
+      "24-hr Reception",
+      "Luggage Storage",
+      "Free WiFi",
+      "Outdoor Pool",
+      "Gym",
+      "Easy Access",
+      "Non-smoking",
+      "Conference Facilities",
+      "Restaurant Chargeback",
+      "Laundry in Apartments",
+      "Full Kitchen Apartments",
+      "Kitchenette in All Studios",
+      "Parking on-site - $33/Day"
+    ],
+    "description": "Ideally located in an exciting lifestyle precinct, minutes from the sand, Adina Apartment Hotel Bondi Beach is perfect accommodation in bondi beach and close to everything Bondi Beach has to offer",
+    "check_in_time": "15:00",
+    "check_out_time": "11:00",
+    "pet_policy": "Contact the hotel for its pet policy",
+    "parking": "Parking on-site - $33/Day",
+    "address": "69-73 Hall Street, Bondi Beach, Sydney, 2026",
+    "image_url": "https://media.tfehotels.com/media/filer_public/bf/be/bfbec5b0-65d0-4a17-a6b5-29105329d2f2/adina-apartment-hotel-bondi-beach-exterior-2016.jpg",
+    "latitude": -33.88955,
+    "longitude": 151.27189,
+    "phone": "+61 2 9300 4800",
+    "faqs": [
+      {
+        "question": "Does the hotel have an airport transfer or shuttle service?",
+        "answer": "<p>The hotel does not have its own pick up service, however guest can find numerous transport alternatives including taxi and Uber. Alternatively, guest can book airport and ground transfer service via our partner's website. For more information, go to <a href=\"https://www.tfehotels.com/en/shuttle/\" target=\"_blank\">tfehotels.com/shuttle</a></p>"
+      },
+      {
+        "question": "Is parking available at the hotel?",
+        "answer": "<p>Secure on-site parking is available for Adina Bondi guests at AU$33 per night with unlimited entries and exits. To access the car park beneath the hotel, enter via O’Brien Street and the parking ticket will be validated at the hotel reception. Maximum vehicle height is 2.1m. Parking spot can be booked online as an add-on when booking accommodation via our website (subject to availability).</p>"
+      },
+      {
+        "question": "What are the children policies and age restrictions at Adina Bondi Beach?",
+        "answer": "<p>Persons under the age of 18 must be accompanied by a parent or legal guardian. Children under the age of 12 years using existing bedding can stay at no additional charge in the room with guardians / parents.</p>"
+      },
+      {
+        "question": "Can I book tour or local activities at the hotel?",
+        "answer": "<p>The local information pack and brochures are available at reception desk for all our guests. To enhance your travel experience, you can also arrange sightseeing tours, day trips and activities online before you arrive at our hotel via our partner's website. To find and book a local attraction tour, visit <a href=\"http://tfehotels.com/tours\" target=\"_blank\">tfehotels.com/tours</a>.</p>"
+      },
+      {
+        "question": "Is breakfast available at the hotel?",
+        "answer": "<p>Breakfast is avaiable at bills Bondi Beach, which located next to the hotel. The breakfast menu is served till late, so you can take your time enjoying the selection of tasty options including bills' famous ricotta hotcakes, banana and honeycomb butter .</p>"
+      }
+    ],
+    "source": "scraped:tfehotels.com"
+  },
+  {
+    "property_id": "adina-apartment-hotel-brisbane-anzac-square",
+    "name": "Adina Apartment Hotel Brisbane Anzac Square",
+    "city": "brisbane",
+    "neighbourhood": "",
+    "max_guests": 4,
+    "rating": 4.2,
+    "price_per_night": 320.0,
+    "amenities": [
+      "24 Hour Reception",
+      "Luggage Storage",
+      "Free WiFi",
+      "Valet Parking: AU$57/Day",
+      "Full Kitchen Apartments",
+      "Kitchenette in All Studios",
+      "Laundry in Apartments",
+      "Easy Access",
+      "Non-smoking",
+      "Room Service"
+    ],
+    "description": "Adina Apartment Hotel is in a superb location close to Brisbane’s CBD, Casino, South Bank & Central Railway are all within walking distance",
+    "check_in_time": "15:00",
+    "check_out_time": "11:00",
+    "pet_policy": "Contact the hotel for its pet policy",
+    "parking": "Valet Parking: AU$57/Day",
+    "address": "255 Ann Street, Brisbane, 4000",
+    "image_url": "https://media.tfehotels.com/media/filer_public/13/1a/131acf40-003d-4abf-baef-22f129cb7f42/adina-apartment-hotel-brisbane-anzac-square-exterior-2-2025-600-400.jpg",
+    "latitude": -27.46669,
+    "longitude": 153.02592,
+    "phone": "+61 7 3001 9888",
+    "faqs": [
+      {
+        "question": "Does the hotel have an airport transfer or shuttle service?",
+        "answer": "<p>The hotel does not have its own pick up service, however guest can find numerous transport alternatives including taxi and Uber. Alternatively, guest can book airport and ground transfer service via our partner's website. For more information, go to <a href=\"https://www.tfehotels.com/en/shuttle/\" target=\"_blank\">tfehotels.com/shuttle</a></p>"
+      },
+      {
+        "question": "Is parking available at the hotel?",
+        "answer": "<p>Valet Parking is available on-site for AU$57 per day and is subject to availability and is valid for multiple entry and exit. Should car parking be required please notify the hotel as soon as possible. Vehicle size restrictions: Height 1.9 metre, length 5.3 metres and weight restrictions apply. Please note that parking for motorcycles is not available at our property.</p>"
+      },
+      {
+        "question": "What are the children policies and age restrictions at Adina Brisbane Anzac Square?",
+        "answer": "<p>Persons under the age of 18 must be accompanied by a parent or legal guardian. Children under the age of 12 years using existing bedding can stay at no additional charge in the room with guardians / parents.</p>"
+      },
+      {
+        "question": "Is breakfast available at the hotel?",
+        "answer": "<p>Adina Brisbane Anzac Square does not have breakfast or restaurant facilites, however guest will find numerous cafes and restaurants nearby including Pando Cafe, Grab Coffee and Melt Brothers Toasties, Espresso &amp; Gems</p>"
+      }
+    ],
+    "source": "scraped:tfehotels.com"
+  },
+  {
+    "property_id": "adina-apartment-hotel-brisbane",
+    "name": "Adina Apartment Hotel Brisbane",
+    "city": "brisbane",
+    "neighbourhood": "",
+    "max_guests": 4,
+    "rating": 4.6,
+    "price_per_night": 320.0,
+    "amenities": [
+      "Check-out: 11 am",
+      "24-hr Reception",
+      "luggage Storage",
+      "Free WiFi",
+      "Restaurant",
+      "Room Service",
+      "Pool",
+      "Gym",
+      "Non-smoking",
+      "Laundry in Apartments",
+      "Full Kitchen Apartments",
+      "Kitchenette in All Studios",
+      "Parking on-site: $30/Day"
+    ],
+    "description": "The new Adina Apartment Hotel Brisbane is in the heart of the CBD close to Queen Street Mall, with studios and hotel apartments plus restaurant, bar, gym and pool.",
+    "check_in_time": "15:00",
+    "check_out_time": "11:00",
+    "pet_policy": "Contact the hotel for its pet policy",
+    "parking": "Parking on-site: $30/Day",
+    "address": "171 George Street, Brisbane, 4000",
+    "image_url": "https://media.tfehotels.com/media/filer_public/ee/e1/eee15057-0b5c-4a2e-bd02-2bd75924dc65/adina-apartment-hotel-brisbane-two-bedroom-premier-room-with-balcony-lounge-room-01-2018-450x300.jpg",
+    "latitude": -27.47179,
+    "longitude": 153.02467,
+    "phone": "+61 7 3155 1000",
+    "faqs": [
+      {
+        "question": "Does the hotel have an airport transfer or shuttle service?",
+        "answer": "<p>The hotel does not have its own pick up service, however guest can find numerous transport alternatives including taxi and Uber. Alternatively, guest can book airport and ground transfer service via our partner's website. For more information, go to <a target=\"_blank\" href=\"https://www.tfehotels.com/en/shuttle/\">tfehotels.com/shuttle</a></p>"
+      },
+      {
+        "question": "Is parking available at the hotel?",
+        "answer": "<p>Limited parking is available on-site and is subject to availability for AU$30 per car per day. Due to high demand, car parking is on first come first serve basis and cannot be booked in advance. Parking space is accessible from 20 Charlotte Street. Guests can access the car park prior to checking-in. For more information, <u><a href=\"https://media.adinahotels.com/media/filer_public/a6/fd/a6fd3567-ebd2-42ac-a19b-c791bf52e193/adina-brisbane-parking.pdf\" target=\"_blank\">see parking direction</a></u>.</p>"
+      },
+      {
+        "question": "What are the children policies and age restrictions at Adina Brisbane?",
+        "answer": "<p>Persons under the age of 18 must be accompanied by a parent or legal guardian. Children under the age of 12 years using existing bedding can stay at no additional charge in the room with guardians / parents.</p>"
+      },
+      {
+        "question": "Is breakfast available at the hotel?",
+        "answer": "<p>Breakfast is available at St Marks Road Co, which is located in the hotel lobby.</p>\n\n<p><strong>Opening Hours:</strong></p>\n\n<p>Monday to Friday : 6:00am - 12:30pm<br>\nSaturday: 7:00am - 12:00pm<br>\nSunday :7:00am - 12:00pm</p>"
+      }
+    ],
+    "source": "scraped:tfehotels.com"
+  },
+  {
+    "property_id": "adina-citylife-auckland",
+    "name": "Adina CityLife Auckland",
+    "city": "auckland",
+    "neighbourhood": "",
+    "max_guests": 4,
+    "rating": 4.3,
+    "price_per_night": 220.0,
+    "amenities": [
+      "24 Hour Reception",
+      "Luggage Storage",
+      "Complimentary WiFi",
+      "Full Kitchen Apartments",
+      "Laundry in Apartments",
+      "Easy Access",
+      "Non-smoking",
+      "Indoor Salt Water Pool",
+      "Gym",
+      "Valet Parking"
+    ],
+    "description": "",
+    "check_in_time": "15:00",
+    "check_out_time": "11:00",
+    "pet_policy": "Contact the hotel for its pet policy",
+    "parking": "Valet Parking",
+    "address": "171 Queen Street, Auckland, 1010",
+    "image_url": "https://media.tfehotels.com/media/filer_public/9e/da/9eda7c46-92f9-4d7c-9f76-b3b2f0a8066a/557219-citylife-auckland-pool.jpg",
+    "latitude": -36.84778835,
+    "longitude": 174.7651531,
+    "phone": "+64 9 979 7200",
+    "faqs": [
+      {
+        "question": "Does the hotel have an airport transfer or shuttle service?",
+        "answer": "<p>The hotel does not offer airport pick up service, however guest can find numerous transport alternatives including taxi and Uber. Alternatively, guest can book airport and ground transfer service via our partner's website. For more information, go to <a target=\"_blank\" href=\"https://www.tfehotels.com/en/shuttle/\">tfehotels.com/shuttle</a></p>"
+      },
+      {
+        "question": "What are the children policies and age restrictions at Adina CityLife Auckland?",
+        "answer": "<p>Persons under the age of 18 must be accompanied by a parent or legal guardian. Children under the age of 12 years using existing bedding can stay at no additional charge in the room with guardians / parents.</p>"
+      },
+      {
+        "question": "Is breakfast available at the hotel?",
+        "answer": "<p>Adina CityLife Auckland currently does not have breakfast or restaurant facilities, however guest will find numerous cool cafes and restaurants nearby.</p>"
+      },
+      {
+        "question": "Is parking available at the hotel?",
+        "answer": "<p>Onsite valet parking is available for $45 per night via 8 Durham Lane, with unlimited retrievals during your stay.</p>"
+      }
+    ],
+    "source": "scraped:tfehotels.com"
+  },
+  {
+    "property_id": "adina-citylife-wellington",
+    "name": "Adina CityLife Wellington",
+    "city": "wellington",
+    "neighbourhood": "",
+    "max_guests": 4,
+    "rating": 4.2,
+    "price_per_night": 220.0,
+    "amenities": [
+      "24 Hour Reception",
+      "Luggage Storage",
+      "Complimentary WiFi",
+      "Gym",
+      "Easy Access",
+      "Executive Boardroom",
+      "Non-smoking",
+      "Laundry in Apartments",
+      "Restaurant Chargeback",
+      "EV Charging Stations",
+      "Parking on-site: $31/Night",
+      "Full Kitchen Apartments",
+      "Kitchenette in All Studios"
+    ],
+    "description": "",
+    "check_in_time": "15:00",
+    "check_out_time": "11:00",
+    "pet_policy": "Contact the hotel for its pet policy",
+    "parking": "Parking on-site: $31/Night",
+    "address": "300 Lambton Quay, Wellington, 6011",
+    "image_url": "https://media.tfehotels.com/media/filer_public/fd/07/fd070b60-992b-4f53-a8db-c26ab0ab4f22/adina-citylife-wellington-guest-lounge.jpg",
+    "latitude": -41.28474188,
+    "longitude": 174.7753291,
+    "phone": "+64 4 922 2800",
+    "faqs": [
+      {
+        "question": "Does the hotel have an airport transfer or shuttle service?",
+        "answer": "<p>The hotel does not offer airport pick up service, however guest can find numerous transport alternatives including taxi and Uber. Alternatively, guest can book airport and ground transfer service via our partner's website. For more information, go to <a target=\"_blank\" href=\"https://www.tfehotels.com/en/shuttle/\">tfehotels.com/shuttle</a></p>"
+      },
+      {
+        "question": "What are the children policies and age restrictions at Adina CityLife Wellington?",
+        "answer": "<p>Persons under the age of 18 must be accompanied by a parent or legal guardian. Children under the age of 12 years using existing bedding can stay at no additional charge in the room with guardians / parents.</p>"
+      },
+      {
+        "question": "Is breakfast available at the hotel?",
+        "answer": "<p>Adina CityLife Wellington does not have breakfast or restaurant facilities, however guest will find numerous cool cafes and restaurants nearby.</p>"
+      },
+      {
+        "question": "Is parking available at the hotel?",
+        "answer": "<p>Parking is available ($31/night). Vehicle entrance is on 14 Gilmer Terrace.</p>\n\n<p>Please contact the reception for information if required. </p>"
+      }
+    ],
+    "source": "scraped:tfehotels.com"
+  },
+  {
+    "property_id": "adina-apartment-hotel-coogee-sydney",
+    "name": "Adina Apartment Hotel Coogee Sydney",
+    "city": "sydney",
+    "neighbourhood": "Coogee",
+    "max_guests": 4,
+    "rating": 4.1,
+    "price_per_night": 320.0,
+    "amenities": [
+      "24 Hour Reception",
+      "Luggage Storage",
+      "Free WiFi",
+      "Indoor Pool",
+      "Gym",
+      "Non-smoking",
+      "Easy Access",
+      "Conference Facilities",
+      "Laundry in Apartments",
+      "Full Kitchen Apartments",
+      "Kitchenette in All Studios",
+      "Parking on-site: $25/Day"
+    ],
+    "description": "Official Site. Adina Coogee Sydney is great serviced apartment near famous Coogee Beach and Randwick. Hotel rooms are modern with Free WiFi. Book now",
+    "check_in_time": "15:00",
+    "check_out_time": "11:00",
+    "pet_policy": "Contact the hotel for its pet policy",
+    "parking": "Parking on-site: $25/Day",
+    "address": "183 Coogee Bay Road, Coogee, Sydney, 2034",
+    "image_url": "https://media.tfehotels.com/media/filer_public/35/70/35709ec3-eeac-4566-a8c2-71f3cf69d30c/adina-apartment-hotel-coogee-sydney-one-bedroom-apartment-lounge-room-and-dining-03-2018.jpg",
+    "latitude": -33.92043,
+    "longitude": 151.25352,
+    "phone": "+61 2 9578 6000",
+    "faqs": [
+      {
+        "question": "Does the hotel have an airport transfer or shuttle service?",
+        "answer": "<p>The hotel does not have its own pick up service, however guest can find numerous transport alternatives including taxi and Uber. Alternatively, guest can book airport and ground transfer service via our partner's website. For more information, go to <a target=\"_blank\" href=\"https://www.tfehotels.com/en/shuttle/\">tfehotels.com/shuttle</a></p>"
+      },
+      {
+        "question": "Is parking available at the hotel?",
+        "answer": "<p>Secure underground parking is available on-site for AU$25 per night. Upon check in please advise reception if parking is required. To enter car park before check in, please press '0' and then the 'bell' symbol on the display on the right hand side of the driveway. The max height is 2.1m. Parking spot can be booked online as an add-on when booking accommodation via our website.</p>"
+      },
+      {
+        "question": "What are the children policies and age restrictions at Adina Coogee?",
+        "answer": "<p>Persons under the age of 18 must be accompanied by a parent or legal guardian. Children under the age of 12 years using existing bedding can stay at no additional charge in the room with guardians / parents.</p>"
+      },
+      {
+        "question": "Is breakfast available at the hotel?",
+        "answer": "<p>Adina Coogee does not have breakfast or restaurant facilities at the hotel, however guest will find numerous cool cafes and restaurants nearby including Tropicana Cafe, Cali Press, and the famous Coogee Pavilion.</p>"
+      }
+    ],
+    "source": "scraped:tfehotels.com"
+  },
+  {
+    "property_id": "adina-apartment-hotel-darwin-waterfront",
+    "name": "Adina Apartment Hotel Darwin Waterfront",
+    "city": "darwin",
+    "neighbourhood": "",
+    "max_guests": 4,
+    "rating": 4.0,
+    "price_per_night": 480.0,
+    "amenities": [
+      "24 Hour Reception",
+      "Luggage Storage",
+      "Free WiFi",
+      "Gym",
+      "Outdoor Pool",
+      "Restaurant",
+      "Bar",
+      "Room Service",
+      "Easy Access",
+      "Non-smoking",
+      "Wedding Facilities",
+      "Conference Facilities",
+      "Laundry in Apartments",
+      "Full Kitchen Apartments",
+      "Kitchenette in All Studios",
+      "Parking on-site: $19/Day"
+    ],
+    "description": "Spacious apartments 2 min walk from CBD. Overlooking darwin waterfront wave pool, Stokes Hill Wharf, next to buzzing restaurants including Il Lido barpiiza, award winning Wharf One and The Precinct.",
+    "check_in_time": "15:00",
+    "check_out_time": "11:00",
+    "pet_policy": "Contact the hotel for its pet policy",
+    "parking": "Parking on-site: $19/Day",
+    "address": "7 Kitchener Drive, Darwin, 0800",
+    "image_url": "https://media.tfehotels.com/media/filer_public/62/20/62209785-3056-4d13-8b4c-f777eaf91bab/adina-apartment-hotel-darwin-waterfront-studio-view-room-01-2016-450x300.jpg",
+    "latitude": -12.46639,
+    "longitude": 130.84701,
+    "phone": "+61 8 8982 9999",
+    "faqs": [
+      {
+        "question": "Does the hotel have an airport transfer or shuttle service?",
+        "answer": "<p>The hotel does not have its own pick up service, however guest can find numerous transport alternatives including taxi and Uber. Alternatively, guest can book airport and ground transfer service via our partner's website. For more information, go to <a href=\"https://www.tfehotels.com/en/shuttle/\" target=\"_blank\">tfehotels.com/shuttle</a></p>"
+      },
+      {
+        "question": "Is parking available at the hotel?",
+        "answer": "<p>Parking at Adina Darwin Waterfront is available on-site for $19 per night. Simply collect a car park pass at reception upon check in and park in the Multi Story Car park next door. The pass valid for 1 car only. Unlimited entry and exit is available</p>"
+      },
+      {
+        "question": "What are the children policies and age restrictions at Adina Darwin Waterfront?",
+        "answer": "<p>Persons under the age of 18 must be accompanied by a parent or legal guardian. Children under the age of 12 years using existing bedding can stay at no additional charge in the room with guardians / parents.</p>"
+      },
+      {
+        "question": "Is breakfast available at the hotel?",
+        "answer": "<p>Breakfast is available daily at the Curve restaurant from 6.30am - 10.00am</p>"
+      },
+      {
+        "question": "Do any of the rooms have balconies?",
+        "answer": "<p>We do have rooms with balconies however they are subject to availability upon request.</p>"
+      },
+      {
+        "question": "Are there washing machines in the hotel?",
+        "answer": "<p>We do have coin operated washing facilities within the hotel. If you have booked either 1 Bedroom or 2 Bedroom apartment, you will have washing facilities within your room. </p>"
+      }
+    ],
+    "source": "scraped:tfehotels.com"
+  },
+  {
+    "property_id": "adina-heritage-christchurch",
+    "name": "Adina Heritage Christchurch",
+    "city": "christchurch",
+    "neighbourhood": "",
+    "max_guests": 4,
+    "rating": 4.4,
+    "price_per_night": 220.0,
+    "amenities": [
+      "24 Hour Reception",
+      "Luggage Storage",
+      "Free WiFi",
+      "Easy Access",
+      "Non-smoking",
+      "Parking on-site: $30/night",
+      "Spa",
+      "Sauna",
+      "Gym",
+      "Heated Indoor Pool",
+      "Laundry in Apartments",
+      "Full Kitchen Apartments"
+    ],
+    "description": "",
+    "check_in_time": "15:00",
+    "check_out_time": "11:00",
+    "pet_policy": "Contact the hotel for its pet policy",
+    "parking": "Parking on-site: $30/night",
+    "address": "28 - 30 Cathedral Square, Christchurch, 8011",
+    "image_url": "https://media.tfehotels.com/media/filer_public/67/a7/67a724e6-04f0-423f-af77-42ab17b85409/adina-heritage-christchurch-2.jpg",
+    "latitude": -43.53110666,
+    "longitude": 172.6380543,
+    "phone": "+64 3 983 4800",
+    "faqs": [
+      {
+        "question": "Does the hotel have an airport transfer or shuttle service?",
+        "answer": "<p>The hotel does not offer airport pick up service, however guest can find numerous transport alternatives including taxis and Uber. Alternatively, guests can book airport and ground transfer service via our partner's website. For more information, go to <a href=\"https://www.tfehotels.com/en/shuttle/\" target=\"_blank\">tfehotels.com/shuttle</a></p>"
+      },
+      {
+        "question": "Is breakfast available at the hotel?",
+        "answer": "<p>Adina Heritage Christchurch does not have breakfast or restaurant facilities, however there are many cool cafes and restaurants within easy walking distance. We also partner with a nearby hotel restaurant with a chargeback option available for added convenience.</p>"
+      },
+      {
+        "question": "Is parking available at the hotel?",
+        "answer": "<p>On-site parking is available at a rate of $30 per night/per vehicle (subject to availability on arrival)<br>\nHeight Restriction: 2.2m</p>"
+      },
+      {
+        "question": "What are the children policies and age restrictions at Adina Heritage Christchurch?",
+        "answer": "<p>Persons under the age of 18 must be accompanied by a parent or legal guardian. Children under the age of 12 years using existing bedding can stay at no additional charge in the room with parents or guardians. \n</p>"
+      }
+    ],
+    "source": "scraped:tfehotels.com"
+  },
+  {
+    "property_id": "adina-apartment-hotel-melbourne-on-flinders",
+    "name": "Adina Apartment Hotel Melbourne on Flinders",
+    "city": "melbourne",
+    "neighbourhood": "Melbourne CBD",
+    "max_guests": 4,
+    "rating": 4.2,
+    "price_per_night": 220.0,
+    "amenities": [
+      "24 Hour Reception",
+      "Luggage Storage",
+      "Free WiFi",
+      "Non-smoking",
+      "Gym",
+      "Laundry in Apartments",
+      "Full Kitchen Apartments",
+      "Parking on-site: $45/Day"
+    ],
+    "description": "In the heart of Melbourne city, 200m from Federation Square and near Flinders Street station. Enjoy spacious apartments with kitchen and laundry facilities, gym, on-site parking. Free WiFi.",
+    "check_in_time": "15:00",
+    "check_out_time": "11:00",
+    "pet_policy": "Contact the hotel for its pet policy",
+    "parking": "Parking on-site: $45/Day",
+    "address": "88 Flinders Street, Melbourne CBD, Melbourne, 3000",
+    "image_url": "https://media.tfehotels.com/media/filer_public/55/5e/555e3d84-e1ad-4c5c-a0dc-bca0b35db40e/adina-melbourne-flinders-street-apartment-hotel-loft-apartment-living-room-01-2022-450x300.jpg",
+    "latitude": -37.81599,
+    "longitude": 144.97171,
+    "phone": "+61 3 8663 0000",
+    "faqs": [
+      {
+        "question": "Does the hotel have an airport transfer or shuttle service?",
+        "answer": "<p>The hotel does not offer airport pick up service, however guest can find numerous transport alternatives including taxi and Uber. Alternatively, guest can book airport and ground transfer service via our partner's website. For more information, go to <a target=\"_blank\" href=\"https://www.tfehotels.com/en/shuttle/\">tfehotels.com/shuttle</a></p>"
+      },
+      {
+        "question": "Is parking available at the hotel?",
+        "answer": "<p>On-site parking is available for AU$45 per night and can be accessed by turning left at Exhibition Street from Flinders Street and then left at Malthouse Lane. The maximum vehicle height is 2m. Simply check-in to hotel and our friendly reception team will arrange access for parking using your room key.</p>"
+      },
+      {
+        "question": "What are the children policies and age restrictions at Adina Melbourne on Flinders?",
+        "answer": "<p>Persons under the age of 18 must be accompanied by a parent or legal guardian. Children under the age of 12 years using existing bedding can stay at no additional charge in the room with guardians / parents.</p>"
+      },
+      {
+        "question": "Is breakfast available at the hotel?",
+        "answer": "<p>Adina Melbourne on Flinders does not have breakfast or restaurant facilities, however guest will find numerous cool cafes and restaurants nearby.</p>"
+      }
+    ],
+    "source": "scraped:tfehotels.com"
+  },
+  {
+    "property_id": "adina-apartment-hotel-melbourne-southbank",
+    "name": "Adina Apartment Hotel Melbourne Southbank",
+    "city": "melbourne",
+    "neighbourhood": "",
+    "max_guests": 4,
+    "rating": 4.6,
+    "price_per_night": 220.0,
+    "amenities": [
+      "24hr Reception",
+      "Luggage Storage",
+      "Free WiFi",
+      "Gym",
+      "Indoor Heated Pool",
+      "Eas Access",
+      "Non-smoking",
+      "Conference Facilities",
+      "Laundry in Apartment",
+      "Full Kitchen Apartments",
+      "Kitchenette in All Studios",
+      "Parking Off-site: $40/Day"
+    ],
+    "description": "Moments away from Melbourne’s bustling Southbank dining precinct features a ground floor café, gym, indoor pool, fully equipped kitchen and laundry.",
+    "check_in_time": "15:00",
+    "check_out_time": "11:00",
+    "pet_policy": "Contact the hotel for its pet policy",
+    "parking": "Parking Off-site: $40/Day",
+    "address": "99 City Road, Melbourne, 3006",
+    "image_url": "https://media.tfehotels.com/media/filer_public/c8/fa/c8fafa03-4979-42de-a434-67c2642d0795/adina-apartment-hotel-melbourne-southbank-lifestyle-pool-02-2020.jpg",
+    "latitude": -37.82258,
+    "longitude": 144.96478,
+    "phone": "+61 3 9491 6100",
+    "faqs": [
+      {
+        "question": "Does the hotel have an airport transfer or shuttle service?",
+        "answer": "<p>The hotel does not have its own pick up service, however guest can find numerous transport alternatives including taxi and Uber. Alternatively, guest can book airport and ground transfer service via our partner's website. For more information, go to <a href=\"https://www.tfehotels.com/en/shuttle/\" target=\"_blank\">tfehotels.com/shuttle</a></p>"
+      },
+      {
+        "question": "Is parking available at the hotel?",
+        "answer": "<p>Offsite car parking is available to hotel guests for a charge of $40 per car per day at Wilson Parking – Eureka (70 City Road, Southbank), directly opposite the hotel. Please obtain a parking ticket at the entry to the parking station, and inform one of our reception team members at the hotel upon check in. Further information on ticket validation and payment will be provided. Maximum Height 1.9 meters.</p>"
+      },
+      {
+        "question": "What are the children policies and age restrictions at Adina Melbourne Southbank?",
+        "answer": "<p>Persons under the age of 18 must be accompanied by a parent or legal guardian. Children under the age of 12 years using existing bedding can stay at no additional charge in the room with guardians / parents.</p>"
+      },
+      {
+        "question": "Is breakfast available at the hotel?",
+        "answer": "<p>The hotel does not have on-site breakfast facilities, however guests will find a great range of alternative in surrounding area.</p>"
+      }
+    ],
+    "source": "scraped:tfehotels.com"
+  },
+  {
+    "property_id": "adina-apartment-hotel-melbourne",
+    "name": "Adina Apartment Hotel Melbourne",
+    "city": "melbourne",
+    "neighbourhood": "Melbourne CBD",
+    "max_guests": 4,
+    "rating": 4.3,
+    "price_per_night": 220.0,
+    "amenities": [
+      "24 Hour Reception",
+      "Luggage Storage",
+      "Free WiFi",
+      "Gym",
+      "Heated Indoor Pool",
+      "Easy Access",
+      "Non-smoking",
+      "Conference Facilities",
+      "Laundry in Apartment",
+      "Full Kitchen Apartments",
+      "Kitchenette in All Studios",
+      "Parking on-site: $35/Day"
+    ],
+    "description": "Newly renovated apartment hotel on Queen Street, Melbourne CBD. 11 luxury penthouses with city views. 5 minutes from Bourke Street Mall. Free WiFi. Spacious apartments, kitchen and laundry facilities.",
+    "check_in_time": "15:00",
+    "check_out_time": "11:00",
+    "pet_policy": "Contact the hotel for its pet policy",
+    "parking": "Parking on-site: $35/Day",
+    "address": "189 Queen Street, Melbourne CBD, Melbourne, 3000",
+    "image_url": "https://media.tfehotels.com/media/filer_public/05/68/056891e3-6156-446b-a31b-b98f6fbf5035/adina-apartment-hotel-melbourne-three-bedroom-penthouse-lounge-room-03-2017-450x300.jpg",
+    "latitude": -37.81423,
+    "longitude": 144.95997,
+    "phone": "+61 3 9934 0000",
+    "faqs": [
+      {
+        "question": "Does the hotel have an airport transfer or shuttle service?",
+        "answer": "<p>The hotel does not offer airport pick up service, however guest can find numerous transport alternatives including taxi and Uber. Alternatively, guest can book airport and ground transfer service via our partner's website. For more information, go to <a target=\"_blank\" href=\"https://www.tfehotels.com/en/shuttle/\">tfehotels.com/shuttle</a></p>"
+      },
+      {
+        "question": "Is parking available at the hotel?",
+        "answer": "<p>On-site parking is AU$35 per night and can be accessed on Merlin Alleyoff Little Bourke Street. Parking is available on levels 2, 3 and 4. The parking ticket can be validated at reception and is valid for multiple entry and exits. Height restriction is 1.82m.</p>\n\n<p>Parking space provided by Wilson parking and is subject to availability on arrival.</p>"
+      },
+      {
+        "question": "What are the children policies and age restrictions at Adina Melbourne?",
+        "answer": "<p>Persons under the age of 18 must be accompanied by a parent or legal guardian. Children under the age of 12 years using existing bedding can stay at no additional charge in the room with guardians / parents.</p>"
+      },
+      {
+        "question": "Can I book tour or local activities at the hotel?",
+        "answer": "<p>The local information pack and brochures are available at reception desk for all our guests. To enhance your travel experience, you can also arrange sightseeing tours, day trips and activities online before you arrive at our hotel via our partner's website. To find and book a local attraction tour, visit <a target=\"_blank\" href=\"http://tfehotels.com/tours\">tfehotels.com/tours</a>.</p>"
+      },
+      {
+        "question": "Do you have room with balcony?",
+        "answer": "<p>All our Premier One Bedroom Apartment, Two and Three Bedrooms Apartments including penthouse apartments have a balcony. For one bedroom apartment, please ensure to book a \"One Bedroom with Balcony\" room type. No balcony in all Studio rooms.</p>"
+      },
+      {
+        "question": "Can I smoke in the balcony?",
+        "answer": "<p>No smoking is allowed at the hotel including on the balcony and in all public areas.</p>"
+      }
+    ],
+    "source": "scraped:tfehotels.com"
+  },
+  {
+    "property_id": "adina-apartment-hotel-pentridge-melbourne",
+    "name": "Adina Apartment Hotel Pentridge Melbourne",
+    "city": "melbourne",
+    "neighbourhood": "Coburg",
+    "max_guests": 4,
+    "rating": 4.6,
+    "price_per_night": 220.0,
+    "amenities": [
+      "24-hr Reception",
+      "Luggage Storage",
+      "Free WiFi",
+      "Restaurant",
+      "Wine Bar",
+      "Room Service",
+      "Non-smoking",
+      "Easy access",
+      "Laundry in Apartment",
+      "Conference Facilities",
+      "Wedding Facilities",
+      "Gym",
+      "Underground Relaxation Pool",
+      "Full Kitchen Apartment",
+      "Parking on-site: $19/Night"
+    ],
+    "description": "The new Adina Hotel Pentridge Melbourne offers spacious studios and apartments with fully equipped kitchen and dining precinct.",
+    "check_in_time": "14:00",
+    "check_out_time": "11:00",
+    "pet_policy": "Contact the hotel for its pet policy",
+    "parking": "Parking on-site: $19/Night",
+    "address": "1 Pentridge Boulevard, Coburg, Melbourne, 3058",
+    "image_url": "https://media.tfehotels.com/media/filer_public/ee/cb/eecb7ae3-1b96-4a5e-8c65-cf61a2361154/adina_apartment_hotel_pentridge_prototype_room_bedroom_01_2022-450x300.jpg",
+    "latitude": -37.73708,
+    "longitude": 144.96783,
+    "phone": "+61 3 9100 9100",
+    "faqs": [
+      {
+        "question": "Does the hotel have an airport transfer or shuttle service?",
+        "answer": "<p>The hotel does not have its own pick up service, however guest can find numerous transport alternatives including taxi and Uber. Alternatively, guest can book airport and ground transfer service via our partner's website. For more information, go to <a href=\"https://www.tfehotels.com/en/shuttle/\" target=\"_blank\">tfehotels.com/shuttle</a></p>"
+      },
+      {
+        "question": "Is parking available at the hotel?",
+        "answer": "<p>Our on-site car park is located at 1 Pentridge Boulevard. Parking is available at a rate of $19 per night, per vehicle, and is subject to availability. All vehicles must be registered with Reception. The car park height restriction is 2.1 metres.</p>"
+      },
+      {
+        "question": "What are the children policies and age restrictions at Adina Pentridge Melbourne?",
+        "answer": "<p>Persons under the age of 18 must be accompanied by a parent or legal guardian. Children under the age of 12 years using existing bedding can stay at no additional charge in the room with guardians / parents.</p>"
+      },
+      {
+        "question": "Can I book tour or local activities at the hotel?",
+        "answer": "<p>The local information pack and brochures are available at reception desk for all our guests. To enhance your travel experience, you can also arrange sightseeing tours, day trips and activities online before you arrive at our hotel via our partner's website. To find and book a local attraction tour, visit <a href=\"http://tfehotels.com/tours\" target=\"_blank\">tfehotels.com/tours</a>.</p>"
+      },
+      {
+        "question": "Is breakfast available at the hotel?",
+        "answer": "<p>Breakfast is served at The Mess Hall</p>"
+      }
+    ],
+    "source": "scraped:tfehotels.com"
+  },
+  {
+    "property_id": "adina-apartment-hotel-perth-barrack-plaza",
+    "name": "Adina Apartment Hotel Perth Barrack Plaza",
+    "city": "perth",
+    "neighbourhood": "",
+    "max_guests": 4,
+    "rating": 3.9,
+    "price_per_night": 220.0,
+    "amenities": [
+      "24 Hour Reception",
+      "Luggage Storage",
+      "Free WiFi",
+      "Outdoor Pool",
+      "Gym",
+      "Sauna",
+      "Easy Access",
+      "Non-smoking",
+      "Conference Facilities",
+      "Laundry in Apartments",
+      "Full Kitchen Apartments",
+      "Kitchenette in All Studios",
+      "Parking on-site: $30/Day"
+    ],
+    "description": "Official Site of Adina Apartment Hotel Perth Barrack Plaza. Offering full serviced apartments accommodation in Perth CBD. Book direct for best rate guaranteed.",
+    "check_in_time": "15:00",
+    "check_out_time": "11:00",
+    "pet_policy": "Contact the hotel for its pet policy",
+    "parking": "Parking on-site: $30/Day",
+    "address": "138 Barrack Street, Perth, 6000",
+    "image_url": "https://media.tfehotels.com/media/filer_public/d7/82/d782a119-4968-47c5-a73d-620a304ec26b/adina-apartment-hotel-perth-barrack-plaza-pool-450x300.jpg",
+    "latitude": -31.95293,
+    "longitude": 115.86138,
+    "phone": "+61 8 9267 0000",
+    "faqs": [
+      {
+        "question": "Does the hotel have an airport transfer or shuttle service?",
+        "answer": "<p>The hotel does not offer airport pick up service, however guest can find numerous transport alternatives including taxi and Uber. Alternatively, guest can book airport and ground transfer service via our partner's website. For more information, go to <a target=\"_blank\" href=\"https://www.tfehotels.com/en/shuttle/\">tfehotels.com/shuttle</a></p>"
+      },
+      {
+        "question": "What are the children policies and age restrictions at Adina Perth Barrack Plaza?",
+        "answer": "<p>Persons under the age of 18 must be accompanied by a parent or legal guardian. Children under the age of 12 years using existing bedding can stay at no additional charge in the room with guardians / parents.</p>"
+      },
+      {
+        "question": "Is breakfast available at the hotel?",
+        "answer": "<p>Adina Perth Barrack Plaza does not have breakfast or restaurant facilities, however guest will find numerous cool cafes and restaurants nearby.</p>"
+      },
+      {
+        "question": "Is parking available at the hotel?",
+        "answer": "<p>Parking is available on site and can be accessed at 363 Wellington Street and parking is available at a rate of $30 per day. Our car park is multiple entry/exit. Height Restriction is 2.0m.</p>\n\n<p>Please note that parking is limited and is subject to availability. In the event that the car park is full, our Reception team will assist you by providing directions to an alternative parking station.</p>"
+      },
+      {
+        "question": "How often will my room be serviced during my stay?",
+        "answer": "<p>For stays of 3 nights or more, your room will be serviced by housekeeping every 3rd night of your stay. For stays of less than 3 nights, your room can be serviced upon request. Fresh towels and in-room amenities can be provided at no extra cost.</p>"
+      }
+    ],
+    "source": "scraped:tfehotels.com"
+  },
+  {
+    "property_id": "adina-apartment-hotel-perth",
+    "name": "Adina Apartment Hotel Perth",
+    "city": "perth",
+    "neighbourhood": "",
+    "max_guests": 4,
+    "rating": 4.0,
+    "price_per_night": 220.0,
+    "amenities": [
+      "24 Hour Reception",
+      "Luggage Storage",
+      "Free WiFi",
+      "Room Service",
+      "Bar",
+      "Sauna",
+      "Gym",
+      "Outdoor Pool",
+      "Easy Access",
+      "Conference Rooms",
+      "Non-smoking",
+      "Laundry in Apartments",
+      "Restaurant Chargeback",
+      "Full Kitchen Apartments",
+      "Kitchenette in All Studios",
+      "Parking on-site: $30/Day"
+    ],
+    "description": "Official Site of Adina Apartment Hotel Perth, award-winning full serviced apartments accommodation in Perth. Next to Perth Convention and Exhibition Centre",
+    "check_in_time": "15:00",
+    "check_out_time": "11:00",
+    "pet_policy": "Contact the hotel for its pet policy",
+    "parking": "Parking on-site: $30/Day",
+    "address": "33 Mounts Bay Road, Perth, 6000",
+    "image_url": "https://media.tfehotels.com/media/filer_public/4f/3c/4f3c205c-e15d-414a-8167-48598c24d5d9/adina-apartment-hotel-perth-premier-grand-one-bedroom-apartment-lounge-room-2017jpg-450x300.jpg",
+    "latitude": -31.95569,
+    "longitude": 115.85282,
+    "phone": "+61 8 9217 8000",
+    "faqs": [
+      {
+        "question": "Does the hotel have an airport transfer or shuttle service?",
+        "answer": "<p>The hotel does not offer airport pick up service, however guest can find numerous transport alternatives including taxi and Uber. Alternatively, guest can book airport and ground transfer service via our partner's website. For more information, go to <a href=\"https://www.tfehotels.com/en/shuttle/\" target=\"_blank\">tfehotels.com/shuttle</a></p>"
+      },
+      {
+        "question": "Is parking available at the hotel?",
+        "answer": "<p>Parking is available on-site for AU$30.00 per night and accessible rom the corner of Mill Street &amp; Mounts Bay Road. The maximum vehicle height is 2.2m. Parking is limited and subject to availability on arrival.</p>"
+      },
+      {
+        "question": "What are the children policies and age restrictions at Adina Perth?",
+        "answer": "<p>Persons under the age of 18 must be accompanied by a parent or legal guardian. Children under the age of 12 years using existing bedding can stay at no additional charge in the room with guardians / parents.</p>"
+      },
+      {
+        "question": "Is breakfast available at the hotel?",
+        "answer": "<p>Breakfast is avaiable at Metro Bar &amp; Bistro which is located on the ground floor. Opening hours are subject to change.</p>"
+      }
+    ],
+    "source": "scraped:tfehotels.com"
+  },
+  {
+    "property_id": "adina-apartment-hotel-sydney-airport",
+    "name": "Adina Apartment Hotel Sydney Airport",
+    "city": "sydney",
+    "neighbourhood": "Mascot",
+    "max_guests": 4,
+    "rating": 4.3,
+    "price_per_night": 220.0,
+    "amenities": [
+      "24 Hours Reception",
+      "Luggage Storage",
+      "Free WiFi",
+      "Gym",
+      "Easy Access",
+      "Laundry in Apartments",
+      "Non-smoking",
+      "Full Kitchen Apartments",
+      "Kitchenette in All Studios",
+      "Parking on-site: $40/Night",
+      "Conference Facilites"
+    ],
+    "description": "Official Site. Adina Apartment Hotel Sydney Airport located mins from Mascot Train Station with parking facilities. Spacious apartments and free WiFi. Close to Marrickville Metro.",
+    "check_in_time": "15:00",
+    "check_out_time": "11:00",
+    "pet_policy": "Contact the hotel for its pet policy",
+    "parking": "Parking on-site: $40/Night",
+    "address": "17 Bourke Road, Mascot, Sydney, 2020",
+    "image_url": "https://media.tfehotels.com/media/filer_public/db/e5/dbe510cf-41cf-4355-9deb-f8078d68f478/adina-apartment-hotel-sydney-airport-exterior-1-2015-450x300.jpg",
+    "latitude": -33.92546,
+    "longitude": 151.18759,
+    "phone": "+61 2 9381 2000",
+    "faqs": [
+      {
+        "question": "Does the hotel have an airport transfer or shuttle service?",
+        "answer": "<p>The hotel does not have its own pick up service, however guest can find numerous transport alternatives including taxi and Uber. Alternatively, guest can book airport and ground transfer service via our partner's website. For more information, go to <a target=\"_blank\" href=\"https://www.tfehotels.com/en/shuttle/\">tfehotels.com/shuttle</a></p>"
+      },
+      {
+        "question": "Is parking available at the hotel?",
+        "answer": "<p>Parking is available AU$40 per night multiple entry and exit, located underneath the hotel building. Parking spot for certain days of the week can be booked online as an add-on when booking accommodation via our website.</p>"
+      },
+      {
+        "question": "What are the children policies and age restrictions at Adina Sydney Airport?",
+        "answer": "<p>Persons under the age of 18 must be accompanied by a parent or legal guardian. Children under the age of 12 years using existing bedding can stay at no additional charge in the room with guardians / parents.</p>"
+      },
+      {
+        "question": "Can I book tour or local activities at the hotel?",
+        "answer": "<p>The local information pack and brochures are available at reception desk for all our guests. To enhance your travel experience, you can also arrange sightseeing tours, day trips and activities online before you arrive at our hotel via our partner's website. To find and book a local attraction tour, visit <a href=\"http://tfehotels.com/tours\" target=\"_blank\">tfehotels.com/tours</a>.</p>"
+      },
+      {
+        "question": "Is breakfast available at the hotel?",
+        "answer": "<p>Breakfast is currently unavailable. Please contact the hotel for more information.</p>"
+      }
+    ],
+    "source": "scraped:tfehotels.com"
+  },
+  {
+    "property_id": "adina-apartment-hotel-sydney-chippendale",
+    "name": "Adina Apartment Hotel Sydney Chippendale",
+    "city": "sydney",
+    "neighbourhood": "Chippendale",
+    "max_guests": 4,
+    "rating": 4.7,
+    "price_per_night": 320.0,
+    "amenities": [
+      "24 Hour Reception",
+      "luggage Storage",
+      "Free WiFi",
+      "Gym",
+      "Outdoor Pool",
+      "Non-smoking",
+      "Laundry in Apartments",
+      "Kitchenette in All Studios",
+      "Full Kitchen Apartments",
+      "Parking on-site: $30/Day"
+    ],
+    "description": "Official Site. Adina Apartment Hotels Sydney Chippendale is conveniently located near the University of Sydney & the Sydney CBD. Book now for the best deal",
+    "check_in_time": "15:00",
+    "check_out_time": "11:00",
+    "pet_policy": "Contact the hotel for its pet policy",
+    "parking": "Parking on-site: $30/Day",
+    "address": "74-80 Ivy Street, Chippendale, Sydney, 2008",
+    "image_url": "https://media.tfehotels.com/media/filer_public/7b/72/7b728f6f-725b-4b4c-b0d2-48c5fb360dde/adina_apartment_hotel_sydney_chippendale_premier_two_bedroom_lounge_room_04_2022.jpg",
+    "latitude": -33.88912,
+    "longitude": 151.19564,
+    "phone": "+61 2 9311 8800",
+    "faqs": [
+      {
+        "question": "Does the hotel have an airport transfer or shuttle service?",
+        "answer": "<p>The hotel does not offer airport pick up service, however guest can find numerous transport alternatives including taxi and Uber. Alternatively, guest can book airport and ground transfer service via our partner's website. For more information, go to <a target=\"_blank\" href=\"https://www.tfehotels.com/en/shuttle/\">tfehotels.com/shuttle</a></p>"
+      },
+      {
+        "question": "Is parking available at the hotel?",
+        "answer": "<p>Parking is AU$30 per night, on-site and undercover. The maximum vehicle height is 2.05m. Three on-site electric vehicle charging stations available. Type 2 charger, 11kW.</p>"
+      },
+      {
+        "question": "What are the children policies and age restrictions at Adina Chippendale?",
+        "answer": "<p>Persons under the age of 18 must be accompanied by a parent or legal guardian. Children under the age of 12 years using existing bedding can stay at no additional charge in the room with guardians / parents.</p>"
+      },
+      {
+        "question": "Is breakfast available at the hotel?",
+        "answer": "<p>Breakfast available at Terra Cotta Roasters, which is located next to the hotel. Adina guest can enjoy breakfast at the cafe or have it delivered to the room and the charges can be added straight to your hotel account.</p>"
+      }
+    ],
+    "source": "scraped:tfehotels.com"
+  },
+  {
+    "property_id": "adina-apartment-hotel-sydney-darling-harbour",
+    "name": "Adina Apartment Hotel Sydney Darling Harbour",
+    "city": "sydney",
+    "neighbourhood": "King Street Wharf",
+    "max_guests": 4,
+    "rating": 4.2,
+    "price_per_night": 320.0,
+    "amenities": [
+      "24-hr Reception",
+      "Free WiFi",
+      "Luggage Storage",
+      "Restaurant",
+      "Bar",
+      "Outdoor Pool",
+      "Non-smoking",
+      "Gym",
+      "Easy Access",
+      "Conference Facilities",
+      "Laundry in Apartments",
+      "Full Kitchen Apartments",
+      "Kitchenette in All Studios",
+      "Parking on-site: $59/Day"
+    ],
+    "description": "Located in popular King Street Wharf by Sydney Darling Harbour, ICC Sydney and Barangaroo. Well-appointed one bedroom apartments,  or studio rooms.",
+    "check_in_time": "15:00",
+    "check_out_time": "11:00",
+    "pet_policy": "Contact the hotel for its pet policy",
+    "parking": "Parking on-site: $59/Day",
+    "address": "55 Shelley Street, King Street Wharf, Sydney, 2000",
+    "image_url": "https://media.tfehotels.com/media/filer_public/1b/20/1b20a3a5-3960-4d5b-aba3-9690eb5941f5/adina-sydney-darling-harbour-one-bedroom-apartment-accelerated-room-2026-3-900x600.jpg",
+    "latitude": -33.86856,
+    "longitude": 151.20243,
+    "phone": "+61 2 9249 7000",
+    "faqs": [
+      {
+        "question": "Does the hotel have an airport transfer or shuttle service?",
+        "answer": "<p>The hotel does not offer airport pick up service, however guest can find numerous transport alternatives including taxi and Uber. Alternatively, guest can book airport and ground transfer service via our partner's website. For more information, go to <a target=\"_blank\" href=\"https://www.tfehotels.com/en/shuttle/\">tfehotels.com/shuttle</a></p>"
+      },
+      {
+        "question": "Is parking available at the hotel?",
+        "answer": "<p>Yes — on site, undercover parking is available for guests, with pre booking required.</p>\n\n<p>Parking is AU$60 per night, or AU$55 for day use or conference parking. Please note that overstay fees apply after 12:00 pm the following day, and the maximum vehicle height is 2 metres.</p>\n\n<p>We recommend booking your parking in advance to secure a space. You can pre-book parking online <u><a href=\"https://public.hotelparking.com.au/adina-darling-harbour/guest/\" target=\"_blank\">click here.</a></u></p>"
+      },
+      {
+        "question": "What are the children policies and age restrictions at Adina Darling Harbour?",
+        "answer": "<p>Persons under the age of 18 must be accompanied by a parent or legal guardian. Children under the age of 12 years using existing bedding can stay at no additional charge in the room with guardians / parents.</p>"
+      },
+      {
+        "question": "Is breakfast available at the hotel?",
+        "answer": "<p>Yes. Breakfast is served daily at Shoreline Kitchen, located on the hotel’s ground floor. Shoreline Kitchen also offers lunch and dinner, a relaxed aperitivo hour, and in room dining — so you can eat your way, whether you’re heading out or staying in.</p>\n\n<p>If you feel like exploring, Darling Harbour and King Street Wharf are just outside, with plenty of cafés, bakeries and local favourites. Our team’s always happy to share local favourites. </p>"
+      }
+    ],
+    "source": "scraped:tfehotels.com"
+  },
+  {
+    "property_id": "adina-apartment-hotel-sydney-surry-hills",
+    "name": "Adina Apartment Hotel Sydney Surry Hills",
+    "city": "sydney",
+    "neighbourhood": "Surry Hills",
+    "max_guests": 4,
+    "rating": 4.2,
+    "price_per_night": 320.0,
+    "amenities": [
+      "24-hr Reception",
+      "Luggage Storage",
+      "Free WiFi",
+      "Outdoor Pool",
+      "Gym",
+      "Easy Access",
+      "Non-smoking",
+      "Conference Facilities",
+      "Laundry in Apartments",
+      "Full Kitchen Apartments",
+      "Restaurant Chargeback",
+      "Parking on-site - $50 / Day"
+    ],
+    "description": "Official Site. Adina Hotel Surry Hills is located in inner-city Surry Hills, offering  serviced apartments with full kitchen facilities. Book direct today.",
+    "check_in_time": "15:00",
+    "check_out_time": "11:00",
+    "pet_policy": "Contact the hotel for its pet policy",
+    "parking": "Parking on-site - $50 / Day",
+    "address": "359 Crown Street, Surry Hills, Sydney, 2010",
+    "image_url": "https://media.tfehotels.com/media/filer_public/fb/1e/fb1eefef-ccf1-427d-80f5-e178e7a8922a/adina-apartment-hotel-surry-hills-two-bedroom-apartment-lounge-room-01-2017-450x300.jpg",
+    "latitude": -33.88403,
+    "longitude": 151.214,
+    "phone": "+61 2 8302 1000",
+    "faqs": [
+      {
+        "question": "Does the hotel have an airport transfer or shuttle service?",
+        "answer": "<p>The hotel does not offer airport pick up service, however guest can find numerous transport alternatives including taxi and Uber. Alternatively, guest can book airport and ground transfer service via our partner's website. For more information, go to <a target=\"_blank\" href=\"https://www.tfehotels.com/en/shuttle/\">tfehotels.com/shuttle</a></p>"
+      },
+      {
+        "question": "Is parking available at the hotel?",
+        "answer": "<p>Limited secure underground parking is available at AU$50 per night with access to the carpark off Fitzroy Street. Maximum height is 2m.</p>"
+      },
+      {
+        "question": "What are the children policies and age restrictions at Adina Surry Hills?",
+        "answer": "<p>Persons under the age of 18 must be accompanied by a parent or legal guardian. Children under the age of 12 years using existing bedding can stay at no additional charge in the room with guardians / parents.</p>"
+      },
+      {
+        "question": "Is breakfast available at the hotel?",
+        "answer": "<p>Breakfast is avaiable at bills Surry Hills located on the ground floor of the hotel. The breakfast menu is served till late, so you can take your time enjoying the selection of tasty options including bills' famous ricotta pancake.</p>"
+      }
+    ],
+    "source": "scraped:tfehotels.com"
+  },
+  {
+    "property_id": "adina-apartment-hotel-sydney-town-hall",
+    "name": "Adina Apartment Hotel Sydney Town Hall",
+    "city": "sydney",
+    "neighbourhood": "Sydney CBD",
+    "max_guests": 4,
+    "rating": 4.8,
+    "price_per_night": 320.0,
+    "amenities": [
+      "24-hr Reception",
+      "Luggage Storage",
+      "Free WiFi",
+      "Semi Outdoor Pool",
+      "Room Service",
+      "Non-smoking",
+      "Easy Access",
+      "Laundry in Apartments",
+      "Kitchenette in All Studios",
+      "Full Kitchen Apartments",
+      "Parking on-site - $55/Day",
+      "Gym"
+    ],
+    "description": "Spacious &amp; welcoming Adina Apartment Hotel Sydney Town Hall is in a superb location close to Sydney&#39;s CBD, Rooms with panoramic city, harbour &amp; sunset",
+    "check_in_time": "15:00",
+    "check_out_time": "11:00",
+    "pet_policy": "Contact the hotel for its pet policy",
+    "parking": "Parking on-site - $55/Day",
+    "address": "511 Kent Street, Sydney CBD, Sydney, 2000",
+    "image_url": "https://media.tfehotels.com/media/filer_public/c6/a2/c6a2b80e-8b42-4d1e-97fb-2fdfd68464d1/adina-town-hall-one-bedroom-detail-prototype-02-2024-600x400.jpg",
+    "latitude": -33.87435,
+    "longitude": 151.2051,
+    "phone": "+61 2 9274 0000",
+    "faqs": [
+      {
+        "question": "Does the hotel have an airport transfer or shuttle service?",
+        "answer": "<p>The hotel does not offer airport pick up service, however guest can find numerous transport alternatives including taxi and Uber. Alternatively, guest can book airport and ground transfer service via our partner's website. For more information, go to <a href=\"https://www.tfehotels.com/en/shuttle/\" target=\"_blank\">tfehotels.com/shuttle</a></p>"
+      },
+      {
+        "question": "Is parking available at the hotel?",
+        "answer": "<p>Secure on-site parking is available for AU$55 per vehicle per night with unlimited entry and exit.The maximum vehicle height is 2.1m. Due to limited space, parking is subject to availability on arrival. On the off chance there are no bays available please contact reception to organise alternative options.</p>"
+      },
+      {
+        "question": "What are the children policies and age restrictions at Adina Sydney Town Hall?",
+        "answer": "<p>Persons under the age of 18 must be accompanied by a parent or legal guardian. Children under the age of 12 years using existing bedding can stay at no additional charge in the room with guardians / parents.</p>"
+      },
+      {
+        "question": "Is breakfast available at the hotel?",
+        "answer": "<p>Breakfast is avaiable at San Marzano located on the ground floor of the hotel, serving breakfast and lunch.</p>"
+      },
+      {
+        "question": "How often is my room or apartment serviced?",
+        "answer": "<p>For stays of 3 nights or more, your room will be serviced by housekeeping every 3rd night of your stay. For stays of less than 3 nights, your room can be serviced upon request. Fresh towels and in-room amenities can be provided at no extra cost.</p>"
+      }
+    ],
+    "source": "scraped:tfehotels.com"
+  },
+  {
+    "property_id": "adina-apartment-hotel-wollongong",
+    "name": "Adina Apartment Hotel Wollongong",
+    "city": "wollongong",
+    "neighbourhood": "",
+    "max_guests": 4,
+    "rating": 4.3,
+    "price_per_night": 220.0,
+    "amenities": [
+      "Luggage Storage",
+      "Free WiFi",
+      "Sauna",
+      "Gym",
+      "Non-smoking",
+      "Easy Access",
+      "Outdoor Pool",
+      "Conference Facilities",
+      "Laundry in Apartments",
+      "Kitchenette in All Studios",
+      "Full Kitchen Apartments",
+      "Parking on-site: $15/Day"
+    ],
+    "description": "Official site. Adina Apartment Hotel Wollongong has easy access to city’s beautiful beaches, restaurants & WIN stadium. Book direct with us for best rate.",
+    "check_in_time": "15:00",
+    "check_out_time": "11:00",
+    "pet_policy": "Contact the hotel for its pet policy",
+    "parking": "Parking on-site: $15/Day",
+    "address": "19 Market Street, Wollongong, 2500",
+    "image_url": "https://media.tfehotels.com/media/filer_public/c9/59/c9595a16-096f-4f56-823b-d0a88be779a8/adina-apartment-hotel-wollongong-two-bedroom-king-lounge-room-2018.jpg",
+    "latitude": -34.42457,
+    "longitude": 150.89971,
+    "phone": "+61 2 4250 5000",
+    "faqs": [
+      {
+        "question": "Does the hotel have an airport transfer or shuttle service?",
+        "answer": "<p>The hotel does not offer airport pick up service, however guest can find numerous transport alternatives including taxi and Uber. Alternatively, guest can book airport and ground transfer service via our partner's website. For more information, go to <a href=\"https://www.tfehotels.com/en/shuttle/\" target=\"_blank\">tfehotels.com/shuttle</a></p>"
+      },
+      {
+        "question": "Is parking available at the hotel?",
+        "answer": "<p>On-site and undercover parking is available at AU$15 per night. Maximum vehicle height is 2 meter. The carpark entrance is on Market Street and guest parking is located on level P4 &amp; P5.</p>"
+      },
+      {
+        "question": "What are the children policies and age restrictions at Adina Wollongong?",
+        "answer": "<p>Persons under the age of 18 must be accompanied by a parent or legal guardian. Children under the age of 12 years using existing bedding can stay at no additional charge in the room with guardians / parents.</p>"
+      },
+      {
+        "question": "Is breakfast available at the hotel?",
+        "answer": "<p>Adina Wollongong offers continental breakfast pack that can be purchased directly during check-in. We also offer breakfast starter pack for guest who stays in our one or two bedroom apartments which includes eggs, bread and butter, juice, milk and bacon. Guest can also pre-purchase the breakfast starter pack while booking accommodation online directly via our website.</p>"
+      },
+      {
+        "question": "Does Adina Wollongong has 24 hour reception?",
+        "answer": "<p>Our front office reception is available everyday between 7:00am - 11:00pm</p>"
+      }
+    ],
+    "source": "scraped:tfehotels.com"
+  },
+  {
+    "property_id": "adina-serviced-apartments-canberra-dickson",
+    "name": "Adina Serviced Apartments Canberra Dickson",
+    "city": "canberra",
+    "neighbourhood": "",
+    "max_guests": 4,
+    "rating": 4.3,
+    "price_per_night": 220.0,
+    "amenities": [
+      "Luggage Storage",
+      "Free WiFi",
+      "On-site Cafe",
+      "Easy Access",
+      "Non-smoking",
+      "Laundry in Apartments",
+      "Full Kitchen Apartments",
+      "Parking On-site: $16/Day"
+    ],
+    "description": "Serviced apartment hotel minutes from Canberra’s CBD and top attractions. Spacious rooms with fully equipped kitchens, private balconies and free WiFi.",
+    "check_in_time": "15:00",
+    "check_out_time": "11:00",
+    "pet_policy": "Contact the hotel for its pet policy",
+    "parking": "Parking On-site: $16/Day",
+    "address": "45 Dooring Street, Canberra, 2602",
+    "image_url": "https://media.tfehotels.com/media/filer_public/e4/d2/e4d2ec2a-8b84-4824-8f14-93305cfa201f/adina-serviced-apartments-canberra-dickson-premier-studio-room-02-2018-450x300.jpg",
+    "latitude": -35.25952,
+    "longitude": 149.13382,
+    "phone": "+61 2 6279 7000",
+    "faqs": [
+      {
+        "question": "Does the hotel have an airport transfer or shuttle service?",
+        "answer": "<p>The hotel does not offer airport pick up service, however guest can find numerous transport alternatives including taxi and Uber. Alternatively, guest can book airport and ground transfer service via our partner's website. For more information, go to <a target=\"_blank\" href=\"https://www.tfehotels.com/en/shuttle/\">tfehotels.com/shuttle</a></p>"
+      },
+      {
+        "question": "Is parking available at the hotel?",
+        "answer": "<p>On-site and undercover parking is available at AU$16 per night. Maximum vehicle height is 2.1m</p>"
+      },
+      {
+        "question": "What are the children policies and age restrictions at Adina Canberra Dickson?",
+        "answer": "<p>Persons under the age of 18 must be accompanied by a parent or legal guardian. Children under the age of 12 years using existing bedding can stay at no additional charge in the room with guardians / parents.</p>"
+      },
+      {
+        "question": "Is breakfast available at the hotel?",
+        "answer": "<p>Yes, Adina guests can purchase breakfast on the go pack at the reception or in advance online, which includes a choice of delicious muffin/croissant or toastie, a choice of hot drink or soft drink, a choice of breakfast snack and a fresh fruit.</p>"
+      },
+      {
+        "question": "How often is my room or apartment serviced?",
+        "answer": "<p>For stays of 3 nights or more, your room will be serviced by housekeeping every 3rd night of your stay. For stays of less than 3 nights, your room can be serviced upon request. Fresh towels and in-room amenities can be provided at no extra cost.\n</p>"
+      },
+      {
+        "question": "Does Adina Dickson has 24 hour reception?",
+        "answer": "<p>Our front office reception is operating only from 7.00am until 11.00pm, 7 days a week.</p>"
+      }
+    ],
+    "source": "scraped:tfehotels.com"
+  },
+  {
+    "property_id": "adina-serviced-apartments-canberra-james-court",
+    "name": "Adina Serviced Apartments Canberra James Court",
+    "city": "canberra",
+    "neighbourhood": "",
+    "max_guests": 4,
+    "rating": 3.6,
+    "price_per_night": 220.0,
+    "amenities": [
+      "Laundry In-room",
+      "Full Kitchen",
+      "Gym",
+      "Sauna",
+      "Outdoor Pool",
+      "Free WiFi",
+      "Luggage Storage",
+      "Non Smoking",
+      "Parking on-site: $20/Day",
+      "Restaurant Chargeback"
+    ],
+    "description": "Official website of Adina Serviced Apartments Hotel Canberra James Court (formerly Medina). These apartments are surrounded by all the conveniences of Canberra\\'s CBD, featuring close proximity to cafes, fine dining and shopping.",
+    "check_in_time": "15:00",
+    "check_out_time": "11:00",
+    "pet_policy": "Contact the hotel for its pet policy",
+    "parking": "Parking on-site: $20/Day",
+    "address": "74 Northbourne Avenue, Canberra, 2601",
+    "image_url": "https://media.tfehotels.com/media/filer_public/5e/6a/5e6a9043-0a9e-4bce-99d5-0dbd9a3c2307/medina-serviced-apartments-canberra-james-court-450x300.jpg",
+    "latitude": -35.27542,
+    "longitude": 149.13019,
+    "phone": "+61 2 6240 1234",
+    "faqs": [
+      {
+        "question": "Does the hotel have an airport transfer or shuttle service?",
+        "answer": "<p>The hotel does not offer airport pick up service, however guest can find numerous transport alternatives including taxi and Uber. Alternatively, guest can book airport and ground transfer service via our partner's website. For more information, go to <a target=\"_blank\" href=\"https://www.tfehotels.com/en/shuttle/\">tfehotels.com/shuttle</a></p>"
+      },
+      {
+        "question": "Is parking available at the hotel?",
+        "answer": "<p>Parking is available in underground car park for only AUD$20.00 per day, valid for multiple entry &amp; exit and is subject to availability. Simply check-in to hotel and our friendly reception team will arrange access for parking using your room key. Maximum vehicle height is 2m.</p>"
+      },
+      {
+        "question": "What are the children policies and age restrictions at Adina Canberra James Court?",
+        "answer": "<p>Persons under the age of 18 must be accompanied by a parent or legal guardian. Children under the age of 12 years using existing bedding can stay at no additional charge in the room with guardians / parents.</p>"
+      },
+      {
+        "question": "Is breakfast available at the hotel?",
+        "answer": "<p>Adina Canberra James Court does not have breakfast or restaurant facilities.</p>"
+      },
+      {
+        "question": "Is the swimming pool and wellness facilities open at this time?",
+        "answer": "<p>Adina Canberra James Court features on-site gym, open from 6.30am - 10.00pm. The outdoor pool, spa/ jacuzzi and sauna is open from 8.00am - 10.00pm.</p>"
+      },
+      {
+        "question": "Does Adina James Court has 24 hour reception?",
+        "answer": "<p>Our front office reception is available everyday between 7:00am - 11:00pm</p>"
+      },
+      {
+        "question": "How often is my room or apartment serviced?",
+        "answer": "<p>For stays of 3 nights or more, your room will be serviced by housekeeping every 3rd night of your stay. For stays of less than 3 nights, your room can be serviced upon request. Fresh towels and in-room amenities can be provided at no extra cost.</p>"
+      }
+    ],
+    "source": "scraped:tfehotels.com"
+  },
+  {
+    "property_id": "adina-serviced-apartments-canberra-kingston",
+    "name": "Adina Serviced Apartments Canberra Kingston",
+    "city": "canberra",
+    "neighbourhood": "",
+    "max_guests": 4,
+    "rating": 4.1,
+    "price_per_night": 220.0,
+    "amenities": [
+      "Luggage Storage",
+      "Non-smoking",
+      "Free WiFi",
+      "Outdoor Pool",
+      "Laundry",
+      "Indoor Pool",
+      "Gym",
+      "Full Kitchen Apartments",
+      "Parking on-site: $10/Day"
+    ],
+    "description": "Adina Serviced Apartments Canberra Kingston (formerly Medina) is centrally located in the exclusive embassy district of Kingston, five minutes from Parliament House. Book Online.",
+    "check_in_time": "15:00",
+    "check_out_time": "11:00",
+    "pet_policy": "Contact the hotel for its pet policy",
+    "parking": "Parking on-site: $10/Day",
+    "address": "11 Giles Street Kingston, Canberra, 2604",
+    "image_url": "https://media.tfehotels.com/media/filer_public/5d/78/5d78d056-431b-4aca-b235-73ea9b5583f9/medina-serviced-apartments-canberra-kingston-courtyard-01-2017-450x300.jpg",
+    "latitude": -35.31802,
+    "longitude": 149.13775,
+    "phone": "+61 2 6239 8100",
+    "faqs": [
+      {
+        "question": "Does the hotel have an airport transfer or shuttle service?",
+        "answer": "<p>The hotel does not offer airport pick up service, however guest can find numerous transport alternatives including taxi and Uber. Alternatively, guest can book airport and ground transfer service via our partner's website. For more information, go to <a href=\"https://www.tfehotels.com/en/shuttle/\" target=\"_blank\">tfehotels.com/shuttle</a></p>"
+      },
+      {
+        "question": "Is parking available at the hotel?",
+        "answer": "<p>Parking at Adina Canberra Kingston is available onsite to hotel guests for a charge of $10 per car per day. Parking is undercover with a height restriction of 2.06m. Parking can be accessed via Giles Street. All vehicles need to be registered with hotel reception.</p>"
+      },
+      {
+        "question": "What are the children policies and age restrictions at Adina Canberra Kingston?",
+        "answer": "<p>Persons under the age of 18 must be accompanied by a parent or legal guardian. Children under the age of 12 years using existing bedding can stay at no additional charge in the room with guardians / parents.</p>"
+      },
+      {
+        "question": "Is breakfast available at the hotel?",
+        "answer": "<p>Adina Canberra Kingston does not have breakfast or restaurant facilities.</p>"
+      },
+      {
+        "question": "Does Adina Canberra Kingston open 24 hours?",
+        "answer": "<p>Our front office reception is operating from 9.00am to 6.00pm 7 days a week.</p>\n\n<p>Please contact reception to make an alternative arrangement if you're planning to arrive after closing time.</p>"
+      },
+      {
+        "question": "How often is my room or apartment serviced?",
+        "answer": "<p>For stays of 3 nights or more, your room will be serviced by housekeeping every 3rd night of your stay. For stays of less than 3 nights, your room can be serviced upon request. Fresh towels and in-room amenities can be provided at no extra cost.</p>"
+      }
+    ],
+    "source": "scraped:tfehotels.com"
+  },
+  {
+    "property_id": "the-calile-hotel-brisbane",
+    "name": "The Calile Hotel Brisbane",
+    "city": "brisbane",
+    "neighbourhood": "",
+    "max_guests": 4,
+    "rating": 4.6,
+    "price_per_night": 480.0,
+    "amenities": [
+      "24-hr Reception",
+      "Luggage Storage",
+      "Free WiFi",
+      "Swimming Pool",
+      "Fitness Centre",
+      "Day Spa",
+      "Restaurant",
+      "Bar",
+      "Room Service",
+      "Easy Access",
+      "Non-smoking",
+      "Wedding facilities",
+      "Conference facilities",
+      "Parking: from $40/day"
+    ],
+    "description": "Official Site. Located in the James Street lifestyle Precinct, only a 10 minute drive to Brisbane CBD. With beautiful hotel rooms outdoor swimming pool, poolside cabanas, restaurants and bars",
+    "check_in_time": "14:00",
+    "check_out_time": "11:00",
+    "pet_policy": "Contact the hotel for its pet policy",
+    "parking": "Parking: from $40/day",
+    "address": "48 James Street, Brisbane, 4006",
+    "image_url": "https://media.tfehotels.com/media/filer_public/0a/08/0a0865af-ad3a-4a16-909e-e74151b82896/2020_thecalile_002_high-res-450x300.jpg",
+    "latitude": -27.45663,
+    "longitude": 153.04037,
+    "phone": "+61 7 3607 5888",
+    "faqs": [
+      {
+        "question": "Is parking available at the hotel?",
+        "answer": "<p>The Calile Hotel secure car park is available to access from 6:00AM – 12:00AM daily with the entrance through Ada Lane via Wandoo Street. The carpark has a maximum entrance height of 2.3 metres. Parking is $40.00/day for guests staying at The Calile, tickets can be validated at reception by Guest Services.</p>\n\n<p>Valet parking is available for $60.00 per day via our porte-cochère, entrance via Doggett Street.</p>\n\n<p>Parking can be booked online as an add-on when booking accommodation via our website.</p>"
+      },
+      {
+        "question": "What are the children policies and age restrictions at The Calile?",
+        "answer": "<p>Guests under the age of 18 must be accompanied by an adult to check-in and stay at The Calile. Our guest rooms can accommodate one child under the age of 12 years using existing bedding at no additional charge with a parent or guardian. Children must be accompanied by an adult in the gym, public and pool areas at all times. Read more about our children’s policy <u><a href=\"https://thecalilehotel.com/wp-content/uploads/2022/02/Childrens-Policy-1.pdf\" target=\"_blank\">here</a></u>.</p>"
+      },
+      {
+        "question": "What should I know about hotel check-in and check-out at The Calile Hotel?",
+        "answer": "<p>Hotel check-in is at 2:00PM and check-out before 11:00AM.  If you require a late checkout or early check-in, please discuss your requirements with Guest Services either prior to arrival or when checking in. Whilst our team will accommodate wherever possible, please note requests are subject to availability.</p>\n\n<p>Please be advised that use of the facilities including the pool is available only whilst checked-in to your room and not prior to check-in or following check-out.</p>\n\n<p>To complete check in on arrival, you will need a valid photo ID and a credit card. We place a temporary pre-authorisation of $100.00 per night for incidentals upon check in. Please also note that The Calile Hotel is a cashless venue.</p>\n\n<p>The hotel provides luggage storage for hotel guests pre or post-stay at no extra charge. Our reception is available to assist you 24 hours a day.</p>"
+      },
+      {
+        "question": "What dining options are available at The Calile Hotel?",
+        "answer": "<p>The hotel has four on-site restaurants and bars – Lobby Bar (ground level), Hellenika (poolside), Sushi Room (ground level) and SK Steak and Oyster on Ada Lane. For more information on opening hours, please <u><a href=\"https://thecalilehotel.com/james-street-dining-retail/\" target=\"_blank\">click here</a></u>.</p>\n\n<p>Adjacent to the hotel is recently opened Ada Lane, consisting of; sAme sAme, Land Of Smiles bar, Bianca, Gelato Messina and Jocelyn's Provisions. There are also a range of exquisite bars and restaurants within walking distance on James Street and surrounding suburbs. Discover more <u><a href=\"https://www.jamesst.com.au/food-drink/\" target=\"_blank\">jamesst.com.au/food-drink.</a></u></p>"
+      },
+      {
+        "question": "What are the transportation options available to get to The Calile Hotel?",
+        "answer": "<p>TAXI/UBER - A taxi or Uber to or from Brisbane Airport to The Calile will cost approximately $35.00 subject to traffic conditions.</p>\n\n<p>PRIVATE CAR - Arranging a private transfer to or from Brisbane Domestic or International Airport will cost approximately $79.00 each way. Contact concierge to book <u><a href=\"mailto:concierge@thecalilehotel.com\">here</a></u>.</p>\n\n<p>TRAIN - From Brisbane Airport – Take the Airtrain to Fortitude Valley station, this journey is approximately 40 minutes in duration and fares start from $18.00 one-way. The hotel is located one kilometre and a short ten-minute walk from Fortitude Valley station.</p>\n\n<p>From the Gold Coast – Take the Brisbane Airport train travelling north to Fortitude Valley station. Fares begin at $13.30 one-way. The hotel is located one kilometre and a short ten-minute walk from Fortitude Valley station.</p>\n\n<p>BUS - James Street near Robertson Street Stop 8A is situated adjacent to the entrance to the hotel. The bus has a set route, including Brisbane city and inner suburbs such as Teneriffe, Toowong, Auchenflower, Milton and Petrie Terrace.</p>"
+      }
+    ],
+    "source": "scraped:tfehotels.com"
+  },
+  {
+    "property_id": "the-hotel-britomart",
+    "name": "The Hotel Britomart",
+    "city": "auckland",
+    "neighbourhood": "",
+    "max_guests": 4,
+    "rating": 4.8,
+    "price_per_night": 320.0,
+    "amenities": [
+      "24-hr Reception",
+      "Luggage Storage",
+      "Free WiFi",
+      "Gym",
+      "Restaurant",
+      "Room Service",
+      "Easy Access",
+      "Non-smoking",
+      "Valet Parking: $60 / Day",
+      "Off-street Parking"
+    ],
+    "description": "Located in most vibrant downtown neighbourhood, The Hotel Britomart  is the new 5 star boutique accommodation featuring five exquisite suites. Book online today!",
+    "check_in_time": "15:00",
+    "check_out_time": "11:00",
+    "pet_policy": "Contact the hotel for its pet policy",
+    "parking": "Off-street Parking",
+    "address": "29 Galway Street, Auckland, 1010",
+    "image_url": "https://media.tfehotels.com/media/filer_public/05/1a/051a7e30-a5d1-44f1-836b-5e7d43e6c39d/tbak-hero-450x300.jpg",
+    "latitude": -36.84481,
+    "longitude": 174.76864,
+    "phone": "+64 9 300 9595",
+    "faqs": [
+      {
+        "question": "Does the hotel have an airport transfer or shuttle service?",
+        "answer": "<p>The hotel does not have its own pick up service, however guest can find numerous transport alternatives including taxi and Uber. Alternatively, guest can book airport and ground transfer service via our partner's website. For more information, go to <a target=\"_blank\" href=\"https://www.tfehotels.com/en/shuttle/\">tfehotels.com/shuttle</a></p>"
+      },
+      {
+        "question": "What are the children policies and age restrictions at The Hotel Britomat?",
+        "answer": "<p>Persons under the age of 18 must be accompanied by a parent or legal guardian. Children under the age of 12 years using existing bedding can stay at no additional charge in the room with guardians / parents.</p>"
+      },
+      {
+        "question": "Can I book tour or local activities at the hotel?",
+        "answer": "<p>The local information pack and brochures are available at reception desk for all our guests. To enhance your travel experience, you can also arrange sightseeing tours, day trips and activities online before you arrive at our hotel via our partner's website. To find and book a local attraction tour, visit <a target=\"_blank\" href=\"http://tfehotels.com/tours\">tfehotels.com/tours</a>.</p>"
+      },
+      {
+        "question": "Is breakfast available at the hotel?",
+        "answer": "<p>Breakfast at The Hotel Britomart can be booked online as an add-on when booking accommodation via our website at only $33 per person per day.</p>"
+      },
+      {
+        "question": "Is parking available at the hotel?",
+        "answer": "<p>Parking available nearby in the Britomart Carpark (fees apply). Valet available at $60.00 per day. Vehicle access for drop off Galway Street in front of The Hotel Britomart.</p>"
+      }
+    ],
+    "source": "scraped:tfehotels.com"
+  },
+  {
+    "property_id": "hotel-kurrajong-canberra",
+    "name": "Hotel Kurrajong Canberra",
+    "city": "canberra",
+    "neighbourhood": "Barton",
+    "max_guests": 4,
+    "rating": 4.2,
+    "price_per_night": 220.0,
+    "amenities": [
+      "24-hr Reception",
+      "Luggage Storage",
+      "Free WiFi",
+      "Restaurant",
+      "Room Service",
+      "Bar",
+      "Gym",
+      "Easy Access",
+      "Non-smoking",
+      "Wedding Facilities",
+      "Conference Facilities",
+      "Parking on-site: $18/Day"
+    ],
+    "description": "",
+    "check_in_time": "14:00",
+    "check_out_time": "11:00",
+    "pet_policy": "Contact the hotel for its pet policy",
+    "parking": "Parking on-site: $18/Day",
+    "address": "8 National Circuit, Barton, Canberra, 2600",
+    "image_url": "https://media.tfehotels.com/media/filer_public/69/43/694362ec-fcfc-471f-84b6-f6924ea6689c/hotel-kurrajong-canberra-lobby-450x300.jpg",
+    "latitude": -35.30745,
+    "longitude": 149.13432,
+    "phone": "+61 2 6234 4444",
+    "faqs": [
+      {
+        "question": "Does the hotel have an airport transfer or shuttle service?",
+        "answer": "<p>The hotel does not have its own pick up service, however guest can find numerous transport alternatives including taxi and Uber. Alternatively, guest can book airport and ground transfer service via our partner's website. For more information, go to <a href=\"https://www.tfehotels.com/en/shuttle/\" target=\"_blank\">tfehotels.com/shuttle</a></p>"
+      },
+      {
+        "question": "Is parking available at the hotel?",
+        "answer": "<p>Parking at Hotel kurrajong is available outside at the front and side of the hotel for $18 per day. Spaces are limited and subject to availability and there is no height limit.</p>"
+      },
+      {
+        "question": "What are the children policies and age restrictions at Hotel Kurrajong?",
+        "answer": "<p>Persons under the age of 18 must be accompanied by a parent or legal guardian. Children under the age of 12 years using existing bedding can stay at no additional charge in the room with guardians / parents.</p>"
+      },
+      {
+        "question": "Is breakfast available at the hotel?",
+        "answer": "<p>Breakfast is available daily at Chifley's Bar &amp; Grill from 6.30am - 10.00am weekdays and 7.00am - 10.30pm on weekend.</p>"
+      }
+    ],
+    "source": "scraped:tfehotels.com"
+  },
+  {
+    "property_id": "quincy-hotel-melbourne",
+    "name": "Quincy Hotel Melbourne",
+    "city": "melbourne",
+    "neighbourhood": "",
+    "max_guests": 4,
+    "rating": 4.2,
+    "price_per_night": 220.0,
+    "amenities": [
+      "24-hr Reception",
+      "Luggage Storage",
+      "Free WiFi",
+      "The Q Bar",
+      "Gym",
+      "Non-smoking",
+      "Rooftop Swimming Pool",
+      "The Salted Egg Restaurant",
+      "Dry Cleaning",
+      "Room Service",
+      "Mini Bar",
+      "Easy Access",
+      "Parking Off-site: $35 / 24hours"
+    ],
+    "description": "",
+    "check_in_time": "15:00",
+    "check_out_time": "11:00",
+    "pet_policy": "Contact the hotel for its pet policy",
+    "parking": "Parking Off-site: $35 / 24hours",
+    "address": "509 Flinders Lane, Melbourne, 3000",
+    "image_url": "https://media.tfehotels.com/media/filer_public/5c/b6/5cb631c4-d37f-4a63-8ea5-2d6837b29923/quincy-hotel-melbourne-lobby-03-2021-1500x1000.jpg",
+    "latitude": -37.81959,
+    "longitude": 144.95696,
+    "phone": "+61 3 9492 7400",
+    "faqs": [
+      {
+        "question": "Does the hotel have an airport transfer or shuttle service?",
+        "answer": "<p>The hotel does not have its own pick up service, however guest can find numerous transport alternatives including taxi and Uber. Alternatively, guest can book airport and ground transfer service via our partner's website. For more information, go to <a href=\"https://www.tfehotels.com/en/shuttle/\" target=\"_blank\">tfehotels.com/shuttle</a></p>"
+      },
+      {
+        "question": "What are the children policies and age restrictions at Quincy Hotel Melbourne?",
+        "answer": "<p>Persons under the age of 18 must be accompanied by a parent or legal guardian. Children under the age of 12 years using existing bedding can stay at no additional charge in the room with guardians / parents.</p>"
+      },
+      {
+        "question": "Is breakfast available at the hotel?",
+        "answer": "<p>Breakfast is served daily from 7am to 11am at Salted Egg Restaurant.</p>"
+      },
+      {
+        "question": "Is parking available at the hotel?",
+        "answer": "<p>Undercover parking is available off-site, enter Secure Parking via 522 Flinders Lane. Simply present your ticket to our friendly Q-Rators for validation and receive a discounted rate of $35 per 24 hours for single entry/exit. Maximum vehicle height is 2.0m</p>\n\n<p><strong>How to use:</strong></p>\n\n<ol>\n\t<li>Enter car park and collect ‘entry ticket’</li>\n\t<li>On departure, visit and pay at reception</li>\n\t<li>Reception will provide a ‘follow on’ ticket</li>\n\t<li>On exit from car park, guest to insert ‘entry ticket’ into car park terminal (this will display public rate)</li>\n\t<li>Guest then to insert ‘Follow on ticket’, which will then reset the rate to $0.00 and grant exit for vehicle</li>\n</ol>"
+      }
+    ],
+    "source": "scraped:tfehotels.com"
+  },
+  {
+    "property_id": "rendezvous-heritage-hotel-auckland",
+    "name": "Rendezvous Heritage Hotel Auckland",
+    "city": "auckland",
+    "neighbourhood": "",
+    "max_guests": 4,
+    "rating": 4.1,
+    "price_per_night": 220.0,
+    "amenities": [
+      "24-hr Reception",
+      "Free WiFi",
+      "Luggage Storage",
+      "Gym",
+      "Spa",
+      "Sauna",
+      "Easy Access",
+      "Non-smoking",
+      "Laundry",
+      "Conference Facility",
+      "Indoor Heated Pool",
+      "Rooftop Heated Pool",
+      "Full Kitchen Apartment",
+      "Valet Parking: NZ$45 / night"
+    ],
+    "description": "",
+    "check_in_time": "15:00",
+    "check_out_time": "11:00",
+    "pet_policy": "Contact the hotel for its pet policy",
+    "parking": "Valet Parking: NZ$45 / night",
+    "address": "35 Hobson Street, Auckland, 1010",
+    "image_url": "https://media.tfehotels.com/media/filer_public/61/be/61beda1a-dbcc-4be4-bd39-80ff19a8317c/652980-heritage-auckland-rooftop-pool.jpg",
+    "latitude": -36.84669092,
+    "longitude": 174.761913,
+    "phone": "+64 9 979 7300",
+    "faqs": [
+      {
+        "question": "Does the hotel have an airport transfer or shuttle service?",
+        "answer": "<p>The hotel does not have its own pick up service, however guest can find numerous transport alternatives including taxi and Uber. Alternatively, guest can book airport and ground transfer service via our partner's website. For more information, go to <a target=\"_blank\" href=\"https://www.tfehotels.com/en/shuttle/\">tfehotels.com/shuttle</a></p>"
+      },
+      {
+        "question": "Is parking available at the hotel?",
+        "answer": "<p>Valet Parking is available subject to availability for $45 per day. </p>"
+      },
+      {
+        "question": "Can I arrange a late check-out?",
+        "answer": "<p>The standard check-out time is at 11am. Should you require a later check-out please contact reception on the day prior to your departure to discuss. Alternatively you can book extra add-on to have 1pm departure when booking accommodation online via our website</p>"
+      },
+      {
+        "question": "What are the age restrictions at Rendezvous Heritage Auckland",
+        "answer": "<p>Persons under the age of 18 must be accompanied by a parent or legal guardian. Children under the age of 12 years using existing bedding can stay at no additional charge in the room with guardians / parents.</p>"
+      }
+    ],
+    "source": "scraped:tfehotels.com"
+  },
+  {
+    "property_id": "rendezvous-heritage-hotel-queenstown",
+    "name": "Rendezvous Heritage Hotel Queenstown",
+    "city": "queenstown",
+    "neighbourhood": "",
+    "max_guests": 4,
+    "rating": 4.2,
+    "price_per_night": 320.0,
+    "amenities": [
+      "24 Hour Reception",
+      "Luggage Storage",
+      "Free WiFi",
+      "Restaurant",
+      "Room Service",
+      "Bar",
+      "Non-smoking",
+      "Gym",
+      "Easy Access",
+      "Wedding Facilities",
+      "Conference Facilites",
+      "Parking On-site: $15/Day",
+      "Spa",
+      "Sauna",
+      "Indoor-outdoor Pool"
+    ],
+    "description": "",
+    "check_in_time": "15:00",
+    "check_out_time": "10:00",
+    "pet_policy": "Contact the hotel for its pet policy",
+    "parking": "Parking On-site: $15/Day",
+    "address": "91 Fernhill Road, Queenstown, 9300",
+    "image_url": "https://media.tfehotels.com/media/filer_public/0d/52/0d522412-d3d9-4517-915c-48211dd6aba1/509921-heritage-queenstown-lakeview-deluxe-room.jpg",
+    "latitude": -45.03781957,
+    "longitude": 168.6421629,
+    "phone": "+64 3 450 1500",
+    "faqs": [
+      {
+        "question": "Does the hotel have an airport transfer or shuttle service?",
+        "answer": "<p>The hotel does not have its own pick up service, however guest can find numerous transport alternatives including taxi and Uber. Alternatively, guest can book airport and ground transfer service via our partner's website. For more information, go to <a href=\"https://www.tfehotels.com/en/shuttle/\" target=\"_blank\">tfehotels.com/shuttle</a></p>"
+      },
+      {
+        "question": "Is parking available at the hotel?",
+        "answer": "<p>Parking fee of $15 per night will be charged. Parking is limited and subject to availability at Rendezvous Heritage Queenstown.</p>"
+      },
+      {
+        "question": "Does Rendezvous Heritage Queenstown Have a Restaurant?",
+        "answer": "<p>Yes, Mackenzies Restaurant &amp; Bar is open 7 days. </p>"
+      },
+      {
+        "question": "What are the age restrictions at Rendezvous Heritage Queenstown",
+        "answer": "<p>Persons under the age of 18 must be accompanied by a parent or legal guardian. Children under the age of 12 years using existing bedding can stay at no additional charge in the room with guardians / parents.</p>"
+      },
+      {
+        "question": "Does Rendezvous Heritage Queenstown have a Pool and Spa?",
+        "answer": "<p>Yes, we have a non-heated outdoor/indoor pool, as well as a hot pool and newly refurbished sauna.</p>"
+      }
+    ],
+    "source": "scraped:tfehotels.com"
+  },
+  {
+    "property_id": "rendezvous-hotel-melbourne",
+    "name": "Rendezvous Hotel Melbourne",
+    "city": "melbourne",
+    "neighbourhood": "",
+    "max_guests": 4,
+    "rating": 4.0,
+    "price_per_night": 220.0,
+    "amenities": [
+      "24 Hour Reception",
+      "Luggage Storage",
+      "Free WiFi",
+      "Restaurant",
+      "Room Service",
+      "Bar",
+      "Non-smoking",
+      "Gym",
+      "Easy Access",
+      "Wedding Facilities",
+      "Conference Facilites",
+      "Parking On-site: $25/Day"
+    ],
+    "description": "Official website of Rendezvous Hotel Melbourne. This central Melbourne hotel is rich in history but restored with the convenience of 21st century technology and amenities. Located on Flinders Street, it is also near the central business district.",
+    "check_in_time": "15:00",
+    "check_out_time": "11:00",
+    "pet_policy": "Contact the hotel for its pet policy",
+    "parking": "Parking On-site: $25/Day",
+    "address": "328 Flinders Street, Melbourne, 3000",
+    "image_url": "https://media.tfehotels.com/media/filer_public/dc/14/dc14edba-4ebd-47a0-8b57-a19dda69f8d9/rendezvous-hotel-melbourne-heritage-bedroom-02-2018-450x300.jpg",
+    "latitude": -37.81835,
+    "longitude": 144.96354,
+    "phone": "+61 3 9250 1888",
+    "faqs": [
+      {
+        "question": "Does the hotel have an airport transfer or shuttle service?",
+        "answer": "<p>The hotel does not have its own pick up service, however guest can find numerous transport alternatives including taxi and Uber. Alternatively, guest can book airport and ground transfer service via our partner's website. For more information, go to <a target=\"_blank\" href=\"https://www.tfehotels.com/en/shuttle/\">tfehotels.com/shuttle</a></p>"
+      },
+      {
+        "question": "Is parking available at the hotel?",
+        "answer": "<p>Parking at Rendezvous Melbourne is $25 per 24 hour period or per exit. Car park is located at 300 flinders Street in a secure building. Take a ticket at the entry gate and validate and pay for the ticket with our reception team to received the discounted rate</p>"
+      },
+      {
+        "question": "Is breakfast available at the hotel?",
+        "answer": "<p>Breakfast is available 7 days a week. Monday to Friday from 6.30am - 10am, weekend and public holiday from  6.30am -10.30am.\n</p>"
+      },
+      {
+        "question": "What are the age restrictions at Rendezvous Melbourne",
+        "answer": "<p>Persons under the age of 18 must be accompanied by a parent or legal guardian. Children under the age of 12 years using existing bedding can stay at no additional charge in the room with guardians / parents.</p>"
+      }
+    ],
+    "source": "scraped:tfehotels.com"
+  },
+  {
+    "property_id": "rendezvous-hotel-perth-scarborough",
+    "name": "Rendezvous Hotel Perth Scarborough",
+    "city": "perth",
+    "neighbourhood": "Scarbo",
+    "max_guests": 4,
+    "rating": 3.8,
+    "price_per_night": 220.0,
+    "amenities": [
+      "24-hr Reception",
+      "Luggage Storage",
+      "Free WiFi",
+      "Restaurant",
+      "Gym",
+      "Room Service",
+      "Lobby Bar",
+      "Easy Access",
+      "Wedding Facilities",
+      "Conference Facilities",
+      "Non-smoking",
+      "Self-Parking: $25/Night",
+      "Scarborough Beach Pool Access"
+    ],
+    "description": "Official Site of Rendezvous Hotel Perth Scarborough, award winning acommodation in Scarborough Beach Perth WA. Stay in Ocean View Room overlooking Indian Ocean.",
+    "check_in_time": "15:00",
+    "check_out_time": "11:00",
+    "pet_policy": "Contact the hotel for its pet policy",
+    "parking": "Self-Parking: $25/Night",
+    "address": "148 The Esplanade, Scarbo, Perth, 6019",
+    "image_url": "https://media.tfehotels.com/media/filer_public/93/bb/93bb1d5b-4c0f-4001-bcb3-2f5f6de877b7/rendezvous-hotel-perth-scarborough-horizon-ocean-view-room-1-600x400.jpg",
+    "latitude": -31.8935,
+    "longitude": 115.75658,
+    "phone": "+61 8 9245 1000",
+    "faqs": [
+      {
+        "question": "Does the hotel have an airport transfer or shuttle service?",
+        "answer": "<p>The hotel does not have its own pick up service, however guest can find numerous transport alternatives including taxi and Uber. Alternatively, guest can book airport and ground transfer service via our partner's website. For more information, go to <a href=\"https://www.tfehotels.com/en/shuttle/\" target=\"_blank\">tfehotels.com/shuttle</a></p>"
+      },
+      {
+        "question": "Is parking available at the hotel?",
+        "answer": "<p>Our on-site car park is located underneath the hotel, and can be accessed from West Coast Highway via the Hotel Driveway, or from the The Esplanade. Our car park fee is $25 per night for self parking (multiple entry/exit). For more information on car parking facilities, please reach out to our team at reception.</p>"
+      },
+      {
+        "question": "Is breakfast available at the hotel?",
+        "answer": "<p>Breakfast is available at the restaurant from 6.00am - 10.00am on weekdays and from 7.00am - 10.30am on weekends and public holidays.</p>"
+      },
+      {
+        "question": "What are the age restrictions at Rendezvous Perth Scarborough",
+        "answer": "<p>Persons under the age of 18 must be accompanied by a parent or legal guardian. Children under the age of 12 years using existing bedding can stay at no additional charge in the room with guardians / parents.</p>"
+      },
+      {
+        "question": "There are two large double beds on family rooms. is 4 people allowed to stay there?",
+        "answer": "<p>Our Family Rooms are designed to accommodate max 3 guests. For additional guests, simply advise reception on check-in.</p>"
+      },
+      {
+        "question": "Do you have room with balcony?",
+        "answer": "<p>Yes, all of our rooms above level 10 have a balcony.</p>"
+      }
+    ],
+    "source": "scraped:tfehotels.com"
+  },
+  {
+    "property_id": "rendezvous-hotel-sydney-the-rocks",
+    "name": "Rendezvous Hotel Sydney The Rocks",
+    "city": "sydney",
+    "neighbourhood": "",
+    "max_guests": 4,
+    "rating": 4.0,
+    "price_per_night": 320.0,
+    "amenities": [
+      "24 Hour Reception",
+      "Luggage Storage",
+      "Free WiFi",
+      "Kitchenette",
+      "Gym",
+      "Outdoor Pool",
+      "Non-smoking",
+      "Parking on-site: $55/Day"
+    ],
+    "description": "Official Site. Rendezvous Hotel Sydney The Rocks features spacious accommodation, and stunning Sydney Opera House view. 5 minutes away from Cirqular Quay. Book Online today",
+    "check_in_time": "15:00",
+    "check_out_time": "11:00",
+    "pet_policy": "Contact the hotel for its pet policy",
+    "parking": "Parking on-site: $55/Day",
+    "address": "75 Harrington Street, Sydney, 2000",
+    "image_url": "https://media.tfehotels.com/media/filer_public/c8/c3/c8c36a7f-140b-40e1-9b7f-c5de15487ffe/rendezvous_hotel_the_rocks_sydney_pool_01_2022-450x300.jpg",
+    "latitude": -33.85963,
+    "longitude": 151.20772,
+    "phone": "+61 2 9251 6711",
+    "faqs": [
+      {
+        "question": "Does the hotel have an airport transfer or shuttle service?",
+        "answer": "<p>The hotel does not have its own pick up service, however guest can find numerous transport alternatives including taxi and Uber. Alternatively, guest can book airport and ground transfer service via our partner's website. For more information, go to <a target=\"_blank\" href=\"https://www.tfehotels.com/en/shuttle/\">tfehotels.com/shuttle</a></p>"
+      },
+      {
+        "question": "Is parking available at the hotel?",
+        "answer": "<p>Parking at Rendezvous Sydney The Rocks is onsite and $55 per car, per night. Entance is on the left side of the hotel entrance, via Harrington Street.</p>"
+      },
+      {
+        "question": "Can I arrange a late check-out?",
+        "answer": "<p>The standard check-out time is at 11am. Should you require a later check-out please contact reception on the day prior to your departure to discuss. Alternatively you can book extra add-on to have 1pm departure when booking accommodation online via our website</p>"
+      },
+      {
+        "question": "What are the age restrictions at Rendezvous Sydney The Rocks",
+        "answer": "<p>Persons under the age of 18 must be accompanied by a parent or legal guardian. Children under the age of 12 years using existing bedding can stay at no additional charge in the room with guardians / parents.</p>"
+      },
+      {
+        "question": "Where can I eat nearby?",
+        "answer": "<p>We recommend the following restaurants:</p>\n\n<ul>\n\t<li><a href=\"http://www.elcaminocantina.com.au/location/the-rocks/\" target=\"_blank\">El Camino </a></li>\n\t<li><a href=\"https://cityextra.com.au/\" target=\"_blank\">City Extra</a></li>\n\t<li><a href=\"https://www.therockscafe.com.au/\" target=\"_blank\">The Rocks Cafe</a></li>\n\t<li><a href=\"https://caminetto.com.au/\" target=\"_blank\">Caminetto</a></li>\n\t<li><a href=\"https://www.operabar.com.au/\" target=\"_blank\">Opera Bar</a></li>\n\t<li><a href=\"https://pancakesontherocks.com.au/\" target=\"_blank\">Pancakes on the rocks</a></li>\n\t<li><a href=\"https://www.fortuneofwar.com.au/\" target=\"_blank\">The fortune of war</a></li>\n\t<li><a href=\"https://larenaissance.com.au/\" target=\"_blank\">La Reaissance</a></li>\n\t<li><a href=\"https://hurricanesgrillrestaurants.com.au/circular-quay/\" target=\"_blank\">Hurricanes</a></li>\n</ul>\n\n<p> </p>\n\n<p> </p>"
+      }
+    ],
+    "source": "scraped:tfehotels.com"
+  },
+  {
+    "property_id": "the-savoy-hotel-on-little-collins-melbourne",
+    "name": "The Savoy Hotel on Little Collins Melbourne",
+    "city": "melbourne",
+    "neighbourhood": "",
+    "max_guests": 4,
+    "rating": 4.2,
+    "price_per_night": 220.0,
+    "amenities": [
+      "24-hr Reception",
+      "Luggage Storage",
+      "Free WiFi",
+      "Restaurant",
+      "Day Spa",
+      "Gym",
+      "Non-smoking",
+      "Bar",
+      "Wedding Facilities",
+      "Conference Facilities",
+      "Parking Off-site: $40/Night"
+    ],
+    "description": "",
+    "check_in_time": "15:00",
+    "check_out_time": "11:00",
+    "pet_policy": "Contact the hotel for its pet policy",
+    "parking": "Parking Off-site: $40/Night",
+    "address": "630 Little Collins Street, Melbourne, 3000",
+    "image_url": "https://media.tfehotels.com/media/filer_public/b3/02/b3025906-45eb-4ef2-9338-995c8cb5fb8d/the-savoy-hotel-on-little-collins-melbourne-exterior-01-2019.jpg",
+    "latitude": -37.81786,
+    "longitude": 144.95399,
+    "phone": "+61 3 9622 8888",
+    "faqs": [
+      {
+        "question": "Does the hotel have an airport transfer or shuttle service?",
+        "answer": "<p>The hotel does not have its own pick up service, however guest can find numerous transport alternatives including taxi and Uber. Alternatively, guest can book airport and ground transfer service via our partner's website. For more information, go to <a target=\"_blank\" href=\"https://www.tfehotels.com/en/shuttle/\">tfehotels.com/shuttle</a></p>"
+      },
+      {
+        "question": "What are the children policies and age restrictions at The Savoy Hotel Melbourne?",
+        "answer": "<p>Persons under the age of 18 must be accompanied by a parent or legal guardian. Children under the age of 12 years using existing bedding can stay at no additional charge in the room with guardians / parents.</p>"
+      },
+      {
+        "question": "Is breakfast available at the hotel?",
+        "answer": "<p>Breakfast is available daily at Savoy Restaurant from 6.30am - 9.30am.</p>"
+      }
+    ],
+    "source": "scraped:tfehotels.com"
+  },
+  {
+    "property_id": "travelodge-hotel-auckland-wynyard-quarter",
+    "name": "Travelodge Hotel Auckland Wynyard Quarter",
+    "city": "auckland",
+    "neighbourhood": "Wynyard Quarter",
+    "max_guests": 4,
+    "rating": 4.4,
+    "price_per_night": 220.0,
+    "amenities": [
+      "24-hr Reception",
+      "Luggage Storage",
+      "Free WiFi",
+      "Easy Access",
+      "Non-smoking",
+      "Parking On-site: $54 / Day*"
+    ],
+    "description": "",
+    "check_in_time": "14:00",
+    "check_out_time": "11:00",
+    "pet_policy": "Contact the hotel for its pet policy",
+    "parking": "Parking On-site: $54 / Day*",
+    "address": "110 Pakenham St West, Wynyard Quarter, Auckland, 1010",
+    "image_url": "https://media.tfehotels.com/media/filer_public/a8/fb/a8fb3b1e-5e4d-4b4d-b7c8-fe29628aba5c/travelodge-hotel-wynyard-quarter-auckland-marina-view-room-01-2020-450x300.jpg",
+    "latitude": -36.8437,
+    "longitude": 174.75655,
+    "phone": "+64 9 200 4511",
+    "faqs": [
+      {
+        "question": "Does the hotel have an airport transfer or shuttle service?",
+        "answer": "<p>The hotel does not have its own pick up service, however guest can find numerous transport alternatives including taxi and Uber. Alternatively, guest can book airport and ground transfer service via our partner's website. For more information, go to <a target=\"_blank\" href=\"https://www.tfehotels.com/en/shuttle/\">tfehotels.com/shuttle</a></p>"
+      },
+      {
+        "question": "Is parking available at the hotel?",
+        "answer": "<p>Located on-site. Parking is supplied by Wynyard Carpark and costs $54 per car, per 24 hours with a single entry/exit. Parking costs $40 per car, per weekend.</p>\n\n<p>Parking is charged at a casual rate of $6 per 30 min for every hour after the 24 hours.</p>\n\n<p>Should you require multiple exits within a few hours, you will be directed to pay at the pay station for a Tariff rate.</p>"
+      },
+      {
+        "question": "What are the children policies and age restrictions at Travelodge Auckland Wynyard Quarter?",
+        "answer": "<p>Persons under the age of 18 must be accompanied by a parent or legal guardian. Children under the age of 12 years using existing bedding can stay at no additional charge in the room with guardians / parents.</p>"
+      },
+      {
+        "question": "Is breakfast available at the hotel?",
+        "answer": "<p>Breakfast is available at Tuck Shop for $30 per person, open seven days a week from 7:30am.</p>"
+      },
+      {
+        "question": "Can you provide more information about family interconnecting room?",
+        "answer": "<p>Our family interconnecting rooms comprise of two guestrooms interconnected by a door. One family interconnecting rooms can accommodate up to 4 guests (two guests on each room). Each room also has its own bathrooms. The bedding can be configured as King or Twin bedding arrangement per room.</p>"
+      }
+    ],
+    "source": "scraped:tfehotels.com"
+  },
+  {
+    "property_id": "travelodge-hotel-hobart",
+    "name": "Travelodge Hotel Hobart",
+    "city": "hobart",
+    "neighbourhood": "",
+    "max_guests": 4,
+    "rating": 3.7,
+    "price_per_night": 220.0,
+    "amenities": [
+      "24 Hour Reception",
+      "Luggage Storage",
+      "Free WiFi",
+      "Kitchenette",
+      "Easy Access",
+      "Non-smoking",
+      "Parking on-site: $25/Night"
+    ],
+    "description": "Travelodge Hotel Hobart is perfectly located in the heart of historic Hobart, close to Franklin Wharf, Battery Point, and many of the city’s top attractions. Book Now.",
+    "check_in_time": "15:00",
+    "check_out_time": "11:00",
+    "pet_policy": "Contact the hotel for its pet policy",
+    "parking": "Parking on-site: $25/Night",
+    "address": "167 Macquarie Street, Hobart, 7000",
+    "image_url": "https://media.tfehotels.com/media/filer_public/00/08/0008da31-7f57-4d0f-8fd0-41517c2148d9/travelodge-hotel-hobart-guest-room-queen-city-view-03-2022-450x300.jpg",
+    "latitude": -42.88563,
+    "longitude": 147.3262,
+    "phone": "+61 3 6220 7100",
+    "faqs": [
+      {
+        "question": "Does the hotel have an airport transfer or shuttle service?",
+        "answer": "<p>The hotel does not have its own pick up service, however guest can find numerous transport alternatives including taxi and Uber. Alternatively, guest can book airport and ground transfer service via our partner's website. For more information, go to <a href=\"https://www.tfehotels.com/en/shuttle/\" target=\"_blank\">tfehotels.com/shuttle</a></p>"
+      },
+      {
+        "question": "Is parking available at the hotel?",
+        "answer": "<p>On-site car parking at Travelodge Hobart is $25 per night. Enter via the second driveway on the left hand side of Harrington street –see reception first to gain access. Off-site car parking is also available at Secure car park on Collins Street at a discounted rate of $15 per night for Travelodge guests.</p>"
+      },
+      {
+        "question": "What are the children policies and age restrictions at Travelodge Hobart?",
+        "answer": "<p>Persons under the age of 18 must be accompanied by a parent or legal guardian. Children under the age of 12 years using existing bedding can stay at no additional charge in the room with guardians / parents.</p>"
+      },
+      {
+        "question": "Is breakfast available at the hotel?",
+        "answer": "<p>Breakfast is available from:<br>\nWeekdays: 6:30am - 9:00am<br>\nWeekends: 7:00am - 10:00am</p>"
+      }
+    ],
+    "source": "scraped:tfehotels.com"
+  },
+  {
+    "property_id": "travelodge-hotel-hurstville-sydney",
+    "name": "Travelodge Hotel Hurstville Sydney",
+    "city": "sydney",
+    "neighbourhood": "",
+    "max_guests": 4,
+    "rating": 4.7,
+    "price_per_night": 220.0,
+    "amenities": [
+      "24 Hour Reception",
+      "Luggage Storage",
+      "Free WiFi",
+      "Restaurant",
+      "Gym",
+      "Easy Access",
+      "Non-smoking",
+      "Parking on-site: $20/24hours",
+      "Laundry"
+    ],
+    "description": "",
+    "check_in_time": "15:00",
+    "check_out_time": "11:00",
+    "pet_policy": "Contact the hotel for its pet policy",
+    "parking": "Parking on-site: $20/24hours",
+    "address": "6-8 Cross Street, Sydney, 2220",
+    "image_url": "https://media.tfehotels.com/media/filer_public/6f/f9/6ff9a252-10c4-4896-b0fa-27b4a5a63159/travelodge_hotel_hurstville_executive_room_bedroom_king_01_2022.jpg",
+    "latitude": -33.96595,
+    "longitude": 151.10405,
+    "phone": "+61 2 9171 2555",
+    "faqs": [
+      {
+        "question": "Does the hotel have an airport transfer or shuttle service?",
+        "answer": "<p>The hotel does not have its own pick up service, however guest can find numerous transport alternatives including taxi and Uber. Alternatively, guest can book airport and ground transfer service via our partner's website. For more information, go to <a href=\"https://www.tfehotels.com/en/shuttle/\" target=\"_blank\">tfehotels.com/shuttle</a></p>"
+      },
+      {
+        "question": "Is parking available at the hotel?",
+        "answer": "<p>Parking at Travelodge Hurstville Sydney is located on-site adjacent to the hotel. Parking costs $20 per car per 24 hours, with multiple entries/exits. Height restriction is 2.1m.<br>\nFor direct access to hotel lifts from car park, please use lifts located next to the marked electrical vehicle spaces on B2.<br>\n<strong>Please note:</strong> parking is limited and is subject to availability. If the car park is full please see the reception team who can direct you to an alternate parking station.</p>"
+      },
+      {
+        "question": "What are the children policies and age restrictions at Travelodge Hurstville Sydney?",
+        "answer": "<p>Persons under the age of 18 must be accompanied by a parent or legal guardian. Children under the age of 12 years using existing bedding can stay at no additional charge in the room with guardians / parents.</p>"
+      },
+      {
+        "question": "Is breakfast available at the hotel?",
+        "answer": "<p>Breakfast at Travelodge Hotel Hurstville will be served at hotel restaurant.</p>"
+      }
+    ],
+    "source": "scraped:tfehotels.com"
+  },
+  {
+    "property_id": "travelodge-hotel-melbourne-docklands",
+    "name": "Travelodge Hotel Melbourne Docklands",
+    "city": "melbourne",
+    "neighbourhood": "",
+    "max_guests": 4,
+    "rating": 4.1,
+    "price_per_night": 220.0,
+    "amenities": [
+      "24 Hour Reception",
+      "Luggage Storage",
+      "Free WiFi",
+      "Kitchenette",
+      "Restaurant",
+      "Easy Access",
+      "Non-smoking",
+      "Parking off-site: $35/Day"
+    ],
+    "description": "Official site. Perfectly located in the Melbourne CBD, close to Southern Cross Station and Marvel Stadium. Well appointed room and great breakfast.",
+    "check_in_time": "15:00",
+    "check_out_time": "11:00",
+    "pet_policy": "Contact the hotel for its pet policy",
+    "parking": "Parking off-site: $35/Day",
+    "address": "66 Aurora Lane, Melbourne, 3008",
+    "image_url": "https://media.tfehotels.com/media/filer_public/89/1a/891a332c-e516-41e7-b4d7-c66fe6dda8ac/travelodge-hotel-docklands-melbourne-lobby-02-2020-450x300.jpg",
+    "latitude": -37.81901,
+    "longitude": 144.95035,
+    "phone": "+61 3 8615 1000",
+    "faqs": [
+      {
+        "question": "Does the hotel have an airport transfer or shuttle service?",
+        "answer": "<p>The hotel does not have its own pick up service, however guest can find numerous transport alternatives including taxi, Uber and Skybus. Alternatively, guest can book airport and ground transfer service via our partner's website. For more information, go to <a href=\"https://www.tfehotels.com/en/shuttle/\" target=\"_blank\">tfehotels.com/shuttle</a></p>"
+      },
+      {
+        "question": "How do I get to the hotel from Southern Cross Station?",
+        "answer": "<p>Exit Southern Cross Station onto the Bourke Street Bridge. Walk along the bridge with Southern Cross Station on your left until you reach the end of the station. Veer to the left towards the Channel 9 Building (717 Bourke Street). Take the lift on the side of the building to the ground floor. Exit the building onto Aurora Lane &amp; turn left. Look for the Travelodge sign 100m ahead.</p>"
+      },
+      {
+        "question": "What are the children policies and age restrictions at Travelodge Melbourne Docklands?",
+        "answer": "<p>Persons under the age of 18 must be accompanied by a parent or legal guardian. Children under the age of 12 years using existing bedding can stay at no additional charge in the room with guardians / parents.</p>"
+      },
+      {
+        "question": "Is breakfast available at the hotel?",
+        "answer": "<p>Daily full buffet breakfast available at the hotel restaurant. Our Grab n Go Breakfast items are also available at Reception.</p>"
+      },
+      {
+        "question": "Is parking available at the hotel?",
+        "answer": "<p>Parking at Travelodge Docklands is available off-site for $35 per night (subject to availability). To access the car park, turn left into Mayfield place, then left into Point Parking facility. Take a ticket to then pay and validate at reception. The max vehicle height is 2.1m</p>"
+      }
+    ],
+    "source": "scraped:tfehotels.com"
+  },
+  {
+    "property_id": "travelodge-hotel-sydney-airport",
+    "name": "Travelodge Hotel Sydney Airport",
+    "city": "sydney",
+    "neighbourhood": "Mascot",
+    "max_guests": 4,
+    "rating": 4.3,
+    "price_per_night": 220.0,
+    "amenities": [
+      "24 Hour Reception",
+      "Luggage Storage",
+      "Free WiFi",
+      "Easy Access",
+      "Non-smoking",
+      "Parking On-site: $30/24hours",
+      "Airport Transfer: $10/Person*"
+    ],
+    "description": "Travelodge Hotel Sydney Airport offers great rooms and amenities, including a restaurant, Free WiFi and more. Book your Sydney Airport accommodation here.",
+    "check_in_time": "15:00",
+    "check_out_time": "11:00",
+    "pet_policy": "Contact the hotel for its pet policy",
+    "parking": "Parking On-site: $30/24hours",
+    "address": "289 King Street, Mascot, Sydney, 2020",
+    "image_url": "https://media.tfehotels.com/media/filer_public/a1/67/a167f951-b8cd-4362-90a6-b5c6e1ecb2f1/travelodge-hotel-sydney-airport-guest-room-king-bedroom-01-2017-450x300.jpg",
+    "latitude": -33.92809,
+    "longitude": 151.18569,
+    "phone": "+61 2 8313 6000",
+    "faqs": [
+      {
+        "question": "Does the hotel have an airport transfer or shuttle service?",
+        "answer": "<p><strong>Free Hotel to Airport Shuttle voucher</strong> <br>\nOne free shuttle voucher valid for use only on your confirmed accommodation departure date.  Not valid for use on airport pick up to hotel. Refer to your booking confirmation to access your free voucher for all guests included in the booking. Conditions apply.</p>\n\n<p>The cost for airport to hotel services are, $10 per person per trip, between 4:30am to 11:30pm daily or $15 per person per trip between 11:00pm to 4:00am, payable directly to the driver.</p>\n\n<p>For more information, visit <a href=\"https://spaceshuttleparking.com.au\" target=\"_blank\">spaceshuttleparking.com.au</a></p>\n\n<p> </p>"
+      },
+      {
+        "question": "Is parking available at the hotel?",
+        "answer": "<p>Parking at Travelodge Sydney Airport is available on-site for $30 per car per 24 hours. Valid multiple entry/exit for 24 hour period. Parking located adjacent to the hotel in the Space Shuttle Parking and is undercover. Daily and extended parking package can be booked online as an add-on when booking accommodation via our website.</p>"
+      },
+      {
+        "question": "What are the children policies and age restrictions at Travelodge Sydney Airport?",
+        "answer": "<p>Persons under the age of 18 must be accompanied by a parent or legal guardian. Children under the age of 12 years using existing bedding can stay at no additional charge in the room with guardians / parents.</p>"
+      },
+      {
+        "question": "Is breakfast available at the hotel?",
+        "answer": "<p>Breakfast is available daily from 6:00am - 9.30am (Monday - Sunday)</p>"
+      }
+    ],
+    "source": "scraped:tfehotels.com"
+  },
+  {
+    "property_id": "travelodge-hotel-wellington",
+    "name": "Travelodge Hotel Wellington",
+    "city": "wellington",
+    "neighbourhood": "",
+    "max_guests": 4,
+    "rating": 3.9,
+    "price_per_night": 150.0,
+    "amenities": [
+      "24 Hour Reception",
+      "Luggage Storage",
+      "Free WiFi",
+      "Restaurant",
+      "Bar",
+      "Room Service",
+      "Kitchenette",
+      "Gym",
+      "Easy Access",
+      "Non-smoking",
+      "Conference Facilities",
+      "Parking on-site: $30/Day"
+    ],
+    "description": "None",
+    "check_in_time": "15:00",
+    "check_out_time": "11:00",
+    "pet_policy": "Contact the hotel for its pet policy",
+    "parking": "Parking on-site: $30/Day",
+    "address": "2-6 Gilmer Terrace, Wellington, 6011",
+    "image_url": "https://media.tfehotels.com/media/filer_public/7b/a5/7ba5cabb-6043-407e-8973-6e5b04245477/travelodge-wellington-hotel-guest-king-room-5-2013-450x300.jpg",
+    "latitude": -41.28587,
+    "longitude": 174.77482,
+    "phone": "+64 4 499 9911",
+    "faqs": [
+      {
+        "question": "Does the hotel have an airport transfer or shuttle service?",
+        "answer": "<p>The hotel does not have its own pick up service, however guest can find numerous transport alternatives including taxi and Uber. Alternatively, guest can book airport and ground transfer service via our partner's website. For more information, go to <a target=\"_blank\" href=\"https://www.tfehotels.com/en/shuttle/\">tfehotels.com/shuttle</a></p>"
+      },
+      {
+        "question": "Is parking available at the hotel?",
+        "answer": "<p>Parking for Travelodge Wellington is $30 per night It is located in the Wilson car park as you drive in from Gilmer Tce. Max vehicle height is 1.8m.</p>"
+      },
+      {
+        "question": "What are the children policies and age restrictions at Travelodge Wellington?",
+        "answer": "<p>Persons under the age of 18 must be accompanied by a parent or legal guardian. Children under the age of 12 years using existing bedding can stay at no additional charge in the room with guardians / parents.</p>"
+      },
+      {
+        "question": "Is breakfast available at the hotel?",
+        "answer": "<p>Breakfast is available daily  6.30am - 09.30am on weekdays and from 7.00am-10.00am on weekends.</p>"
+      }
+    ],
+    "source": "scraped:tfehotels.com"
+  },
+  {
+    "property_id": "vibe-hotel-adelaide",
+    "name": "Vibe Hotel Adelaide",
+    "city": "adelaide",
+    "neighbourhood": "",
+    "max_guests": 4,
+    "rating": 4.6,
+    "price_per_night": 220.0,
+    "amenities": [
+      "24 Hour Reception",
+      "Luggage Storage",
+      "Free WiFi",
+      "Outdoor Heated Pool",
+      "Gym",
+      "Restaurant",
+      "Bar",
+      "Non-smoking",
+      "Easy Access",
+      "Parking Off-site: $25/Night"
+    ],
+    "description": "",
+    "check_in_time": "15:00",
+    "check_out_time": "11:00",
+    "pet_policy": "Contact the hotel for its pet policy",
+    "parking": "Parking Off-site: $25/Night",
+    "address": "260 Flinders Street, Adelaide, 5000",
+    "image_url": "https://media.tfehotels.com/media/filer_public/b4/8a/b48ae911-bf2c-49cc-8f3f-0fe22b77f9e8/vibe-hotel-adelaide-premiere-suite-bedroom-06-2022.jpg",
+    "latitude": -34.92622,
+    "longitude": 138.60959,
+    "phone": "+61 8 8432 3333",
+    "faqs": [
+      {
+        "question": "Does the hotel have an airport transfer or shuttle service?",
+        "answer": "<p>The hotel does not have its own pick up service, however guest can find numerous transport alternatives including taxi and Uber. Alternatively, guest can book airport and ground transfer service via our partner's website. For more information, go to <a href=\"https://www.tfehotels.com/en/shuttle/\" target=\"_blank\">tfehotels.com/shuttle</a></p>"
+      },
+      {
+        "question": "Is parking available at the hotel?",
+        "answer": "<p>Secure Parking is available offsite. Please see reception prior to proceeding to the carpark to obtain access. Car Parking is charged at $25 per car, per night, with unlimited entry and exits. Parking is strictly subject to availability.</p>"
+      },
+      {
+        "question": "What are the children policies and age restrictions at Vibe Hotel Adelaide?",
+        "answer": "<p>Persons under the age of 18 must be accompanied by a parent or legal guardian. Children under the age of 12 years using existing bedding can stay at no additional charge in the room with guardians / parents.</p>"
+      },
+      {
+        "question": "Is breakfast available at the hotel?",
+        "answer": "<p>Breakfast will be served at the Storehouse Flinders East, located at the ground floor of the hotel.</p>"
+      }
+    ],
+    "source": "scraped:tfehotels.com"
+  },
+  {
+    "property_id": "vibe-hotel-canberra",
+    "name": "Vibe Hotel Canberra",
+    "city": "canberra",
+    "neighbourhood": "",
+    "max_guests": 4,
+    "rating": 4.3,
+    "price_per_night": 220.0,
+    "amenities": [
+      "24-Hr Reception",
+      "Luggage Storage",
+      "Free WiFi",
+      "Free Shuttle",
+      "Restaurant",
+      "Room Service",
+      "Gym",
+      "Easy Access",
+      "Non-smoking",
+      "Wedding Facilities",
+      "Conference Facilities",
+      "Kitchenette in Apartments",
+      "Parking on-site: $12/24hr"
+    ],
+    "description": "Land at Canberra Airport and go straight to your hotel room within moments. Enjoy the best last minute deals plus free WiFi at this award winning hotel, less than 10 minutes from Canberra’s CBD.",
+    "check_in_time": "15:00",
+    "check_out_time": "11:00",
+    "pet_policy": "Contact the hotel for its pet policy",
+    "parking": "Parking on-site: $12/24hr",
+    "address": "1 Rogan Street, Canberra, 2609",
+    "image_url": "https://media.tfehotels.com/media/filer_public/1f/4b/1f4ba3c1-4486-43d0-bedc-08985b7c35e7/vibe-canberra-airport-lobby-01-2016-450x300.jpg",
+    "latitude": -35.30914,
+    "longitude": 149.18748,
+    "phone": "+61 2 6201 1500",
+    "faqs": [
+      {
+        "question": "Does the hotel have an airport transfer or shuttle service?",
+        "answer": "<p>The hotel does not have its own pick up service, however guest can find numerous transport alternatives including taxi and Uber. Alternatively, guest can book airport and ground transfer service via our partner's website. For more information, go to <a href=\"https://www.tfehotels.com/en/shuttle/\" target=\"_blank\">tfehotels.com/shuttle</a></p>"
+      },
+      {
+        "question": "Is parking available at the hotel?",
+        "answer": "<p>Parking at Vibe Canberra Airport is $12 per car per 24 hours and located in the basement of the hotel. Drive through the hotel drop off zone, down the ramp on the right, push button for ticket to raise the boom gate. Max vehicle height is 2.3m. Parking is subject to availability on first come first serve basis.</p>"
+      },
+      {
+        "question": "What are the children policies and age restrictions at Vibe Hotel Canberra",
+        "answer": "<p>Persons under the age of 18 must be accompanied by a parent or legal guardian. Children under the age of 12 years using existing bedding can stay at no additional charge in the room with guardians / parents.</p>"
+      },
+      {
+        "question": "Is breakfast available at the hotel?",
+        "answer": "<p>Breakfast is available daily at the Helix Bar &amp; Grill from 6.30am - 10.00am weekdays and 7.00am-10.30am on weekend.</p>"
+      }
+    ],
+    "source": "scraped:tfehotels.com"
+  },
+  {
+    "property_id": "vibe-hotel-darwin-waterfront",
+    "name": "Vibe Hotel Darwin Waterfront",
+    "city": "darwin",
+    "neighbourhood": "",
+    "max_guests": 4,
+    "rating": 3.9,
+    "price_per_night": 480.0,
+    "amenities": [
+      "24-hr Reception",
+      "Luggage Storage",
+      "Free WiFi",
+      "Gym",
+      "Outdoor Pool",
+      "Restaurant",
+      "Bar",
+      "Room Service",
+      "Non-smoking",
+      "Wedding Facilities",
+      "Conference Facilities",
+      "Parking on-site: $19/Day"
+    ],
+    "description": "Located close to the Darwin CBD, Vibe Hotel Darwin Waterfront is the place for you. Stay in one of the hotel\\'s 121 well-appointed guest rooms. Book Now.",
+    "check_in_time": "15:00",
+    "check_out_time": "11:00",
+    "pet_policy": "Contact the hotel for its pet policy",
+    "parking": "Parking on-site: $19/Day",
+    "address": "7 Kitchener Drive, Darwin, 0800",
+    "image_url": "https://media.tfehotels.com/media/filer_public/bf/66/bf660bcd-ae3d-4c95-a4ae-a4337425e675/vibe-hotel-darwin-waterfront-guest-view-room-king-01-2016.jpg",
+    "latitude": -12.46666,
+    "longitude": 130.8463,
+    "phone": "+61 8 8982 9999",
+    "faqs": [
+      {
+        "question": "Does the hotel have an airport transfer or shuttle service?",
+        "answer": "<p>The hotel does not have its own pick up service, however guest can find numerous transport alternatives including taxi and Uber. Alternatively, guest can book airport and ground transfer service via our partner's website. For more information, go to <a href=\"https://www.tfehotels.com/en/shuttle/\" target=\"_blank\">tfehotels.com/shuttle</a></p>"
+      },
+      {
+        "question": "Is parking available at the hotel?",
+        "answer": "<p>Parking at Vibe Darwin is available on-site for $19 per night. Simply collect a car park pass at reception upon check in and park in the Multi Story Car park next door. The pass valid for 1 car only. Unlimited entry and exit is available</p>"
+      },
+      {
+        "question": "What are the children policies and age restrictions at Vibe Hotel Darwin Waterfront?",
+        "answer": "<p>Persons under the age of 18 must be accompanied by a parent or legal guardian. Children under the age of 12 years using existing bedding can stay at no additional charge in the room with guardians / parents.</p>"
+      },
+      {
+        "question": "Is breakfast available at the hotel?",
+        "answer": "<p>Breakfast is available daily at the Curve restaurant from 6.30am - 10.00am</p>"
+      }
+    ],
+    "source": "scraped:tfehotels.com"
+  },
+  {
+    "property_id": "vibe-hotel-hobart",
+    "name": "Vibe Hotel Hobart",
+    "city": "hobart",
+    "neighbourhood": "",
+    "max_guests": 4,
+    "rating": 4.7,
+    "price_per_night": 220.0,
+    "amenities": [
+      "24-hr Reception",
+      "Luggage Storage",
+      "Free WiFi",
+      "Restaurant",
+      "Bar",
+      "Gym",
+      "Swimming Pool",
+      "Easy Access",
+      "Non-smoking",
+      "Off-site Parking",
+      "Conference Facilities"
+    ],
+    "description": "",
+    "check_in_time": "15:00",
+    "check_out_time": "11:00",
+    "pet_policy": "Contact the hotel for its pet policy",
+    "parking": "Off-site Parking",
+    "address": "36 Argyle Street, Hobart, 7000",
+    "image_url": "https://media.tfehotels.com/media/filer_public/d2/68/d2682fa0-1419-4658-9e10-8eaef86fa870/vibe-hotel-hobart-two-bedroom-apartment-lounge-01-2020.jpg",
+    "latitude": -42.88107,
+    "longitude": 147.32941,
+    "phone": "+61 3 6240 5600",
+    "faqs": [
+      {
+        "question": "Does the hotel have an airport transfer or shuttle service?",
+        "answer": "<p>The hotel does not have its own pick up service, however guest can find numerous transport alternatives including taxi and Uber. Alternatively, guest can book airport and ground transfer service via our partner's website. For more information, go to <a href=\"https://www.tfehotels.com/en/shuttle/\" target=\"_blank\">tfehotels.com/shuttle</a></p>"
+      },
+      {
+        "question": "Is parking available at the hotel?",
+        "answer": "<p>Located at 2-4 Market Place, Sultan Carpark is open 24 hours daily. Parking fee is $35* per night. Parking spot can be reserved at hotel reception on check in, granting unlimited entry and exit. Please note that a height restriction of 1.9m applies. Parking is subject to availability and the acceptance of the car parks T&amp;Cs.</p>"
+      },
+      {
+        "question": "What are the children policies and age restrictions at Vibe Hotel Hobart?",
+        "answer": "<p>Persons under the age of 18 must be accompanied by a parent or legal guardian. Children under the age of 12 years using existing bedding can stay at no additional charge in the room with guardians / parents.</p>"
+      },
+      {
+        "question": "Is breakfast available at the hotel?",
+        "answer": "<p>Breakfast is served at the hotel's <a href=\"https://vibehotels.com/book-accommodation/hobart/hotel-hobart/belvedere/\" target=\"_blank\">Belvedere Restaurant</a>.</p>"
+      }
+    ],
+    "source": "scraped:tfehotels.com"
+  },
+  {
+    "property_id": "vibe-hotel-melbourne-docklands",
+    "name": "Vibe Hotel Melbourne Docklands",
+    "city": "melbourne",
+    "neighbourhood": "",
+    "max_guests": 4,
+    "rating": 3.6,
+    "price_per_night": 220.0,
+    "amenities": [
+      "24 Hour Reception",
+      "Luggage Storage",
+      "Free WiFi",
+      "Outdoor Heated Pool",
+      "Gym",
+      "Restaurant",
+      "Bar",
+      "Non-smoking",
+      "Easy Access",
+      "Parking Off-site: $32AUD/Night"
+    ],
+    "description": "",
+    "check_in_time": "15:00",
+    "check_out_time": "11:00",
+    "pet_policy": "Contact the hotel for its pet policy",
+    "parking": "Parking Off-site: $32AUD/Night",
+    "address": "443 Docklands Drive, Melbourne, 3008",
+    "image_url": "https://media.tfehotels.com/media/filer_public/2e/83/2e83129d-5a53-43e5-818e-d04d7898c000/vibe_d3_cornerroomking_13-450x300.jpg",
+    "latitude": -37.81511,
+    "longitude": 144.9385,
+    "phone": "+61 3 8578 0000",
+    "faqs": [
+      {
+        "question": "Does the hotel have an airport transfer or shuttle service?",
+        "answer": "<p>The hotel does not have its own pick up service, however guest can find numerous transport alternatives including taxi, Uber and SkyBus - Melbourne City Express. Alternatively, guest can book airport and ground transfer service via our partner's website. For more information, go to <a href=\"https://www.tfehotels.com/en/shuttle/\" target=\"_blank\">tfehotels.com/shuttle</a></p>"
+      },
+      {
+        "question": "Is parking available at the hotel?",
+        "answer": "<p>Off-Site Parking is available for $32 per car per night (single entry/exit per day) at District Docklands West Car Park: 88 Pearl River Road, Docklands, VIC 3008, which is located 300 meters from the hotel.</p>\n\n<p>Loading zones around the hotel available to unload luggage and check-in prior to parking vehicle off-site.</p>"
+      },
+      {
+        "question": "What are the children policies and age restrictions at Vibe Hotel Melbourne Docklands?",
+        "answer": "<p>Persons under the age of 18 must be accompanied by a parent or legal guardian. Children under the age of 12 years using existing bedding can stay at no additional charge in the room with guardians / parents.</p>"
+      },
+      {
+        "question": "Is breakfast available at the hotel?",
+        "answer": "<p>Breakfast will be served at the on-site restaurant.</p>"
+      },
+      {
+        "question": "Can guests of Vibe Hotel Melbourne Docklands access the Free Tram Zone?",
+        "answer": "<p>Yes, guests of Vibe Hotel Melbourne Docklands can easily access the Free Tram Zone. The hotel is conveniently located near the Free Tram Zone, allowing guests to explore Melbourne's CBD and its attractions without the need to pay for tram fares. Simply step outside the hotel and hop on any tram near District Docklands within the designated zone to enjoy free travel around the city center.</p>"
+      }
+    ],
+    "source": "scraped:tfehotels.com"
+  },
+  {
+    "property_id": "vibe-hotel-melbourne",
+    "name": "Vibe Hotel Melbourne",
+    "city": "melbourne",
+    "neighbourhood": "",
+    "max_guests": 4,
+    "rating": 4.5,
+    "price_per_night": 220.0,
+    "amenities": [
+      "24-hr Reception",
+      "Luggage Storage",
+      "Free WiFi",
+      "Restaurant",
+      "Room Service",
+      "Swimming pool",
+      "Gym",
+      "Bar",
+      "Conference Facilities",
+      "Parking Off-site: $35/Day"
+    ],
+    "description": "",
+    "check_in_time": "15:00",
+    "check_out_time": "11:00",
+    "pet_policy": "Contact the hotel for its pet policy",
+    "parking": "Parking Off-site: $35/Day",
+    "address": "1 Queen Street, Melbourne, 3000",
+    "image_url": "https://media.tfehotels.com/media/filer_public/2a/e7/2ae78b2f-68b5-4d92-ba88-fcec02454dec/vibe-hotel-melbourne-fletcher-suite-bedroom-01-2020-450x300.jpg",
+    "latitude": -37.81874,
+    "longitude": 144.96222,
+    "phone": "+61 3 9958 9100",
+    "faqs": [
+      {
+        "question": "Does the hotel have an airport transfer or shuttle service?",
+        "answer": "<p>The hotel does not have its own pick up service, however guest can find numerous transport alternatives including taxi and Uber. Alternatively, guest can book airport and ground transfer service via our partner's website. For more information, go to <a href=\"https://www.tfehotels.com/en/shuttle/\" target=\"_blank\">tfehotels.com/shuttle</a></p>"
+      },
+      {
+        "question": "Is parking available at the hotel?",
+        "answer": "<p>Off-site self-parking is available at 376 Flinders Street (Max vehicle height is 1.9m). Vibe Hotel Melbourne can offer a special rate of $35 per vehicle, per night (single entry/exit). All vehicles must exit the car park before 1pm, else additional charges will be applicable. Parking must be pre-booked with the hotel prior to arrival to receive this discounted offer.</p>\n\n<p>As the car park is not owned or operated by Vibe Melbourne, we are not able to make reservations for the car park. The car park generally has bays readily available. On the off chance there are no bays available please contact reception to organise alternative options. If arriving or departing after 10pm, please contact reception for access to the car park.</p>"
+      },
+      {
+        "question": "What are the children policies and age restrictions at Vibe Hotel Melbourne?",
+        "answer": "<p>Persons under the age of 18 must be accompanied by a parent or legal guardian. Children under the age of 12 years using existing bedding can stay at no additional charge in the room with guardians / parents.</p>"
+      },
+      {
+        "question": "Is breakfast available at the hotel?",
+        "answer": "<p>Breakfast will be served at hotel restaurant</p>"
+      }
+    ],
+    "source": "scraped:tfehotels.com"
+  },
+  {
+    "property_id": "vibe-hotel-north-sydney",
+    "name": "Vibe Hotel North Sydney",
+    "city": "sydney",
+    "neighbourhood": "North Sydney",
+    "max_guests": 4,
+    "rating": 4.2,
+    "price_per_night": 220.0,
+    "amenities": [
+      "24-hr Reception",
+      "Luggage Storage",
+      "Free WiFi",
+      "Restaurant",
+      "24-hr Gym",
+      "Outdoor Pool",
+      "Easy access",
+      "Non-smoking",
+      "Conference Facilities",
+      "Parking on-site: $45/Night"
+    ],
+    "description": "The new Vibe Hotel North Sydney is in Northpoint, with a new rooftop pool and bar, plus its own eat street and retail, near North Sydney Station.",
+    "check_in_time": "15:00",
+    "check_out_time": "11:00",
+    "pet_policy": "Contact the hotel for its pet policy",
+    "parking": "Parking on-site: $45/Night",
+    "address": "171 Pacific Highway, North Sydney, Sydney, 2060",
+    "image_url": "https://media.tfehotels.com/media/filer_public/61/06/6106e081-f296-43df-9ff3-0d7295ee76eb/vibe-hotel-north-sydney-deluxe-room-bedroom-king-01-2018-450x300.jpg",
+    "latitude": -33.83798,
+    "longitude": 151.20654,
+    "phone": "+61 2 9955 1111",
+    "faqs": [
+      {
+        "question": "Does the hotel have an airport transfer or shuttle service?",
+        "answer": "<p>The hotel does not have its own pick up service, however guest can find numerous transport alternatives including taxi and Uber. Alternatively, guest can book airport and ground transfer service via our partner's website. For more information, go to <a href=\"https://www.tfehotels.com/en/shuttle/\" target=\"_blank\">tfehotels.com/shuttle</a></p>"
+      },
+      {
+        "question": "Is parking available at the hotel?",
+        "answer": "<p>Car parking is located on-site at Secure Parking with access via 100 Miller Street. Direct access to Level 9 Reception is available using the car parking lift. Car parking is charged at $45 per car per night. Car parking is multiple entry and exit so you can come and go as you please. </p>\n\n<p>Please note there is a Height Restriction of 1.9m</p>"
+      },
+      {
+        "question": "What are the children policies and age restrictions at Vibe Hotel North Sydney?",
+        "answer": "<p>Persons under the age of 18 must be accompanied by a parent or legal guardian. Children under the age of 12 years using existing bedding can stay at no additional charge in the room with guardians / parents.</p>"
+      },
+      {
+        "question": "Where can I eat nearby?",
+        "answer": "<p>We recommend the following restaurants:</p>\n\n<ul>\n\t<li><a href=\"https://vibehotels.com/book-accommodation/sydney/hotel-north-sydney/dining/\" target=\"_blank\">Lobby Boy</a>  </li>\n\t<li><a href=\"https://www.greenmoustache.com.au/\" target=\"_blank\">Green Moustache</a>  </li>\n\t<li><a href=\"http://www.devoncafe.com.au/\" target=\"_blank\">Devon Café</a></li>\n\t<li><a href=\"https://yakiniku.com.au/\" target=\"_blank\">Rengaya</a></li>\n</ul>"
+      }
+    ],
+    "source": "scraped:tfehotels.com"
+  },
+  {
+    "property_id": "vibe-hotel-subiaco-perth",
+    "name": "Vibe Hotel Subiaco Perth",
+    "city": "perth",
+    "neighbourhood": "Subiaco",
+    "max_guests": 4,
+    "rating": 4.5,
+    "price_per_night": 320.0,
+    "amenities": [
+      "24-hr. Reception",
+      "Luggage Storage",
+      "Free WiFi",
+      "Rooftop Pool",
+      "Gym",
+      "Restaurant",
+      "Non-smoking",
+      "Easy access",
+      "Conference Facilities",
+      "Room Service",
+      "Parking on-site: $25/24h"
+    ],
+    "description": "Introducing lifestyle hotel in this leafy village, boasting a rooftop pool, gym, conference space, versatile guest rooms and suites. Book your stay today.",
+    "check_in_time": "15:00",
+    "check_out_time": "11:00",
+    "pet_policy": "Contact the hotel for its pet policy",
+    "parking": "Parking on-site: $25/24h",
+    "address": "9 Alvan Street, Subiaco, Perth, 6008",
+    "image_url": "https://media.tfehotels.com/media/filer_public/0f/cd/0fcd4354-bbc4-4cde-8aa5-9536f90859c4/vibe-hotel-subiaco-perth-suite-bedroom-05-2020-450x300.jpg",
+    "latitude": -31.94628,
+    "longitude": 115.82275,
+    "phone": "+61 8 6282 9000",
+    "faqs": [
+      {
+        "question": "Does the hotel have an airport transfer or shuttle service?",
+        "answer": "<p>The hotel does not have its own pick up service, however guest can find numerous transport alternatives including taxi and Uber. Alternatively, guest can book airport and ground transfer service via our partner's website. For more information, go to <a href=\"https://www.tfehotels.com/en/shuttle/\" target=\"_blank\">tfehotels.com/shuttle</a></p>"
+      },
+      {
+        "question": "Is parking available at the hotel?",
+        "answer": "<p>Parking options for Vibe Hotel Subiaco Guests.</p>\n\n<p>• Undercover Hotel car parking:<br>\nA limited number of underground car parks are available below the Hotel precinct.  Located on Basement Level 2. These bays are subject to availability, charged at $25 per 24 hours. </p>\n\n<p>Multiple entries &amp; exits are permitted in a 24 hour period. Height restrictions are in place, maximum vehicle height is 2.0 metres. Once you have completed your check-in, access is via the main entrance off Alvan Street.</p>\n\n<p>The hotel is not able to provide guaranteed parking for vehicles above 2.0 meters. </p>\n\n<p>Alternative options (including over-sized vehicles):</p>\n\n<p>• City of Subiaco public car park:<br>\nLocated below the Hotel on Basement Level 1. These bays are payable via ticket kiosks within the car park. Suitable for larger vehicles. Entry available from 6am until 11pm, via the main entrance off Alvan Street.</p>\n\n<p>• Street parking:<br>\nAvailable on Railway Road. Ticket kiosks are in place and fees payable on weekdays only, between 8am and 5pm. Parking is free of charge after 5pm on weekdays and all day on weekends and public holidays. </p>"
+      },
+      {
+        "question": "What are the children policies and age restrictions at Vibe Hotel Subiaco Perth?",
+        "answer": "<p>Persons under the age of 18 must be accompanied by a parent or legal guardian. Children under the age of 12 years using existing bedding can stay at no additional charge in the room with guardians / parents.</p>"
+      },
+      {
+        "question": "Is breakfast available at the hotel?",
+        "answer": "<p>Breakfast is available 7 days a week at our stunning rooftop Storehouse Restaurant (weekdays from 6:30am to 10am, weekends &amp; public holidays from 7am to 10:30am) and St Marks Road Co. in our Lobby for Grab &amp; Go options (Mon-Fri 6:30am – 11am, closed on public holidays).</p>"
+      }
+    ],
+    "source": "scraped:tfehotels.com"
+  },
+  {
+    "property_id": "vibe-hotel-sydney-darling-harbour",
+    "name": "Vibe Hotel Sydney Darling Harbour",
+    "city": "sydney",
+    "neighbourhood": "",
+    "max_guests": 4,
+    "rating": 4.2,
+    "price_per_night": 320.0,
+    "amenities": [
+      "24-hr Reception",
+      "Luggage Storage",
+      "Free WiFi",
+      "Gym",
+      "Swimming Pool",
+      "Restaurant",
+      "Rooftop Bar",
+      "Easy Access",
+      "Non-smoking",
+      "Room Service",
+      "Parking Off-site: $50 AUD/Day"
+    ],
+    "description": "Official Site. The new Vibe Hotel Sydney Darling Harbour features infinity pool & rooftop bar & located close to all Sydney major attraction including China Town, ICC Sydney and Darling Harbour",
+    "check_in_time": "15:00",
+    "check_out_time": "11:00",
+    "pet_policy": "Contact the hotel for its pet policy",
+    "parking": "Parking Off-site: $50 AUD/Day",
+    "address": "319 - 325 Sussex Street, Sydney, 2000",
+    "image_url": "https://media.tfehotels.com/media/filer_public/6a/ea/6aead0e1-e9ed-4a58-80ac-366b8437877f/vibe-hotel-sydney-darling-harbour-pool-05-2019-450x300.jpg",
+    "latitude": -33.87511,
+    "longitude": 151.20426,
+    "phone": "+61 2 9060 8888",
+    "faqs": [
+      {
+        "question": "Does the hotel have an airport transfer or shuttle service?",
+        "answer": "<p>The hotel does not have its own pick up service, however guest can find numerous transport alternatives including taxi and Uber. Alternatively, guest can book airport and ground transfer service via our partner's website. For more information, go to <a href=\"https://www.tfehotels.com/en/shuttle/\" target=\"_blank\">tfehotels.com/shuttle</a></p>"
+      },
+      {
+        "question": "Is parking available at the hotel?",
+        "answer": "<p>Parking at Vibe Darling Harbour is available via Cinema Centro Carpark, 306 Sussex Street. The entry is just before the hotel on the left hand side. Simply walk across the road to access the Hotel Reception, we recommend parking the car first then checking into the hotel. Cost is $50 per car per 24-hour period, with one entry and one exit only allowed.<br>\nHow it works: When you drive into the carpark, collect a ticket upon entry. Before you exit, Please hand your parking ticket to reception and make payment.</p>"
+      },
+      {
+        "question": "What are the children policies and age restrictions at Vibe Hotel Darling Harbour?",
+        "answer": "<p>Persons under the age of 18 must be accompanied by a parent or legal guardian. Children under the age of 12 years using existing bedding can stay at no additional charge in the room with guardians / parents.</p>"
+      },
+      {
+        "question": "Is breakfast available at the hotel?",
+        "answer": "<p>Breakfast is available daily from 7.00am - 10.30am served at The Sussex Store, which is located on ground floor of the hotel.</p>"
+      },
+      {
+        "question": "Where is the entrance located?",
+        "answer": "<p>The entrance of the hotel is located at 319-325 Sussex Street, directly across the road from the Cinema Centro Carpark. Due to the one way nature of Sussex Street we recommend parking prior to check-in if it is convenient.</p>"
+      },
+      {
+        "question": "Do you have interconnecting rooms?",
+        "answer": "<p>Yes, we do. You can request interconnecting room via the Request section when you book directly via our website.</p>"
+      }
+    ],
+    "source": "scraped:tfehotels.com"
+  },
+  {
+    "property_id": "vibe-hotel-sydney",
+    "name": "Vibe Hotel Sydney",
+    "city": "sydney",
+    "neighbourhood": "",
+    "max_guests": 4,
+    "rating": 3.8,
+    "price_per_night": 320.0,
+    "amenities": [
+      "24-hr Reception",
+      "Luggage Storage",
+      "Free WiFi",
+      "Restaurant",
+      "Bar",
+      "Room Service",
+      "Gym",
+      "Rooftop Pool",
+      "Easy Access Room",
+      "Non Smoking",
+      "Conference Facilities",
+      "Wedding Facilities",
+      "Parking off-site: $39/24hr"
+    ],
+    "description": "Official Site. Vibe Hotel Sydney is at centre of Sydney’s main attractions such as Hyde Park, Chinatown and Oxford Street. Free WiFi & great breakfast. Great savings when you book direct.",
+    "check_in_time": "15:00",
+    "check_out_time": "11:00",
+    "pet_policy": "Contact the hotel for its pet policy",
+    "parking": "Parking off-site: $39/24hr",
+    "address": "111 Goulburn Street, Sydney, 2000",
+    "image_url": "https://media.tfehotels.com/media/filer_public/80/2d/802dc248-f436-48f5-8413-83b437024511/vibe-hotel-sydney-master-family-suite-bedroom-king-02-2018.jpg",
+    "latitude": -33.87856,
+    "longitude": 151.20958,
+    "phone": "+61 2 8272 3300",
+    "faqs": [
+      {
+        "question": "Does the hotel have an airport transfer or shuttle service?",
+        "answer": "<p>The hotel does not have its own pick up service, however guest can find numerous transport alternatives including taxi and Uber. Alternatively, guest can book airport and ground transfer service via our partner's website. For more information, go to <a href=\"https://www.tfehotels.com/en/shuttle/\" target=\"_blank\">tfehotels.com/shuttle</a></p>"
+      },
+      {
+        "question": "Is parking available at the hotel?",
+        "answer": "<p>Parking at Vibe Sydney is located off-site across the hotel. The entrance is at the first driveway at the lights on Goulburn St cnr of Elizabeth in Secure Parking. Take a ticket at the boom gate and purchase a discounted 24 hour single entry rate of $39 per day at Vibe Hotel reception (subject to availability).</p>"
+      },
+      {
+        "question": "What are the children policies and age restrictions at Vibe Hotel Sydney?",
+        "answer": "<p>Persons under the age of 18 must be accompanied by a parent or legal guardian. Children under the age of 12 years using existing bedding can stay at no additional charge in the room with guardians / parents.</p>"
+      },
+      {
+        "question": "Is breakfast available at the hotel?",
+        "answer": "<p>Breakfast is available daily from 6:30am - 11:30am served at Storehouse, which is located on ground floor of the hotel.</p>"
+      },
+      {
+        "question": "Where can I eat nearby?",
+        "answer": "<p>We recommend the following restaurants:</p>\n\n<ul>\n\t<li><a href=\"https://vibehotels.com/book-accommodation/sydney/hotel-sydney/storehouse-sydney-central/\" target=\"_blank\">Storehouse Sydney Central</a></li>\n\t<li><a href=\"https://www.macchiato.com.au/\" target=\"_blank\">Macchiato Wood Fire Pizza &amp; Coffee Roastery</a></li>\n\t<li><a href=\"https://www.chinchin.sydney/\" target=\"_blank\">Chin Chin</a></li>\n\t<li><a href=\"https://nomadwine.com.au/\" target=\"_blank\">Nomad</a></li>\n\t<li><a href=\"https://www.spiceiam.com/\" target=\"_blank\">Spice I Am</a></li>\n\t<li><a href=\"https://nelrestaurant.com.au/\" target=\"_blank\">Nel.</a></li>\n</ul>"
+      }
+    ],
+    "source": "scraped:tfehotels.com"
+  }
+]

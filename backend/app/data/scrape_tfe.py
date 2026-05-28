@@ -1,14 +1,17 @@
-"""TFE Hotels public website scraper.
+"""TFE Hotels public website scraper (Australia + New Zealand properties).
 
-Scrapes publicly available hotel data from tfehotels.com and writes
-``properties_scraped.json`` in the same directory.  The scraper is
-best-effort: individual page failures are logged and skipped; if the
-entire run fails the output file is written with an empty list so
-downstream code never crashes.
+Discovers hotel pages from the published sitemap and extracts structured data
+from each page's JSON-LD (schema.org ``Hotel`` + ``FAQPage`` blocks), with the
+on-page meta description and amenity list as supplements. Only properties whose
+JSON-LD ``addressCountry`` is Australia or New Zealand are kept.
 
-Data source: TFE Hotels public website (tfehotels.com)
-Honesty note: Data scraped from public pages; may not reflect current
-listings. This is NOT TFE's real production system — it is a portfolio demo.
+Writes ``properties_scraped.json`` in this directory. Best-effort: individual
+page failures are logged and skipped; if the whole run fails the output file is
+still written (empty list) so downstream code never crashes.
+
+Data source: TFE Hotels public website (tfehotels.com).
+Honesty note: data scraped from public pages; may not reflect current listings.
+This is NOT TFE's real production system — it is a portfolio demo.
 
 Usage:
     cd backend
@@ -20,10 +23,9 @@ from __future__ import annotations
 import asyncio
 import json
 import re
-import urllib.robotparser
 from pathlib import Path
 from typing import Any
-from urllib.parse import urljoin, urlparse
+from urllib.parse import urlparse
 
 import httpx
 from bs4 import BeautifulSoup
@@ -38,11 +40,41 @@ load_dotenv()
 # ---------------------------------------------------------------------------
 
 BASE_URL = "https://www.tfehotels.com"
-HOTELS_PATH = "/en/hotels/"
+SITEMAP_URL = "https://www.tfehotels.com/generate/sitemap.xml"
 USER_AGENT = "TFE-Portfolio-Demo/1.0"
-MAX_HOTELS = 20
-REQUEST_DELAY = 0.5  # seconds between page requests
+# JSON-LD addressCountry is inconsistent across the site ("Australia" vs
+# "New-zealand"), so we compare on a normalised form (letters only, lowercased).
+TARGET_COUNTRIES = {"australia", "newzealand"}
+REQUEST_DELAY = 0.4  # seconds between page requests (politeness)
 OUTPUT_PATH = Path(__file__).parent / "properties_scraped.json"
+URL_LIST_PATH = Path(__file__).parent / "hotel_urls.txt"
+
+# Disallowed path prefixes from tfehotels.com/robots.txt (User-agent: *). Python's
+# stdlib robotparser mis-parses this particular file and blocks everything, so we
+# enforce the rules explicitly. Hotel detail pages and the sitemap are allowed.
+_DISALLOWED_PREFIXES = (
+    "/admin/",
+    "/en/admin/",
+    "/en/save-10/",
+    "/benefitme/",
+    "/en/benefitme/",
+    "/en/deals/",
+    "/goglobal",
+    "/en/hospital-and-university/",
+    "/en/registration-card/",
+    "/en/hotels/travelodge-hotels/hotel-closure/",
+    "/en/careers/teamhub/wagestream/",
+    "/contact/eclub/",
+    "/en/member-survey-giveaway/",
+    "/de/member-survey-giveaway/",
+    "/hotels-with-stories/",
+)
+
+# schema.org priceRange ($–$$$$) → indicative nightly rate (AUD). The real site
+# does not publish nightly rates statically; bookings are mocked downstream.
+_PRICE_RANGE_AUD = {"$": 150.0, "$$": 220.0, "$$$": 320.0, "$$$$": 480.0}
+_DEFAULT_PRICE_AUD = 300.0
+
 
 # ---------------------------------------------------------------------------
 # Helpers
@@ -50,242 +82,147 @@ OUTPUT_PATH = Path(__file__).parent / "properties_scraped.json"
 
 
 def _slugify(text: str) -> str:
-    """Convert a hotel name to a URL-friendly property_id slug."""
-    text = text.lower().strip()
-    text = re.sub(r"[^a-z0-9]+", "-", text)
-    text = text.strip("-")
-    return text
+    return re.sub(r"[^a-z0-9]+", "-", text.lower().strip()).strip("-")
 
 
-def _text(tag: Any) -> str | None:
-    """Safely extract stripped text from a BeautifulSoup tag or None."""
-    if tag is None:
-        return None
-    return tag.get_text(separator=" ", strip=True) or None
+def _can_fetch(url: str) -> bool:
+    """Return True if robots.txt permits fetching this URL (explicit prefix check)."""
+    path = urlparse(url).path
+    return not any(path.startswith(prefix) for prefix in _DISALLOWED_PREFIXES)
 
 
-def _first(*args: Any) -> Any:
-    """Return the first truthy value from a sequence."""
-    for v in args:
-        if v:
-            return v
-    return None
+def _is_hotel_detail_url(url: str) -> bool:
+    """True for /en/hotels/{brand}/{location}/ — exactly 4 path segments.
 
-
-def _check_robots(base_url: str) -> urllib.robotparser.RobotFileParser:
-    """Fetch and parse robots.txt synchronously (called once before scraping)."""
-    rp = urllib.robotparser.RobotFileParser()
-    robots_url = urljoin(base_url, "/robots.txt")
-    try:
-        rp.set_url(robots_url)
-        rp.read()
-        logger.info("robots_txt_loaded", url=robots_url)
-    except Exception as exc:  # noqa: BLE001
-        logger.warning("robots_txt_failed", url=robots_url, error=str(exc))
-        # Permissive default: allow everything if robots.txt is unreachable
-        rp.allow_all = True  # type: ignore[attr-defined]
-    return rp
-
-
-def _can_fetch(rp: urllib.robotparser.RobotFileParser, url: str) -> bool:
-    """Return True if robots.txt allows us to fetch this URL."""
-    try:
-        return rp.can_fetch(USER_AGENT, url)
-    except Exception:  # noqa: BLE001
-        return True  # permissive default
+    Excludes brand landing pages (3 segments) and sub-pages such as /dining/,
+    /weddings/, /meetings-events/ (5 segments), plus all non-English locales.
+    """
+    parsed = urlparse(url)
+    if parsed.netloc != urlparse(BASE_URL).netloc:
+        return False
+    segments = [s for s in parsed.path.split("/") if s]
+    return len(segments) == 4 and segments[0] == "en" and segments[1] == "hotels"
 
 
 # ---------------------------------------------------------------------------
-# Field extractors
+# JSON-LD + page extraction
 # ---------------------------------------------------------------------------
 
 
-def _extract_description(soup: BeautifulSoup) -> str:
-    """Try several selectors for the hotel's main description text."""
-    tag = _first(
-        soup.select_one(".hotel-description"),
-        soup.select_one(".property-description"),
-        soup.select_one("[class*='description']"),
-        soup.select_one(".about-hotel"),
-        soup.select_one("[class*='intro']"),
-        soup.select_one("meta[name='description']"),
-    )
-    if tag is None:
-        return ""
-    # <meta> tags expose content via .get(), not text
-    if tag.name == "meta":
-        return tag.get("content", "") or ""
-    return _text(tag) or ""
+def _parse_jsonld(soup: BeautifulSoup) -> tuple[dict | None, list[dict]]:
+    """Return (hotel_block, faqs) from the page's JSON-LD scripts."""
+    hotel: dict | None = None
+    faqs: list[dict] = []
+    for block in soup.find_all("script", type="application/ld+json"):
+        if not block.string:
+            continue
+        try:
+            data = json.loads(block.string)
+        except json.JSONDecodeError:
+            continue
+        for entry in data if isinstance(data, list) else [data]:
+            if not isinstance(entry, dict):
+                continue
+            if entry.get("@type") == "Hotel" and hotel is None:
+                hotel = entry
+            elif entry.get("@type") == "FAQPage":
+                for q in entry.get("mainEntity", []):
+                    question = (q.get("name") or "").strip()
+                    answer = ((q.get("acceptedAnswer") or {}).get("text") or "").strip()
+                    if question and answer:
+                        faqs.append({"question": question, "answer": answer})
+    return hotel, faqs
 
 
-def _extract_amenities(soup: BeautifulSoup) -> list[str]:
-    """Extract a list of amenity strings from the page."""
-    # Try structured amenity lists first
-    for selector in (
-        ".amenities-list li",
-        ".hotel-amenities li",
-        "[class*='amenity'] li",
-        "[class*='facilities'] li",
-        ".features li",
-    ):
-        items = soup.select(selector)
-        if items:
-            return [_text(i) for i in items if _text(i)]
+def _extract_amenities(soup: BeautifulSoup) -> tuple[list[str], str, str, str | None]:
+    """Return (amenities, check_in, check_out, parking) from the amenity list.
 
-    # Fallback: look for an amenities section heading and grab nearby list
-    for heading in soup.find_all(["h2", "h3", "h4"]):
-        if heading.get_text(strip=True).lower() in {"amenities", "facilities", "features"}:
-            sibling_list = heading.find_next_sibling("ul")
-            if sibling_list:
-                items = sibling_list.find_all("li")
-                return [_text(i) for i in items if _text(i)]
-
-    return []
-
-
-def _extract_check_times(soup: BeautifulSoup) -> tuple[str, str]:
-    """Return (check_in_time, check_out_time) in HH:MM format or defaults."""
-    check_in = "14:00"
-    check_out = "11:00"
-
-    page_text = soup.get_text(separator=" ")
-    # Match patterns like "Check-in: 2:00 PM" / "check in from 14:00" etc.
-    ci_match = re.search(
-        r"check[\s\-]?in[:\s]+(?:from\s+)?(\d{1,2}(?::\d{2})?\s*(?:am|pm)?)",
-        page_text,
-        re.IGNORECASE,
-    )
-    co_match = re.search(
-        r"check[\s\-]?out[:\s]+(?:by\s+)?(\d{1,2}(?::\d{2})?\s*(?:am|pm)?)",
-        page_text,
-        re.IGNORECASE,
-    )
-
-    def _to_24h(raw: str) -> str:
-        raw = raw.strip().lower()
-        # Already 24h with colon, e.g. "14:00"
-        if re.match(r"^\d{2}:\d{2}$", raw):
-            return raw
-        # 12h format
-        ampm_match = re.match(r"(\d{1,2})(?::(\d{2}))?\s*(am|pm)", raw)
-        if ampm_match:
-            hour = int(ampm_match.group(1))
-            minute = int(ampm_match.group(2) or 0)
-            if ampm_match.group(3) == "pm" and hour != 12:
-                hour += 12
-            elif ampm_match.group(3) == "am" and hour == 12:
-                hour = 0
-            return f"{hour:02d}:{minute:02d}"
-        # Bare number like "14"
-        bare = re.match(r"^(\d{1,2})$", raw)
-        if bare:
-            return f"{int(bare.group(1)):02d}:00"
-        return raw  # give up, return as-is
-
-    if ci_match:
-        check_in = _to_24h(ci_match.group(1))
-    if co_match:
-        check_out = _to_24h(co_match.group(1))
-
-    return check_in, check_out
-
-
-def _extract_pet_policy(soup: BeautifulSoup) -> str:
-    """Return a short pet-policy string."""
-    page_text = soup.get_text(separator=" ")
-    if re.search(r"\bpet[\s\-]?friendly\b", page_text, re.IGNORECASE):
-        return "Pets welcome"
-    if re.search(r"\bpets?\s+(are\s+)?(?:not\s+)?(?:permitted|allowed|accepted)\b",
-                 page_text, re.IGNORECASE):
-        match = re.search(
-            r"pets?\s+(?:are\s+)?(?:not\s+)?(?:permitted|allowed|accepted)[^.]*\.",
-            page_text,
-            re.IGNORECASE,
-        )
-        if match:
-            return match.group(0).strip()
-    # No mention — conservatively say not permitted
-    return "Pets not permitted"
-
-
-def _extract_parking(soup: BeautifulSoup) -> str:
-    """Return a short parking-policy string."""
-    page_text = soup.get_text(separator=" ")
-    parking_match = re.search(
-        r"parking[^.]{0,120}\.",
-        page_text,
-        re.IGNORECASE,
-    )
-    if parking_match:
-        snippet = parking_match.group(0).strip()
-        # Truncate if excessively long
-        return snippet if len(snippet) <= 120 else snippet[:117] + "..."
-    return "Parking information not available"
-
-
-def _extract_address(soup: BeautifulSoup) -> str:
-    """Extract a hotel address."""
-    tag = _first(
-        soup.select_one("[itemprop='streetAddress']"),
-        soup.select_one(".hotel-address"),
-        soup.select_one("[class*='address']"),
-        soup.select_one("address"),
-    )
-    return _text(tag) or ""
-
-
-def _extract_rating(soup: BeautifulSoup) -> float | None:
-    """Extract a numeric star/guest rating if present."""
-    # Try schema.org markup first
-    tag = _first(
-        soup.select_one("[itemprop='ratingValue']"),
-        soup.select_one(".star-rating"),
-        soup.select_one("[class*='rating']"),
-    )
-    if tag:
-        raw = (tag.get("content") or _text(tag) or "").strip()
-        match = re.search(r"(\d+(?:\.\d+)?)", raw)
-        if match:
-            try:
-                val = float(match.group(1))
-                # Ratings are typically 1–5; ignore values like year numbers
-                if 1.0 <= val <= 5.0:
-                    return round(val, 1)
-            except ValueError:
-                pass
-    return None
-
-
-def _extract_city_neighbourhood(soup: BeautifulSoup, name: str) -> tuple[str, str]:
-    """Infer city and neighbourhood from page content or hotel name."""
-    # Try meta / structured data
-    city_tag = _first(
-        soup.select_one("[itemprop='addressLocality']"),
-        soup.select_one("[class*='city']"),
-        soup.select_one("[class*='location']"),
-    )
-    city = _text(city_tag) or ""
-
-    neighbourhood_tag = _first(
-        soup.select_one("[itemprop='addressRegion']"),
-        soup.select_one("[class*='neighbourhood']"),
-        soup.select_one("[class*='suburb']"),
-        soup.select_one("[class*='area']"),
-    )
-    neighbourhood = _text(neighbourhood_tag) or ""
-
-    # Heuristic: well-known cities in TFE's portfolio
-    known_cities = [
-        "Sydney", "Melbourne", "Brisbane", "Perth", "Adelaide",
-        "Canberra", "Auckland", "Wellington", "Queenstown",
+    The on-page amenity list mixes real amenities with check-in/out times and a
+    parking line, so we split those out while keeping them discoverable.
+    """
+    raw = [
+        i.get_text(" ", strip=True)
+        for i in soup.select("[class*=amenit] li")
+        if i.get_text(strip=True)
     ]
-    if not city:
-        for kc in known_cities:
-            if kc.lower() in name.lower():
-                city = kc
-                break
+    amenities: list[str] = []
+    check_in, check_out = "14:00", "11:00"
+    parking: str | None = None
 
-    return city.lower(), neighbourhood
+    for item in raw:
+        ci = re.match(r"check[\s\-]?in[:\s]+(\d{1,2})[.:](\d{2})", item, re.IGNORECASE)
+        co = re.match(r"check[\s\-]?out[:\s]+(\d{1,2})[.:](\d{2})", item, re.IGNORECASE)
+        if ci:
+            check_in = f"{int(ci.group(1)):02d}:{ci.group(2)}"
+            continue
+        if co:
+            check_out = f"{int(co.group(1)):02d}:{co.group(2)}"
+            continue
+        if re.search(r"parking", item, re.IGNORECASE):
+            parking = item
+        amenities.append(item)
+
+    return amenities, check_in, check_out, parking
+
+
+def _meta_description(soup: BeautifulSoup) -> str:
+    tag = soup.select_one("meta[name='description']")
+    return (tag.get("content") if tag else "") or ""
+
+
+def _pet_policy(soup: BeautifulSoup) -> str:
+    text = soup.get_text(" ")
+    if re.search(r"\bpet[\s\-]?friendly\b", text, re.IGNORECASE):
+        return "Pets welcome"
+    return "Contact the hotel for its pet policy"
+
+
+def _float_or_none(value: Any) -> float | None:
+    try:
+        return float(value)
+    except (TypeError, ValueError):
+        return None
+
+
+def _build_property(hotel: dict, faqs: list[dict], soup: BeautifulSoup) -> dict:
+    name = (hotel.get("name") or "").strip()
+    address = hotel.get("address") or {}
+    city = (address.get("addressLocality") or "").strip()
+    street = (address.get("streetAddress") or "").strip()
+    # The suburb/neighbourhood is usually the trailing comma-segment of the street.
+    neighbourhood = street.split(",")[-1].strip() if "," in street else ""
+
+    amenities, check_in, check_out, parking = _extract_amenities(soup)
+    description = (hotel.get("description") or "").strip() or _meta_description(soup)
+    rating = _float_or_none((hotel.get("aggregateRating") or {}).get("ratingValue"))
+    price = _PRICE_RANGE_AUD.get((hotel.get("priceRange") or "").strip(), _DEFAULT_PRICE_AUD)
+
+    full_address = ", ".join(
+        part for part in (street, city, address.get("postalCode")) if part
+    )
+
+    return {
+        "property_id": _slugify(name),
+        "name": name,
+        "city": city.lower(),
+        "neighbourhood": neighbourhood,
+        "max_guests": 4,
+        "rating": round(rating, 1) if rating is not None else None,
+        "price_per_night": price,
+        "amenities": amenities,
+        "description": description,
+        "check_in_time": check_in,
+        "check_out_time": check_out,
+        "pet_policy": _pet_policy(soup),
+        "parking": parking or "Contact the hotel for parking details",
+        "address": full_address,
+        "image_url": hotel.get("image") or None,
+        "latitude": _float_or_none(hotel.get("latitude")),
+        "longitude": _float_or_none(hotel.get("longitude")),
+        "phone": (hotel.get("telephone") or "").strip() or None,
+        "faqs": faqs,
+        "source": "scraped:tfehotels.com",
+    }
 
 
 # ---------------------------------------------------------------------------
@@ -293,51 +230,37 @@ def _extract_city_neighbourhood(soup: BeautifulSoup, name: str) -> tuple[str, st
 # ---------------------------------------------------------------------------
 
 
-async def _get_hotel_urls(
-    client: httpx.AsyncClient,
-    rp: urllib.robotparser.RobotFileParser,
-) -> list[str]:
-    """Fetch the hotels listing page and return absolute URLs to detail pages."""
-    listing_url = urljoin(BASE_URL, HOTELS_PATH)
-
-    if not _can_fetch(rp, listing_url):
-        logger.warning("robots_disallowed", url=listing_url)
-        return []
+async def _get_hotel_urls(client: httpx.AsyncClient) -> list[str]:
+    """Return hotel detail URLs from the local list file, falling back to the sitemap."""
+    if URL_LIST_PATH.exists():
+        urls = [
+            line.strip()
+            for line in URL_LIST_PATH.read_text().splitlines()
+            if line.strip() and _is_hotel_detail_url(line.strip())
+        ]
+        if urls:
+            logger.info("hotel_urls_loaded", source=str(URL_LIST_PATH), count=len(urls))
+            return list(dict.fromkeys(urls))
 
     try:
-        resp = await client.get(listing_url)
+        resp = await client.get(SITEMAP_URL)
         resp.raise_for_status()
     except Exception as exc:  # noqa: BLE001
-        logger.warning("listing_page_failed", url=listing_url, error=str(exc))
+        logger.warning("sitemap_failed", url=SITEMAP_URL, error=str(exc))
         return []
 
-    soup = BeautifulSoup(resp.text, "html.parser")
-
-    urls: list[str] = []
-    # Look for links that plausibly point to individual hotel pages
-    for a in soup.find_all("a", href=True):
-        href: str = a["href"]
-        # Heuristic: hotel detail paths often contain /hotels/ + a slug
-        if "/hotels/" in href and href.rstrip("/") != HOTELS_PATH.rstrip("/"):
-            abs_url = urljoin(BASE_URL, href)
-            # De-duplicate and keep same domain only
-            if abs_url not in urls and urlparse(abs_url).netloc == urlparse(BASE_URL).netloc:
-                urls.append(abs_url)
-
-    logger.info("hotel_urls_found", count=len(urls))
-    return urls[:MAX_HOTELS]
+    locs = re.findall(r"<loc>([^<]+)</loc>", resp.text)
+    urls = [u for u in locs if _is_hotel_detail_url(u)]
+    deduped = list(dict.fromkeys(urls))
+    logger.info("hotel_urls_found", count=len(deduped))
+    return deduped
 
 
-async def _scrape_hotel_page(
-    client: httpx.AsyncClient,
-    url: str,
-    rp: urllib.robotparser.RobotFileParser,
-) -> dict | None:
-    """Scrape a single hotel detail page and return a property dict or None."""
-    if not _can_fetch(rp, url):
+async def _scrape_hotel_page(client: httpx.AsyncClient, url: str) -> dict | None:
+    """Scrape one hotel page; return a property dict only for AU properties."""
+    if not _can_fetch(url):
         logger.warning("robots_disallowed", url=url)
         return None
-
     try:
         resp = await client.get(url)
         resp.raise_for_status()
@@ -346,40 +269,18 @@ async def _scrape_hotel_page(
         return None
 
     soup = BeautifulSoup(resp.text, "html.parser")
+    hotel, faqs = _parse_jsonld(soup)
+    if hotel is None or not (hotel.get("name") or "").strip():
+        return None  # not a real hotel detail page (e.g. listing/redirect)
 
-    # --- Name ---
-    name_tag = _first(
-        soup.select_one("h1"),
-        soup.select_one("[itemprop='name']"),
-        soup.select_one(".hotel-name"),
-        soup.select_one("[class*='hotel-title']"),
-    )
-    name = _text(name_tag) or ""
-    if not name:
-        logger.warning("hotel_name_missing", url=url)
-        return None
+    country_raw = ((hotel.get("address") or {}).get("addressCountry") or "")
+    country = re.sub(r"[^a-z]", "", country_raw.lower())
+    if country not in TARGET_COUNTRIES:
+        return None  # keep Australian + New Zealand properties only
 
-    city, neighbourhood = _extract_city_neighbourhood(soup, name)
-    check_in, check_out = _extract_check_times(soup)
-
-    property_dict: dict = {
-        "property_id": _slugify(name),
-        "name": name,
-        "city": city,
-        "neighbourhood": neighbourhood,
-        "max_guests": 4,  # default; TFE site rarely surfaces this
-        "rating": _extract_rating(soup),
-        "amenities": _extract_amenities(soup),
-        "description": _extract_description(soup),
-        "check_in_time": check_in,
-        "check_out_time": check_out,
-        "pet_policy": _extract_pet_policy(soup),
-        "parking": _extract_parking(soup),
-        "address": _extract_address(soup),
-    }
-
-    logger.info("hotel_scraped", name=name, city=city)
-    return property_dict
+    prop = _build_property(hotel, faqs, soup)
+    logger.info("hotel_scraped", name=prop["name"], city=prop["city"], n_faqs=len(faqs))
+    return prop
 
 
 # ---------------------------------------------------------------------------
@@ -388,47 +289,26 @@ async def _scrape_hotel_page(
 
 
 async def main() -> None:
-    """Run the scraper and write properties_scraped.json."""
     properties: list[dict] = []
-
     try:
-        # 1. Check robots.txt (synchronous — called once)
-        rp = _check_robots(BASE_URL)
-
-        # 2. Build HTTP client with portfolio user-agent
         headers = {"User-Agent": USER_AGENT}
         async with httpx.AsyncClient(
-            headers=headers,
-            follow_redirects=True,
-            timeout=15.0,
+            headers=headers, follow_redirects=True, timeout=20.0
         ) as client:
-            # 3. Discover hotel URLs from the listing page
-            hotel_urls = await _get_hotel_urls(client, rp)
-
+            hotel_urls = await _get_hotel_urls(client)
             if not hotel_urls:
                 logger.warning("no_hotel_urls_found", base=BASE_URL)
 
-            # 4. Scrape each hotel page with a polite delay
             for url in hotel_urls:
-                result = await _scrape_hotel_page(client, url, rp)
+                result = await _scrape_hotel_page(client, url)
                 if result is not None:
                     properties.append(result)
                 await asyncio.sleep(REQUEST_DELAY)
-
     except Exception as exc:  # noqa: BLE001
-        logger.warning(
-            "scraper_failed",
-            error=str(exc),
-            hotels_collected=len(properties),
-        )
+        logger.warning("scraper_failed", error=str(exc), hotels_collected=len(properties))
 
-    # Always write output, even on total failure
     OUTPUT_PATH.write_text(json.dumps(properties, indent=2, ensure_ascii=False))
-    logger.info(
-        "scrape_complete",
-        output=str(OUTPUT_PATH),
-        hotels_written=len(properties),
-    )
+    logger.info("scrape_complete", output=str(OUTPUT_PATH), hotels_written=len(properties))
 
 
 if __name__ == "__main__":

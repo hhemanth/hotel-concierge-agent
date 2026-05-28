@@ -96,6 +96,30 @@ def _load_faq_docs() -> list[Doc]:
     return docs
 
 
+def _load_scraped_faq_docs() -> list[Doc]:
+    """One doc per scraped per-hotel FAQ (question/answer), attributed to the hotel."""
+    docs: list[Doc] = []
+    for p in load_properties():
+        for faq in p.get("faqs", []):
+            question = (faq.get("question") or "").strip()
+            answer = (faq.get("answer") or "").strip()
+            if not question or not answer:
+                continue
+            docs.append(
+                Doc(
+                    id=f"faq:{p['property_id']}:{_slugify(question)[:60]}",
+                    content=f"{p['name']} — {question} {answer}",
+                    source_type="faq",
+                    metadata={
+                        "property_id": p["property_id"],
+                        "name": p["name"],
+                        "topic": question,
+                    },
+                )
+            )
+    return docs
+
+
 async def _embed_docs(client: voyageai.AsyncClient, docs: list[Doc]) -> list[list[float]]:
     """Embed all docs in batches, return list of embedding vectors."""
     all_embeddings: list[list[float]] = []
@@ -155,7 +179,14 @@ async def _upsert_docs(
                     json.dumps(doc.metadata),
                 ),
             )
+        # Prune stale rows so the table mirrors the current data set (e.g. old
+        # property_ids from a previous ingest that no longer exist).
+        current_ids = [d.id for d in docs]
+        await cur.execute("DELETE FROM docs WHERE id <> ALL(%s)", (current_ids,))
+        pruned = cur.rowcount
     await conn.commit()
+    if pruned:
+        logger.info("docs_pruned", n=pruned)
 
 
 async def main() -> int:
@@ -169,7 +200,7 @@ async def main() -> int:
 
     # Load documents
     property_docs = _load_property_docs()
-    faq_docs = _load_faq_docs()
+    faq_docs = _load_faq_docs() + _load_scraped_faq_docs()
     all_docs = property_docs + faq_docs
 
     logger.info("ingest_start", n_property=len(property_docs), n_faq=len(faq_docs), total=len(all_docs))
