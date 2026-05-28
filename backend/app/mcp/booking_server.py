@@ -15,8 +15,8 @@ from fastmcp import FastMCP
 
 from app.data.properties import load_properties
 from app.tools.booking_api import (
-    check_availability,
     cancel_booking,
+    check_availability,
     create_booking,
     get_booking,
 )

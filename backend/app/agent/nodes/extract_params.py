@@ -19,7 +19,6 @@ from anthropic import Anthropic
 from app.agent.state import AgentState, BookingState
 from app.observability import logger, timed_llm_call
 
-
 _PROMPT = """Extract booking parameters from the conversation. Today's date is {today}.
 
 Return a JSON object with EXACTLY these keys (use null for anything not specified):
@@ -38,11 +37,18 @@ Return a JSON object with EXACTLY these keys (use null for anything not specifie
   "min_nights": integer | null
 }}
 
-Mode decision rules:
-- "direct" if: a specific hotel name is mentioned (e.g. "Vibe Sydney", "Adina Bondi") OR
-               city AND check_in AND check_out AND guests are ALL extractable from the conversation.
-- "search" if: dates are vague ("next month", "late July"), OR only partial info is given,
-               OR the user is browsing without a specific property in mind.
+Mode decision rules (follow precisely):
+- Use "search" if ANY of the following is true:
+  • No specific hotel name is mentioned (user is browsing, not naming a property)
+  • guests is null — the user did not state a number of guests
+  • Dates are vague or unresolved ("next month", "late July", "a weekend in June")
+  • The user is exploring options rather than booking a known property
+- Use "direct" ONLY when ALL of the following are true:
+  • A specific hotel name IS mentioned (e.g. "Vibe Sydney", "Adina Bondi") OR
+    city + check_in + check_out + guests are ALL explicitly stated by the user
+  • guests is an explicit number stated by the user — never infer or default it
+
+Default to "search" when in doubt.
 
 Field rules:
 - Resolve relative dates ("next weekend", "this Friday") to absolute ISO dates.

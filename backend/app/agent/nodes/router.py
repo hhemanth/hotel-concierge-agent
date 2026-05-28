@@ -16,7 +16,6 @@ from anthropic import Anthropic
 from app.agent.state import AgentState, Intent
 from app.observability import logger, timed_llm_call
 
-
 _PROMPT = """You are an intent classifier for a hotel concierge chatbot. \
 Read the conversation and classify the user's LATEST message into exactly one of:
 

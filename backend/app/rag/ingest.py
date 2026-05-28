@@ -12,14 +12,14 @@ import sys
 from dataclasses import dataclass
 from pathlib import Path
 
-from dotenv import load_dotenv
 import psycopg
 import voyageai
+from dotenv import load_dotenv
 
 load_dotenv()
 
-from app.data.properties import load_properties
-from app.observability import logger
+from app.data.properties import load_properties  # noqa: E402
+from app.observability import logger  # noqa: E402
 
 _DATA_DIR = Path(__file__).parent.parent / "data"
 _FAQS_PATH = _DATA_DIR / "faqs.md"

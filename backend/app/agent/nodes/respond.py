@@ -18,7 +18,6 @@ from anthropic import Anthropic
 from app.agent.state import AgentState
 from app.observability import logger, timed_llm_call
 
-
 _SYSTEM_BASE = """You are a warm, helpful concierge for TFE Hotels (a hotel group operating Vibe, Adina, and Travelodge brands in Australia and New Zealand).
 
 Voice:
