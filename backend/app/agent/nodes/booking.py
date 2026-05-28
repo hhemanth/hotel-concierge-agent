@@ -126,6 +126,11 @@ async def run(state: AgentState) -> dict:  # noqa: C901
                     property_id = p["property_id"]
                     break
 
+        if property_name and property_id is None:
+            # Named property not found in the system — signal no match immediately
+            logger.info("direct_mode_property_not_found", property_name=property_name)
+            return {"available_options": []}
+
         if property_id and check_in and check_out and guests is not None:
             result = check_hotel_availability(
                 property_id=property_id,
@@ -151,7 +156,6 @@ async def run(state: AgentState) -> dict:  # noqa: C901
                 }
             else:
                 logger.info("direct_mode_unavailable", property_id=property_id)
-                # Return empty options so respond can apologise
                 return {"available_options": []}
 
     # ------------------------------------------------------------------

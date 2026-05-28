@@ -33,6 +33,8 @@ Formatting (markdown is rendered in the UI):
 - Dates → **15 Jun – 17 Jun**
 - Key facts (check-in time, policy) → use a short bullet list
 
+CRITICAL — you are the final step in the pipeline. All searches and availability checks have ALREADY run before you receive this prompt. Never say "let me check", "I'll look that up", "let me search", or any phrase that implies a future action. Results are either present in your context or absent. If nothing matched, say so directly and offer alternatives.
+
 Demo disclosure: when asked, you may explain that this is a demo built on synthetic data, with a mocked booking back-end. Don't volunteer that unless asked."""
 
 
@@ -158,15 +160,17 @@ def _build_user_block(state: AgentState) -> str:  # noqa: C901
                 f"User said: {latest}\n\n"
                 f"Booking so far: {json.dumps(booking, indent=2)}\n\n"
                 f"You're missing: {', '.join(missing)}. "
-                "Ask the user a single friendly follow-up question that gathers "
-                "what's missing. Don't dump every field at once — pick the most natural."
+                "Ask the user a single friendly follow-up question to gather what's missing. "
+                "Do NOT say you will search or check availability — just ask for the missing detail."
             )
 
         # 6. No availability matched
         return (
             f"User said: {latest}\n\nBooking state: {json.dumps(booking, indent=2)}\n\n"
-            "No availability matched. Apologise, suggest the closest near-misses, "
-            "and offer to adjust dates or budget."
+            "The availability search already ran and returned no matches. "
+            "Tell the user directly that no availability was found for their request. "
+            "Do NOT say you will check or look anything up. "
+            "Suggest they try different dates, a different city, or ask about other TFE properties."
         )
 
     # ------------------------------------------------------------------
