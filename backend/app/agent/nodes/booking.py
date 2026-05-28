@@ -95,7 +95,7 @@ async def run(state: AgentState) -> dict:  # noqa: C901
     # ------------------------------------------------------------------
     if mode == "search":
         location_hints: list[str] = search_criteria.get("location_hints") or []
-        location = location_hints[0] if location_hints else None
+        location = location_hints[0] if location_hints else booking_in_progress.get("city")
         vibe_hints: list[str] = search_criteria.get("vibe_hints") or []
         min_nights: int | None = search_criteria.get("min_nights")
 
