@@ -19,7 +19,6 @@ from typing import Any, Iterator
 import structlog
 from pythonjsonlogger import jsonlogger
 
-
 # ---------------------------------------------------------------------------
 # Logging setup
 # ---------------------------------------------------------------------------

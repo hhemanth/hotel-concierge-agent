@@ -12,7 +12,8 @@
     "check_out_time": "11:00",
     "pet_policy": "no pets",
     "parking": "valet AUD 55/night",
-    "address": "111 Goulburn Street, Surry Hills NSW 2010"
+    "address": "111 Goulburn Street, Surry Hills NSW 2010",
+    "image_url": "https://media.tfehotels.com/media/filer_public/d1/92/d192d146-f76d-4ca5-9dd4-a165b58f549c/vibe-hotel-sydney-exterior-04-2019.jpg"
   },
   {
     "property_id": "adina-bondi",
@@ -27,7 +28,8 @@
     "check_out_time": "10:00",
     "pet_policy": "service animals only",
     "parking": "limited on-site AUD 40/night, book ahead",
-    "address": "69-73 Hall Street, Bondi Beach NSW 2026"
+    "address": "69-73 Hall Street, Bondi Beach NSW 2026",
+    "image_url": "https://media.tfehotels.com/media/filer_public/a5/87/a5878b0a-7a9f-41e6-9f65-0ffe9312a71c/adina-apartment-hotel-bondi-beach-one-bedroom-apartment-king-2016-900x600.jpg"
   },
   {
     "property_id": "vibe-melbourne",
@@ -42,7 +44,8 @@
     "check_out_time": "11:00",
     "pet_policy": "no pets",
     "parking": "off-site partner garage AUD 45/night",
-    "address": "1 Flinders Lane, Melbourne VIC 3000"
+    "address": "1 Flinders Lane, Melbourne VIC 3000",
+    "image_url": "https://media.tfehotels.com/media/filer_public/34/10/34104629-05ef-4407-b0c6-079edc9e0b53/vibe-hotel-melbourne-deluxe-room-bedroom-01-2020-900x600.jpg"
   },
   {
     "property_id": "travelodge-auckland",
@@ -57,7 +60,8 @@
     "check_out_time": "10:00",
     "pet_policy": "no pets",
     "parking": "valet NZD 50/night",
-    "address": "96-100 Customs Street West, Auckland 1010"
+    "address": "96-100 Customs Street West, Auckland 1010",
+    "image_url": "https://media.tfehotels.com/media/filer_public/f3/6f/f36fbdf3-8d74-43cb-9648-5c99fd6bbd4b/travelodge-hotel-auckland-surroundings-21-2020-900x600.jpg"
   },
   {
     "property_id": "adina-surry-hills",
@@ -72,6 +76,7 @@
     "check_out_time": "10:00",
     "pet_policy": "no pets",
     "parking": "underground AUD 50/night",
-    "address": "359 Crown Street, Surry Hills NSW 2010"
+    "address": "359 Crown Street, Surry Hills NSW 2010",
+    "image_url": "https://media.tfehotels.com/media/filer_public/50/ca/50ca6ecc-11b2-48f9-ae73-c5bad3291b68/adina-apartment-hotel-sydney-surry-hills-2-bedroom-terrace-apartment-900x600.jpg"
   }
 ]

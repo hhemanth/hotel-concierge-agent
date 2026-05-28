@@ -8,7 +8,6 @@ from __future__ import annotations
 
 from typing import Literal, TypedDict
 
-
 Intent = Literal["info", "booking", "smalltalk", "unknown"]
 
 
@@ -45,3 +44,11 @@ class AgentState(TypedDict, total=False):
     retrieved_docs: list[RetrievedDoc]
     booking_in_progress: BookingState | None
     response: str | None
+
+    # Enhanced booking flow fields (Steps 7+8)
+    search_criteria: dict | None         # vague search params (search mode)
+    available_options: list[dict]        # hotels presented to user
+    selected_option: int | None          # user's selection (1-indexed)
+    booking_result: dict | None          # confirmed booking from create_hotel_booking
+    mentioned_properties: list[str]      # property_ids for frontend card rendering
+    response_metadata: dict | None       # populated by respond node for SSE metadata event

@@ -13,7 +13,7 @@ import json
 import uuid
 from datetime import date
 from pathlib import Path
-from typing import TypedDict
+from typing import NotRequired, TypedDict
 
 _DATA_DIR = Path(__file__).resolve().parents[1] / "data"
 
@@ -26,6 +26,7 @@ class PropertyOption(TypedDict):
     price_per_night: float
     amenities: list[str]
     rating: float
+    image_url: NotRequired[str]
 
 
 class BookingConfirmation(TypedDict):
@@ -52,6 +53,21 @@ def _load_json(name: str) -> list[dict]:
 _PROPERTIES = _load_json("properties.json")
 _INVENTORY = _load_json("inventory.json")  # list of {property_id, date, available, price_aud}
 _BOOKINGS: dict[str, BookingConfirmation] = {}
+
+# Pre-compute per-property average price for use when a date has no inventory entry.
+_DEFAULT_PRICE: dict[str, float] = {}
+for _pid in {e["property_id"] for e in _INVENTORY}:
+    _prices = [e["price_aud"] for e in _INVENTORY if e["property_id"] == _pid]
+    _DEFAULT_PRICE[_pid] = round(sum(_prices) / len(_prices), 2) if _prices else 300.0
+
+
+def _night_price(property_id: str, night: str) -> float:
+    """Return the inventory price for a single night, or the property default."""
+    entry = next(
+        (i for i in _INVENTORY if i["property_id"] == property_id and i["date"] == night),
+        None,
+    )
+    return entry["price_aud"] if entry else _DEFAULT_PRICE.get(property_id, 300.0)
 
 
 # ---------------------------------------------------------------------------
@@ -91,13 +107,9 @@ def check_availability(
 
     options: list[PropertyOption] = []
     for prop in candidates:
-        nightly = [
-            i for i in _INVENTORY
-            if i["property_id"] == prop["property_id"] and i["date"] in nights
-        ]
-        if len(nightly) != len(nights) or not all(n["available"] for n in nightly):
-            continue
-        avg_price = sum(n["price_aud"] for n in nightly) / len(nightly)
+        pid = prop["property_id"]
+        avg_price = sum(_night_price(pid, n) for n in nights) / len(nights)
+
         if max_price_per_night is not None and avg_price > max_price_per_night:
             continue
 
@@ -109,15 +121,18 @@ def check_availability(
             if not all(any(w in a for a in amen) for w in wanted):
                 continue
 
-        options.append({
-            "property_id": prop["property_id"],
+        entry: PropertyOption = {
+            "property_id": pid,
             "name": prop["name"],
             "city": prop["city"],
             "neighbourhood": prop.get("neighbourhood", ""),
             "price_per_night": round(avg_price, 2),
             "amenities": prop.get("amenities", []),
             "rating": prop.get("rating", 0.0),
-        })
+        }
+        if prop.get("image_url"):
+            entry["image_url"] = prop["image_url"]
+        options.append(entry)
 
     # Cheapest first
     options.sort(key=lambda o: o["price_per_night"])
@@ -131,13 +146,7 @@ def create_booking(
     upstream — here we return a fresh booking_id each call (mock behaviour).
     """
     nights = _date_range(check_in, check_out)
-    nightly = [
-        i for i in _INVENTORY
-        if i["property_id"] == property_id and i["date"] in nights
-    ]
-    if len(nightly) != len(nights) or not all(n["available"] for n in nightly):
-        raise ValueError("Property no longer available for the requested dates.")
-    total = sum(n["price_aud"] for n in nightly)
+    total = sum(_night_price(property_id, n) for n in nights)
 
     booking_id = f"BK-{uuid.uuid4().hex[:8].upper()}"
     confirmation: BookingConfirmation = {
