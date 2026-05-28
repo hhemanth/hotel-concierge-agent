@@ -125,20 +125,22 @@ docker compose up -d
 ### 2. Backend
 
 ```bash
+# Install uv (if not already installed)
+curl -LsSf https://astral.sh/uv/install.sh | sh
+
 cd backend
-python3 -m venv .venv && source .venv/bin/activate
-pip install -r requirements.txt
+uv sync                    # installs all deps from uv.lock into a managed venv
 
 cp .env.example .env
 # Edit .env — add ANTHROPIC_API_KEY and VOYAGE_API_KEY at minimum
 
 # Scrape TFE property data (optional — falls back to synthetic data)
-python3 -m app.data.scrape_tfe
+uv run python -m app.data.scrape_tfe
 
 # Embed and ingest into pgvector (run once, re-run after data changes)
-python3 -m app.rag.ingest
+uv run python -m app.rag.ingest
 
-uvicorn app.main:app --reload --port 8000
+uv run uvicorn app.main:app --reload --port 8000
 ```
 
 ### 3. Frontend
@@ -167,37 +169,44 @@ curl -N -s -X POST http://localhost:8000/chat \
 
 ---
 
-## CI/CD
+## CI
 
 ### On pull request → `ci.yml`
 
 | Job | Steps |
 |---|---|
-| `backend` | `ruff check` → `pyright` → `pytest` |
+| `backend` | `uv run ruff check` → `uv run pyright` → `uv run pytest` |
 | `frontend` | `npm ci` → `next build` |
 
-### On merge to main → `deploy.yml`
+### Required GitHub secrets (for CI tests)
 
-- **Backend** → Railway (`railway up --service backend`)
-- **Frontend** → Vercel (`vercel --prod`)
-
-Both deploy jobs run in parallel.
-
-### Required GitHub secrets
-
-| Secret | Used by |
+| Secret | Purpose |
 |---|---|
-| `ANTHROPIC_API_KEY` | Backend CI tests |
-| `VOYAGE_API_KEY` | Backend CI tests |
-| `DATABASE_URL` | Backend CI tests |
-| `RAILWAY_TOKEN` | Railway deploy |
-| `VERCEL_TOKEN` | Vercel deploy |
-| `VERCEL_ORG_ID` | Vercel deploy |
-| `VERCEL_PROJECT_ID` | Vercel deploy |
+| `ANTHROPIC_API_KEY` | Backend pytest |
+| `VOYAGE_API_KEY` | Backend pytest |
+| `DATABASE_URL` | Backend pytest |
 
 ---
 
 ## Deployment
+
+Deployments are triggered directly from the platform dashboards — no CI automation needed.
+
+### Backend → Railway
+
+1. Create a new Railway project → **Deploy from GitHub repo**
+2. Set root directory to `backend/`
+3. Railway auto-detects the `Dockerfile` and builds on every push to `main`
+4. Add env vars in Railway's **Variables** tab (copy from `backend/.env.example`)
+
+### Frontend → Vercel
+
+1. Import the GitHub repo in Vercel
+2. Set framework to **Next.js**, root directory to `frontend/`
+3. Add env var: `NEXT_PUBLIC_BACKEND_URL=https://your-railway-app.up.railway.app`
+4. Vercel deploys on every push to `main` automatically
+
+### Vector store → Supabase
 
 | Service | Target |
 |---|---|
