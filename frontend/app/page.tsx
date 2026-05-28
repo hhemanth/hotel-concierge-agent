@@ -555,6 +555,14 @@ export default function Home() {
     send(`Option ${n}`);
   }
 
+  function newChat() {
+    setMessages([]);
+    setInput("");
+    setStreamingText("");
+    setBusy(false);
+    setLatestOptions([]);
+  }
+
   return (
     <main className="mx-auto flex h-screen max-w-2xl flex-col">
       {/* Header */}
@@ -563,12 +571,22 @@ export default function Home() {
           <div className="h-9 w-9 rounded-full bg-gold flex items-center justify-center shadow">
             <span className="text-navy text-xs font-bold tracking-tight">TFE</span>
           </div>
-          <div>
+          <div className="flex-1">
             <h1 className="font-serif text-base font-semibold text-white leading-tight">
               Guest Concierge
             </h1>
             <p className="text-xs text-gold-light/70">TFE Hotels · AI Demo</p>
           </div>
+          <button
+            onClick={newChat}
+            disabled={busy}
+            className="flex items-center gap-1.5 rounded-xl border border-gold/60 bg-gold/10 px-3 py-1.5 text-xs font-semibold text-gold hover:bg-gold hover:text-navy transition-colors disabled:opacity-40"
+          >
+            <svg className="h-3.5 w-3.5" viewBox="0 0 16 16" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round">
+              <path d="M8 2v4M6 4h4M3 8a5 5 0 1 0 10 0A5 5 0 0 0 3 8z" />
+            </svg>
+            New Chat
+          </button>
         </div>
       </header>
 
