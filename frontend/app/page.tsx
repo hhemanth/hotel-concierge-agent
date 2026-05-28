@@ -459,7 +459,7 @@ export default function Home() {
   const [input, setInput] = useState("");
   const [busy, setBusy] = useState(false);
   const [streamingText, setStreamingText] = useState("");
-  const [sessionId] = useState(() => `s-${Math.random().toString(36).slice(2, 10)}`);
+  const [sessionId, setSessionId] = useState(() => `s-${Math.random().toString(36).slice(2, 10)}`);
   const [latestOptions, setLatestOptions] = useState<HotelOption[]>([]);
 
   const scrollRef = useRef<HTMLDivElement>(null);
@@ -561,6 +561,7 @@ export default function Home() {
     setStreamingText("");
     setBusy(false);
     setLatestOptions([]);
+    setSessionId(`s-${Math.random().toString(36).slice(2, 10)}`);
   }
 
   return (
