@@ -77,6 +77,7 @@ class ChatMessage(BaseModel):
 class ChatRequest(BaseModel):
     messages: list[ChatMessage] = Field(..., description="Full conversation history; last item must be a user turn.")
     session_id: str | None = Field(None, description="Stable id to persist booking state across turns.")
+    available_options: list[dict] = Field(default_factory=list, description="Hotel options from the previous turn, so selection ('Option 1') can be matched.")
 
 
 # ---------------------------------------------------------------------------
@@ -150,7 +151,7 @@ async def chat(req: ChatRequest) -> StreamingResponse:
         "intent": None,
         "response": None,
         "search_criteria": None,
-        "available_options": [],
+        "available_options": req.available_options,
         "selected_option": None,
         "booking_result": None,
         "mentioned_properties": [],

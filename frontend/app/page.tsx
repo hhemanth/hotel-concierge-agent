@@ -300,6 +300,7 @@ export default function Home() {
           body: JSON.stringify({
             messages: history.map((m) => ({ role: m.role, content: m.content })),
             session_id: sessionId,
+            available_options: latestOptions,
           }),
         });
 

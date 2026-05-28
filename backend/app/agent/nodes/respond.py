@@ -172,12 +172,23 @@ async def run(state: AgentState) -> dict:
     model = os.getenv("AGENT_MODEL", "claude-sonnet-4-6")
     user_block = _build_user_block(state)
 
+    # Build multi-turn history so the LLM has conversational memory.
+    # All prior turns are passed as-is; the current turn uses the enriched
+    # user_block (injecting RAG context, booking options, etc.) instead of
+    # the raw user message.
+    raw_messages = state.get("messages") or []
+    llm_messages = [
+        {"role": m["role"], "content": m["content"]}
+        for m in raw_messages[:-1]  # everything except the latest user turn
+    ]
+    llm_messages.append({"role": "user", "content": user_block})
+
     with timed_llm_call(model=model, node="respond") as usage:
         resp = Anthropic().messages.create(
             model=model,
             max_tokens=600,
             system=_SYSTEM_BASE,
-            messages=[{"role": "user", "content": user_block}],
+            messages=llm_messages,
         )
         usage["input_tokens"] = resp.usage.input_tokens
         usage["output_tokens"] = resp.usage.output_tokens
