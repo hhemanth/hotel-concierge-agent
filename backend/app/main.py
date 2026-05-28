@@ -41,9 +41,9 @@ load_dotenv()
 @asynccontextmanager
 async def lifespan(app: FastAPI):
     configure_logging()
-    logger.info("startup", event="building_graph")
+    logger.info("startup", phase="building_graph")
     app.state.graph = build_graph()
-    logger.info("startup", event="ready")
+    logger.info("startup", phase="ready")
     yield
     logger.info("shutdown")
 
