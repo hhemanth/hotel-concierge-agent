@@ -12,8 +12,11 @@ import sys
 from dataclasses import dataclass
 from pathlib import Path
 
+from dotenv import load_dotenv
 import psycopg
 import voyageai
+
+load_dotenv()
 
 from app.data.properties import load_properties
 from app.observability import logger

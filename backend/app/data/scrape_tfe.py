@@ -25,10 +25,13 @@ from pathlib import Path
 from typing import Any
 from urllib.parse import urljoin, urlparse
 
+from dotenv import load_dotenv
 import httpx
 from bs4 import BeautifulSoup
 
 from app.observability import logger
+
+load_dotenv()
 
 # ---------------------------------------------------------------------------
 # Constants
