@@ -8,11 +8,11 @@ this cheap so the cost stays low — most turns are info questions.
 
 from __future__ import annotations
 
-import json
 import os
 
 from anthropic import Anthropic
 
+from app.agent.json_utils import parse_llm_json
 from app.agent.state import AgentState, Intent
 from app.observability import logger, timed_llm_call
 
@@ -32,7 +32,7 @@ def _client() -> Anthropic:
 
 
 async def run(state: AgentState) -> dict:
-    model = os.getenv("ROUTER_MODEL", "claude-haiku-4-5-20251001")
+    model = os.getenv("ROUTER_MODEL", "claude-sonnet-4-6")
     messages = state.get("messages", [])
 
     # Build a compact conversation for the classifier.
@@ -50,14 +50,13 @@ async def run(state: AgentState) -> dict:
         usage["input_tokens"] = resp.usage.input_tokens
         usage["output_tokens"] = resp.usage.output_tokens
 
-    raw = resp.content[0].text.strip() if resp.content else ""
-    try:
-        parsed = json.loads(raw)
-        candidate = parsed.get("intent", "unknown").strip().lower()
-        if candidate in ("info", "booking", "smalltalk", "unknown"):
-            intent = candidate  # type: ignore[assignment]
-    except json.JSONDecodeError:
+    raw = resp.content[0].text if resp.content else ""
+    parsed = parse_llm_json(raw)
+    if not parsed:
         logger.warning("router_parse_fail", raw=raw)
+    candidate = str(parsed.get("intent", "unknown")).strip().lower()
+    if candidate in ("info", "booking", "smalltalk", "unknown"):
+        intent = candidate  # type: ignore[assignment]
 
     logger.info("router_intent", intent=intent)
     return {"intent": intent}

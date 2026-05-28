@@ -123,6 +123,26 @@ def _build_user_block(state: AgentState) -> str:  # noqa: C901
                 "property name, dates, and a one-line next-step (e.g. confirmation email)."
             )
 
+        # 2c. User picked a property but we still need dates/guests to book it.
+        selected_name = booking.get("selected_property_name")
+        if selected_name and not booking_result:
+            needed = [k for k in ("check_in", "check_out", "guests") if not booking.get(k)]
+            if needed:
+                labels = {
+                    "check_in": "check-in date",
+                    "check_out": "check-out date",
+                    "guests": "number of guests",
+                }
+                missing_h = ", ".join(labels[k] for k in needed)
+                return (
+                    f"User said: {latest}\n\n"
+                    f"The guest chose {selected_name}. To confirm the booking we still need: {missing_h}.\n\n"
+                    f"Warmly acknowledge their choice of {selected_name}, then ask a single friendly "
+                    "follow-up for the missing detail(s), and invite them to confirm once provided "
+                    "(e.g. 'just say the word and I'll lock it in'). "
+                    "Do NOT say you will search or check availability — that's already done."
+                )
+
         # 3. Available options to present (from enhanced booking node)
         if available_options:
             mode = search_criteria.get("mode", "direct")

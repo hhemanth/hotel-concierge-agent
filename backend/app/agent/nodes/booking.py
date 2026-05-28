@@ -49,33 +49,46 @@ async def run(state: AgentState) -> dict:  # noqa: C901
     booking_in_progress: dict = state.get("booking_in_progress") or {}
 
     # ------------------------------------------------------------------
-    # Branch 1: user has selected an option → confirm booking
+    # Branch 1: user selected an option from the presented list.
     # ------------------------------------------------------------------
     if selected_option is not None and available_options:
         idx = selected_option - 1  # convert 1-indexed to 0-indexed
-        if 0 <= idx < len(available_options):
-            chosen = available_options[idx]
-            check_in = booking_in_progress.get("check_in") or chosen.get("check_in")
-            check_out = booking_in_progress.get("check_out") or chosen.get("check_out")
-            guests = booking_in_progress.get("guests") or chosen.get("guests", 1)
-            property_id = chosen.get("property_id")
+        if not (0 <= idx < len(available_options)):
+            logger.warning("booking_selection_out_of_range", selected_option=selected_option)
+            return {}
 
-            if property_id and check_in and check_out and guests:
-                result = create_hotel_booking(
-                    property_id=property_id,
-                    check_in=check_in,
-                    check_out=check_out,
-                    guests=int(guests),
-                )
-                logger.info(
-                    "booking_confirmed",
-                    property_id=property_id,
-                    booking_id=result.get("booking_id"),
-                )
-                return {"booking_result": result}
+        chosen = available_options[idx]
+        property_id = chosen.get("property_id")
+        check_in = booking_in_progress.get("check_in") or chosen.get("check_in")
+        check_out = booking_in_progress.get("check_out") or chosen.get("check_out")
+        guests = booking_in_progress.get("guests") or chosen.get("guests")
 
-        logger.warning("booking_selection_out_of_range", selected_option=selected_option)
-        return {}
+        if property_id and check_in and check_out and guests:
+            result = create_hotel_booking(
+                property_id=property_id,
+                check_in=check_in,
+                check_out=check_out,
+                guests=int(guests),
+            )
+            logger.info(
+                "booking_confirmed",
+                property_id=property_id,
+                booking_id=result.get("booking_id"),
+            )
+            return {"booking_result": result}
+
+        # Valid choice, but we still need dates/guests before we can book.
+        # Keep only the chosen property on screen; respond asks for the rest.
+        logger.info("booking_selection_needs_info", property_id=property_id)
+        return {
+            "booking_in_progress": {
+                **booking_in_progress,
+                "selected_property_id": property_id,
+                "selected_property_name": chosen.get("name") or property_id,
+            },
+            "available_options": [chosen],
+            "mentioned_properties": [property_id] if property_id else [],
+        }
 
     # ------------------------------------------------------------------
     # Branch 2: search mode — find matching hotels
@@ -89,23 +102,23 @@ async def run(state: AgentState) -> dict:  # noqa: C901
         vibe = vibe_hints[0] if vibe_hints else None
         amenities_param = booking_in_progress.get("preferences") or None
         max_price = booking_in_progress.get("max_price_per_night")
-        options = search_hotels(
-            location=location,
-            amenities=amenities_param,
-            vibe=vibe,
-            max_price_aud=max_price,
-            min_nights=min_nights,
-        )
-        # If the price cap produced no results, relax it and show closest options.
-        if not options and max_price is not None:
-            logger.info("search_mode_price_fallback", max_price=max_price)
-            options = search_hotels(
-                location=location,
-                amenities=amenities_param,
-                vibe=vibe,
-                max_price_aud=None,
-                min_nights=min_nights,
-            )
+
+        # Progressive relaxation: extracted preferences/vibe can be noisy
+        # ("family room" is not an amenity), so drop the strictest filters
+        # until a real location stops returning an empty list.
+        attempts = [
+            {"amenities": amenities_param, "vibe": vibe, "max_price_aud": max_price},
+            {"amenities": amenities_param, "vibe": vibe, "max_price_aud": None},
+            {"amenities": None, "vibe": vibe, "max_price_aud": None},
+            {"amenities": None, "vibe": None, "max_price_aud": None},
+        ]
+        options: list[dict] = []
+        for level, kwargs in enumerate(attempts):
+            options = search_hotels(location=location, min_nights=min_nights, **kwargs)
+            if options:
+                if level > 0:
+                    logger.info("search_mode_relaxed", level=level)
+                break
 
         enriched: list[dict] = []
         for prop in options[:3]:

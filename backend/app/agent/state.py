@@ -26,6 +26,10 @@ class BookingState(TypedDict, total=False):
     candidate_options: list[dict]
     selected_option_id: str | None
     confirmed_booking_id: str | None
+    # A property the user picked from search results but for which we still
+    # need dates/guests before we can book it (carried across turns).
+    selected_property_id: str | None
+    selected_property_name: str | None
 
 
 class RetrievedDoc(TypedDict):

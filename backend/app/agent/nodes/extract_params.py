@@ -9,13 +9,13 @@ Merge logic preserves info from earlier turns (accumulated state).
 
 from __future__ import annotations
 
-import json
 import os
 import re
 from datetime import datetime
 
 from anthropic import Anthropic
 
+from app.agent.json_utils import parse_llm_json
 from app.agent.state import AgentState, BookingState
 from app.observability import logger, timed_llm_call
 
@@ -65,13 +65,15 @@ Field rules:
 Reply with ONLY the JSON object, no prose, no markdown fences."""
 
 
-# Patterns for detecting selected_option from a user message.
+# Patterns for detecting selected_option from a user message. These require
+# explicit selection language ("option 2", "#2", "the second one") — a bare
+# digit is NOT enough, otherwise "make it 2 nights" would hijack a selection.
 _OPTION_PATTERNS: list[tuple[re.Pattern, int]] = [
-    (re.compile(r"\boption\s*1\b|\bfirst\s+one\b|\b#?1\b", re.IGNORECASE), 1),
-    (re.compile(r"\boption\s*2\b|\bsecond\s+one\b|\b#?2\b", re.IGNORECASE), 2),
-    (re.compile(r"\boption\s*3\b|\bthird\s+one\b|\b#?3\b", re.IGNORECASE), 3),
-    (re.compile(r"\boption\s*4\b|\bfourth\s+one\b|\b#?4\b", re.IGNORECASE), 4),
-    (re.compile(r"\boption\s*5\b|\bfifth\s+one\b|\b#?5\b", re.IGNORECASE), 5),
+    (re.compile(r"\boption\s*1\b|\bnumber\s*1\b|\bfirst\b|#1\b", re.IGNORECASE), 1),
+    (re.compile(r"\boption\s*2\b|\bnumber\s*2\b|\bsecond\b|#2\b", re.IGNORECASE), 2),
+    (re.compile(r"\boption\s*3\b|\bnumber\s*3\b|\bthird\b|#3\b", re.IGNORECASE), 3),
+    (re.compile(r"\boption\s*4\b|\bnumber\s*4\b|\bfourth\b|#4\b", re.IGNORECASE), 4),
+    (re.compile(r"\boption\s*5\b|\bnumber\s*5\b|\bfifth\b|#5\b", re.IGNORECASE), 5),
 ]
 _CONFIRM_PATTERN = re.compile(r"\bbook\s+it\b|\bconfirm\b|\byes\b|\bthat\s+one\b", re.IGNORECASE)
 
@@ -129,12 +131,10 @@ async def run(state: AgentState) -> dict:
         usage["input_tokens"] = resp.usage.input_tokens
         usage["output_tokens"] = resp.usage.output_tokens
 
-    raw = resp.content[0].text.strip() if resp.content else "{}"
-    try:
-        parsed = json.loads(raw)
-    except json.JSONDecodeError:
+    raw = resp.content[0].text if resp.content else ""
+    parsed = parse_llm_json(raw)
+    if not parsed:
         logger.warning("extract_params_parse_fail", raw=raw)
-        parsed = {}
 
     # --- Build / update booking_in_progress (direct-mode fields) ---
     direct_fields = {
