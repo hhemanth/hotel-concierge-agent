@@ -131,6 +131,7 @@ async def _stream_graph(
 # ---------------------------------------------------------------------------
 
 @app.get("/healthz")
+@app.get("/health")
 async def healthz() -> dict[str, str]:
     return {"status": "ok"}
 
